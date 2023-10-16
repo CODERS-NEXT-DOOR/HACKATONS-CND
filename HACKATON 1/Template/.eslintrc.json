@@ -11,16 +11,16 @@
         "ecmaVersion": 13,
         "sourceType": "module"
     },
-    "rules": {      
-      ////////// overrides of google config //////////
-      "max-len": ["error", {
-        "code": 80,
-        "tabWidth": 2,
-        "ignoreComments": true,
-        "ignoreTrailingComments": true,
-        "ignoreUrls": true,
-        "ignoreStrings": true
-      }], // enforce a maximum line length
+    // "rules": {      
+    //   ////////// overrides of google config //////////
+    //   "max-len": ["error", {
+    //     "code": 80,
+    //     "tabWidth": 2,
+    //     "ignoreComments": true,
+    //     "ignoreTrailingComments": true,
+    //     "ignoreUrls": true,
+    //     "ignoreStrings": true
+      // }], // enforce a maximum line length
       "object-curly-spacing": [
         "error",
         "always"
@@ -64,4 +64,3 @@
       "no-undefined": 2, // disallow use of undefined variable (off by default)
       "no-unused-vars": 1 // disallow declaration of variables that are not used in the code
     }
-}
