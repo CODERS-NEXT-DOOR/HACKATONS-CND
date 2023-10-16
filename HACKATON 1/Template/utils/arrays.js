@@ -18,6 +18,7 @@ const reverse = (array) => {
 
 const fill = (array, value, start = 0, end = array.length) => {      //Vyara
   // TODO
+  let newArr = [];
 };
 
 // medium
@@ -33,7 +34,7 @@ const indexOf = (array, element) => {                              //martin
 
 // hard
 
-const filter = (array, predicate) => {                                // Vyara
+const filter = (array, predicate) => {                              // Vyara
   // TODO
 };
 
