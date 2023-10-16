@@ -21,7 +21,15 @@ const reverse = (array) => {
 };
 
 const fill = (array, value, start = 0, end = array.length) => {      //Vyara
-  // TODO
+  
+  const filledArray = [];
+
+  for(let i = start; i < end; i++)
+  {
+     filledArray.push(value);
+  }
+
+  return filledArray;
 
 };
 
