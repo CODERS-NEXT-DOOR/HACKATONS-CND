@@ -54,10 +54,31 @@ const pow = (number = 2, power = 3) => {           //Toni
 };
 
 // hard
+/**
+ * Checks whether the number is prime.
+ *
+ * @param {number} the number to be checked
+ * @returns {boolean} true if it's prime; else - false
+ */
+const isPrime = (number) => {                      //Georgi
 
-const isPrime = (number) => {                              //Georgi
-  // TODO
+  let isPrime = true;    
+                                             
+  if (number <= 1) {
+    isPrime = false;
+    return isPrime;
+  };
+
+  for (let i = 2; i < number; i++) {
+    if (number % i == 0) {
+      isPrime = false;
+      break;
+  };
+  };
+  
+  return isPrime;
 };
+
 
 const swapWholeAndRemainder = (number) => {                  //vyara
   // TODO
