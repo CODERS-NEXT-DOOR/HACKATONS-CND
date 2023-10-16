@@ -14,8 +14,19 @@ const average = (array) => {                //andi
   // TODO
 };
 
-const pow = (number, power) => {           //Toni
-  // TODO
+/**
+ * Raises the number to the chosen power.
+ *
+ * @param {number} number the base number
+ * @param {number} number the power by which the number should be raised
+ * @returns {number} the number raised by the power
+ */
+const pow = (number = 2, power = 3) => {           //Toni
+  let result = number;
+  for(let i = 1; i<power; i++){
+    result = result*number
+  }
+  return result;
 };
 
 // hard
