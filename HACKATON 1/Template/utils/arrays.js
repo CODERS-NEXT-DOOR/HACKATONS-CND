@@ -27,10 +27,27 @@ const fill = (array, value, start = 0, end = array.length) => {      //Vyara
 
 // medium
 
+/**
+ * Converts all elements in an array into a string separated by a separator.
+ *
+ * @param {array} array the array to be reversed
+ * @param {[separator = ',']} the separators between the array elements
+ * @returns the concatinated string
+ */
 const join = (array, separator = ',') => {                          //Georgi
-  return "Hi World!";
-  // TODO
+  
+  let outputString = '';
+  for (let i = 0; i < array.length; i++) {
+    if (i === array.length - 1) {
+      outputString += array[i]
+    } else {
+      outputString += array[i] + separator
+    }
+    
+  };
+  return outputString;
 };
+
 
 const indexOf = (array, element) => {                              //martin
   // TODO
