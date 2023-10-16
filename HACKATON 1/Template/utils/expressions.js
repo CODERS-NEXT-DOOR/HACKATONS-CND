@@ -1,5 +1,6 @@
 // easy
 
+
 const isMinLength = (str, minLength) => {  // TODO                //Andi
 
   if (str.length <= minLength) {
