@@ -8,8 +8,10 @@ const isMinLength = (str, minLength) => {  // TODO                //Andi
     console.log("true");
   }
 };
+//START
 const result1 = isMinLength("asd", 2);
 const result2 = isMinLength("asd", 4);
+//END
 
 const isMaxLength = (str, maxLength) => null; // TODO               //Toni
 
@@ -23,7 +25,17 @@ const isArrayOfType = (arr, type) => null; // TODO                    //Toni
 
 const areValidNumbers = (stringNumbers) => null; // TODO                //georgi
 
-const sumNumbersFromString = (string) => null; // TODO                  //andi
+//START
+const sumNumbersFromString = (string) => { // TODO                  //andi
+  let newSting = string.split(' ').map(Number);
+  let result = 0;
+  for(let i = 0; i < newSting.length; i++){
+    result += newSting[i]
+  }
+  console.log(result);
+}; 
+const result = sumNumbersFromString('2 4 5 4 10'); 
+//END
 
 export {
   isMinLength,
