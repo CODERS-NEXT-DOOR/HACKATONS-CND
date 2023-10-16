@@ -1,30 +1,30 @@
 // easy
 
-const existInObject = (obj, prop) => {
+const existInObject = (obj, prop) => {                 //vyara
   // TODO
 };
 
-const removeProp = (obj, prop) => {
+const removeProp = (obj, prop) => {                 //Georgi
   // TODO
 };
 
 // medium
 
-const copy = (obj) => {
+const copy = (obj) => {                               //andi
   // TODO
 };
 
-const typeOfProps = (obj) => {
+const typeOfProps = (obj) => {                       //Martin
   // TODO
 };
 
 // hard
 
-const flat = (obj) => {
+const flat = (obj) => {                           //Martin
   // TODO
 };
 
-const entries = (obj) => {
+const entries = (obj) => {                        //andi
   // TODO
 };
 

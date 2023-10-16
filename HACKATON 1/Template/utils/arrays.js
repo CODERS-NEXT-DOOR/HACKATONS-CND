@@ -16,27 +16,27 @@ const reverse = (array) => {
   return reversed;
 };
 
-const fill = (array, value, start = 0, end = array.length) => {
+const fill = (array, value, start = 0, end = array.length) => {      //Vyara
   // TODO
 };
 
 // medium
 
-const join = (array, separator = ',') => {
+const join = (array, separator = ',') => {                          //Georgi
   // TODO
 };
 
-const indexOf = (array, element) => {
+const indexOf = (array, element) => {                              //martin
   // TODO
 };
 
 // hard
 
-const filter = (array, predicate) => {
+const filter = (array, predicate) => {                                //Vyara
   // TODO
 };
 
-const zip = (...arrays) => {
+const zip = (...arrays) => {                                         //Toni
   // TODO
 };
 

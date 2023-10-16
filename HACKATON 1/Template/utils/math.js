@@ -1,30 +1,30 @@
 // easy
 
-const min = (array) => {
+const min = (array) => {               //Georgi
   // TODO
 };
 
-const sum = (array) => {
+const sum = (array) => {                 //Martin
   // TODO
 };
 
 // medium
 
-const average = (array) => {
+const average = (array) => {                //andi
   // TODO
 };
 
-const pow = (number, power) => {
+const pow = (number, power) => {           //Toni
   // TODO
 };
 
 // hard
 
-const isPrime = (number) => {
+const isPrime = (number) => {                              //Georgi
   // TODO
 };
 
-const swapWholeAndRemainder = (number) => {
+const swapWholeAndRemainder = (number) => {                  //vyara
   // TODO
 };
 
