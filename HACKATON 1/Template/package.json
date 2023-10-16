@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "doc": "jsdoc utils/arrays.js utils/expressions.js utils/math.js utils/objects.js utils/strings.js"
+    "doc": "jsdoc utils/arrays.js utils/expressions.js utils/math.js utils/objects.js utils/strings.js",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
   },
   "keywords": [],
   "author": "Telerik Academy",
