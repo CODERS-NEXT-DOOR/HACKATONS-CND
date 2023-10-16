@@ -14,7 +14,14 @@ const result1 = isMinLength("asd", 2);
 const result2 = isMinLength("asd", 4);
 //END
 
-const isMaxLength = (str, maxLength) => null; // TODO               //Toni
+/**
+ * Checks if the string have the maximal given length.
+ *
+ * @param {string} string the string to check.
+ * @param {number} number The max length.
+ * @returns {boolean} returns true if the validation passes and false if it doesn't
+ */
+const isMaxLength = (str, maxLength) => str.length <= maxLength;              //Toni
 
 // medium
 
