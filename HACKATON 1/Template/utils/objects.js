@@ -4,9 +4,19 @@ const existInObject = (obj, prop) => {                 //vyara
   // TODO
 };
 
+/**
+ * Removes a given property from an object.
+ *
+ * @param {object} the input object
+ * @param {string} propety to get rid of
+ * @returns {object} the new object
+ */
 const removeProp = (obj, prop) => {                 //Georgi
-  // TODO
+  const outputObj = {...obj};
+  delete outputObj[prop];
+  return outputObj;
 };
+
 
 // medium
 
