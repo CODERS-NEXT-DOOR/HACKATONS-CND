@@ -18,7 +18,7 @@ const reverse = (array) => {
 
 const fill = (array, value, start = 0, end = array.length) => {      //Vyara
   // TODO
-  let newArr = [];
+
 };
 
 // medium
