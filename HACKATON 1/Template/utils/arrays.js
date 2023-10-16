@@ -23,6 +23,7 @@ const fill = (array, value, start = 0, end = array.length) => {      //Vyara
 // medium
 
 const join = (array, separator = ',') => {                          //Georgi
+  return "Hi World!";
   // TODO
 };
 
@@ -32,7 +33,7 @@ const indexOf = (array, element) => {                              //martin
 
 // hard
 
-const filter = (array, predicate) => {                                //Vyara
+const filter = (array, predicate) => {                                // Vyara
   // TODO
 };
 
