@@ -12,6 +12,8 @@
   "author": "Telerik Academy",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.51.0",
+    "eslint-config-google": "^0.14.0",
     "jsdoc": "^3.6.3"
   }
 }
