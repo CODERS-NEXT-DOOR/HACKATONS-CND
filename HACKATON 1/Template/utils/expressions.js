@@ -1,6 +1,15 @@
 // easy
 
-const isMinLength = (str, minLength) => null; // TODO                //Andi
+const isMinLength = (str, minLength) => {  // TODO                //Andi
+
+  if (str.length <= minLength) {
+    console.log("false");
+  } else {
+    console.log("true");
+  }
+};
+const result1 = isMinLength("asd", 2);
+const result2 = isMinLength("asd", 4);
 
 const isMaxLength = (str, maxLength) => null; // TODO               //Toni
 
