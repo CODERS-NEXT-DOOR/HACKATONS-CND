@@ -1,7 +1,23 @@
 // easy
 
+/**
+ * Returns the smallest number in the array.
+ *
+ * @param {array} the array to itetate through
+ * @returns {array} the smallest number of the array
+ */
 const min = (array) => {               //Georgi
-  // TODO
+  
+  let minNum = 0;
+
+  for (const num of array) {
+    if (num < minNum) {
+      minNum = num;
+    }
+  };
+  
+  return minNum;
+
 };
 
 const sum = (array) => {                 //Martin
