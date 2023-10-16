@@ -25,11 +25,19 @@ const sum = (array) => {                 //Martin
 };
 
 // medium
+// START
+const average = (array) => { // TODO              //andi
+  let avg = 0
+  for(let i = 0; i < array.length; i++){
+    avg += array[i];
+  }
+  avg /= array.length;
 
-const average = (array) => {                //andi
-  // TODO
-};
+  console.log(avg);
+  };
 
+  const average1 = average([1, -2, 3]);
+// END
 /**
  * Raises the number to the chosen power.
  *
