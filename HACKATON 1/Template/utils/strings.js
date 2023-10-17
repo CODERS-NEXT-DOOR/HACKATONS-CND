@@ -5,12 +5,10 @@ const slice = (string, start = 0, end = string.length) => {     //Martin
 };
 
 //START
-const repeat = (string, n) => {                                  //Andi
-  console.log(string.repeat(n));
-};
-const stars = repeat('*', 3);
-const abc = repeat('abc', 2);
-const nothing = repeat('abc', 0);
+  const repeat = (string, n) => {                                  //Andi
+    console.log(string.repeat(n));
+  };
+
 //END
 
 // medium
@@ -33,11 +31,10 @@ const capitalize = (string) => {                              //vyara
 
 /**
  * Replaces all matches for a single character pattern in a string with replacement string.
- *
- * @param {string} the input string
- * @param {string} the character to be replaced
- * @param {string} the replacement for the character
- * @return {string} the replaced string
+ * @param {string} string The input string.
+ * @param {string} char The character to be replaced.
+ * @param {string} replacement The replacement for the character.
+ * @returns {string} The final string.
  */
 const replace = (string, char, replacement) => {               //Georgi
   let outputString = '';
@@ -59,11 +56,12 @@ const split = (string, separator) => {                      //Martin
 };
 
 
+
 /**
  * Trims the trailing spaces from the start and the end of a given string.
- *
+ * 
  * @param {string} string the string to trim.
- * @return {string} the trimmed string.
+ * @returns the trimmed string.
  */
 const trim = (string) => {                                 //Toni
   let startStr = 0;

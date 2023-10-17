@@ -34,21 +34,42 @@ const fill = () => {
   // array is not changed!
 };
 
-const join = () => {
-  // TODO
+const join = () => {             //GEORGI
+  const arr = [1, 2, 3, 4, 5];
+  const outputArr = utils.join(arr, '!');
+  console.log(outputArr); // => 1!2!3!4!5
 };
 
 const indexOf = () => {
-  // TODO
+  const finalIndex = utils.indexOf([6, 0, 0, 2], 6);
+  console.log(finalIndex);
+  // => 0
 };
 
 const filter = () => {
   // TODO
 };
 
-const zip = () => {
-  // TODO
-};
+const zip = (...arrays) => {                                         
+  let minLength = arrays[0].length;
+  for (let i = 1; i < arrays.length; i++) {
+    if (arrays[i].length < minLength) {
+      minLength = arrays[i].length;
+    }
+  }
+  
+  const result = [];
+  for (let i = 0; i < minLength; i++) {
+    const groupedArr = [];
+    for (const array of arrays) {
+      groupedArr.push(array[i]);
+    }
+    result.push(groupedArr);
+  }
+  return result;
+}
+console.log(zip(['a', 'b'], [1, 2], [true, false]));
+// => [ [ 'a', 1, true ], [ 'b', 2, false ] ]
 
 const arrays = () => {
   const separators = ['-', '_', '~'];
@@ -66,24 +87,48 @@ const arrays = () => {
 
 // Math
 
-const min = () => {
-  // TODO
+const min = () => {               //GEORGI
+  const arr = [1, 2, -2, 4, 9, 11, 0, -6, 7]
+  const result = utils.min(arr)
+  console.log(result) // => -6
 };
 
 const sum = () => {
-  // TODO
+  let finalSum = utils.sum([2, 3, 4, 5, 6, 2, 4]);
+  console.log(finalSum);
+  // => 26
 };
 
-const pow = () => {
-  // TODO
+const pow = (number, power) => {        
+  let result = number;
+  for(let i = 1; i<power; i++){
+    result = result*number
+  }
+  return result;
 };
+console.log(pow(3,2));
+// => "9"
 
 const average = () => {
-  // TODO
-};
+  const average1 = [1, -2, 3];
+  const average2 = [2, 3, 6];
+  const average3 = [3, 5, 7];
+  console.log(utils.average(average1)); // => 0.6666666666666666
+  console.log(utils.average(average2)); // => 3.6666666667
+  console.log(utils.average(average3)); // => 5
+}
 
-const isPrime = () => {
-  // TODO
+const isPrime = () => {                  //GEORGI
+  const num1 = 1;
+  const num2 = 5;
+  const num3 = 15;
+  const num4 = -6;
+  const num5 = 84;
+  console.log(utils.isPrime(num1)) // => false
+  console.log(utils.isPrime(num2)) // => true
+  console.log(utils.isPrime(num3)) // => false
+  console.log(utils.isPrime(num4)) // => false
+  console.log(utils.isPrime(num5)) // => false
 };
 
 const swapWholeAndRemainder = () => {
@@ -111,13 +156,23 @@ const existInObject = () => {
   // TODO
 };
 
-const removeProp = () => {
-  // TODO
+const removeProp = () => {                            //GEORGI
+  const obj = {
+    name: 'Georgi',
+    age: 35,
+    drivingLicense: true
+  };
+  const result = utils.removeProp(obj, 'drivingLicense');
+  console.log(result)        // => { name: 'Georgi', age: 35 }
 };
 
-const copy = () => {
-  // TODO
-};
+const copy = (obj) => {                               //andy
+  const initialObject = { name: 'Pesho', age: 20, isAlive: true, addressstreet: 'Al Malinov' };
+  const initialObject1 = { name: 'Andy', age: 30, isAlive: true, addressstreet: 'Grafa' };
+  console.log(copy(initialObject)); // { name: 'Pesho', age: 20, isAlive: true, addressstreet: 'Al Malinov' }
+  console.log(copy(initialObject1)); // { name: 'Andy', age: 30, isAlive: true, addressstreet: 'Grafa' }
+  
+}
 
 const typeOfProps = () => {
   // TODO
@@ -136,9 +191,14 @@ const flat = () => {
   // => {"name":"Pesho","age":20,"isAlive":true,"keyWithNullValue":null,"keyWithArrValue":[2,3,5,7,2],"address.street":"Al Malinov","address.number":34}
 };
 
-const entries = () => {
-  // TODO
-};
+const entries = (obj) => {                //andi
+  const result ={ a: 5, b: 6, c: 7 };
+  const result1 ={ a: 3, b: 10, c: 6};
+  const result2 ={ a: 8, b: 2, c: 20};
+  console.log(entries(result)); // => [ [ 'a', 5 ], [ 'b', 6 ], [ 'c', 7 ] ]
+  console.log(entries(result1)); // => [ [ 'a', 3 ], [ 'b', 10 ], [ 'c', 6 ] ]
+  console.log(entries(result2)); // => [ [ 'a', 8], [ 'b', 2 ], [ 'c', 20 ] ]
+}
 
 const objects = () => {
   const object = {
@@ -165,24 +225,45 @@ const slice = () => {
 };
 
 const repeat = () => {
-  // TODO
+  const stars = repeat('*', 3); // ***
+  const abc = repeat('abc', 2); // abcabc
+  const nothing = repeat('abc', 0); // 
 };
 
 const capitalize = () => {
   // TODO
 };
 
-const replace = () => {
-  // TODO
+const replace = () => {                 //GEORGI
+  const string = 'Txlxrik Acadxmy'
+  const result = utils.replace(string, 'x', 'e')
+  console.log(result)      // => Telerik Academy
 };
 
 const split = () => {
   // TODO
 };
 
-const trim = () => {
-  // TODO
+const trim = (string) => {
+  let startStr = 0;
+  let endStr = string.length-1;
+  let trimmedStr = '';
+
+  while(string[startStr] === ' '){
+    startStr++
+  }
+  while(string[endStr] === ' '){
+    endStr--
+  }
+
+  for(let i = startStr; i<= endStr; i++){
+    trimmedStr += string[i];
+  }
+
+  return trimmedStr;
 };
+console.log(trim('     Telerik   '));
+// => "Telerik"
 
 const strings = () => {
   const string = utils.repeat('  home', 2); //   home  home
@@ -198,27 +279,36 @@ const strings = () => {
 // Expressions
 
 const isMinLength = () => {
-  // TODO
+  console.log(isMinLength('asd', 2)); // Output: true
+  console.log(isMinLength('asd', 4)); // Output: false
 };
 
-const isMaxLength = () => {
-  // TODO
-};
+const isMaxLength = (str, maxLength) => str.length <= maxLength;  
+console.log(isMaxLength("Telerik", 9));
+// => "true"
 
 const isIn = () => {
   // TODO
 };
 
-const isArrayOfType = () => {
-  // TODO
-};
+const isArrayOfType = (arr, type) => arr.every(element => typeof element === type); 
+console.log(isArrayOfType(['apple', 4, 'cherry'], 'string'));
+  // => "false" 
 
-const areValidNumbers = () => {
-  // TODO
+const areValidNumbers = () => {    //GEORGI
+  const arr1 = ['1', '2', '3', '4', '5'];
+  const arr2 = ['1', '2', 'dsg', '4', '5'];
+  const result1 = utils.areValidNumbers(arr1);
+  const result2 = utils.areValidNumbers(arr2);
+  console.log(result1);  // => true
+  console.log(result2);  // => false
 };
 
 const sumNumbersFromString = () => {
-  // TODO
+const result = '2 4 5 4 10'
+const result1 = '3 5 6 2 20'
+sumNumbersFromString(result); // 25
+sumNumbersFromString(result1); // 36
 };
 
 const expressions = () => {
@@ -252,7 +342,7 @@ const expressions = () => {
 
 // reverse();
 // fill();
-// join();
+// join();                                 //GEORGI
 // indexOf();
 // filter();
 // zip();
@@ -260,18 +350,18 @@ const expressions = () => {
 
 // Math
 
-// min();
+// min();                                  //GEORGI
 // sum();
 // average();
 // pow();
-// isPrime();
+// isPrime();                              //GEORGI
 // swapWholeAndRemainder();
 // math();
 
 // Objects
 
 // existInObject();
-// removeProp();
+// removeProp();                           //GEORGI
 // copy();
 // typeOfProps();
 // flat();
@@ -283,7 +373,7 @@ const expressions = () => {
 // slice();
 // repeat();
 // capitalize();
-// replace();
+// replace();                              //GEORGI
 // split();
 // trim();
 // strings();
@@ -294,6 +384,6 @@ const expressions = () => {
 // isMaxLength();
 // isIn();
 // isArrayOfType();
-// areValidNumbers();
+// areValidNumbers();                      //GEORGI
 // sumNumbersFromString();
 // expressions();

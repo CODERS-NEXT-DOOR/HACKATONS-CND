@@ -14,10 +14,9 @@ const existInObject = (obj, prop) => {                 //vyara
 
 /**
  * Removes a given property from an object.
- *
- * @param {object} the input object
- * @param {string} propety to get rid of
- * @returns {object} the new object
+ * @param {object} obj The input object.
+ * @param {string} prop The prop to get rid of.
+ * @returns {object} The new object.
  */
 const removeProp = (obj, prop) => {                 //Georgi
   const outputObj = {...obj};
@@ -27,19 +26,15 @@ const removeProp = (obj, prop) => {                 //Georgi
 
 
 // medium
+/**
+ * makes a copy of an object
+ * @param {object} obj The input object
+ * @param {object} newObj keep the changes
+ */
 //START
-const copy = (obj) => {                               //andi
-  let newObj = {};
-  for(const key in obj){
-    newObj = obj;
-  }
-    console.log(newObj);
-  };
-
-const initialObject = { name: 'Pesho', age: 20, isAlive: true, addressstreet: 'Al Malinov' };
-const resultObject = copy(initialObject);
-
-console.log(initialObject === resultObject);
+const copy = (obj) => {                          // andy
+  return { ...obj };
+}
 //END
 
 const typeOfProps = (obj) => {                       //Martin
@@ -73,6 +68,11 @@ const flat = (obj) => {                           //Martin
   return newObj;
 };
 
+/**
+ * takes an object, reconfigures it, and returns it as an array full of small arrays that contain key and value
+ * @param {object} obj input object
+ * @param {array} result keep the changes
+ */
 //START
 const entries = (obj) => {                   //andi
   const result = [];
@@ -82,10 +82,8 @@ const entries = (obj) => {                   //andi
       result.push([key, obj[key]]);
     }
   }
-  console.log(result);
+  return result;
 }
-
-const result = entries({ a: 5, b: 6, c: 7 });
 //END
 
 export { existInObject, typeOfProps, copy, removeProp, flat, entries };
