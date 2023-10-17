@@ -87,7 +87,7 @@ const arrays = () => {
 
 // Math
 
-const min = () => {
+const min = () => {               //GEORGI
   const arr = [1, 2, -2, 4, 9, 11, 0, -6, 7]
   const result = utils.min(arr)
   console.log(result) //CASE 1
@@ -119,8 +119,17 @@ const average = (array) => {
   const average1 = average([1, -2, 3]);
   // => 0.6666666666666666
 
-const isPrime = () => {
-  // TODO
+const isPrime = () => {            //GEORGI
+  const num1 = 1;
+  const num2 = 5;
+  const num3 = 15;
+  const num4 = -6;
+  const num5 = 84;
+  console.log(utils.isPrime(num1)) //CASE 1
+  console.log(utils.isPrime(num2)) //CASE 2
+  console.log(utils.isPrime(num3)) //CASE 3
+  console.log(utils.isPrime(num4)) //CASE 4
+  console.log(utils.isPrime(num5)) //CASE 5
 };
 
 const swapWholeAndRemainder = () => {
@@ -148,8 +157,14 @@ const existInObject = () => {
   // TODO
 };
 
-const removeProp = () => {
-  // TODO
+const removeProp = () => {                            //GEORGI
+  const obj = {
+    name: 'Georgi',
+    age: 35,
+    drivingLicense: true
+  };
+  const result = utils.removeProp(obj, 'drivingLicense');
+  console.log(result)
 };
 
 const copy = (obj) => {                               //andi
@@ -225,8 +240,10 @@ const capitalize = () => {
   // TODO
 };
 
-const replace = () => {
-  // TODO
+const replace = () => {                 //GEORGI
+  const string = 'Txlxrik Acadxmy'
+  const result = utils.replace(string, 'x', 'e')
+  console.log(result) //CASE 1
 };
 
 const split = () => {
@@ -340,14 +357,14 @@ const expressions = () => {
 // sum();
 // average();
 // pow();
-// isPrime();
+isPrime();                              //GEORGI
 // swapWholeAndRemainder();
 // math();
 
 // Objects
 
 // existInObject();
-// removeProp();
+removeProp();                           //GEORGI
 // copy();
 // typeOfProps();
 // flat();
@@ -359,7 +376,7 @@ const expressions = () => {
 // slice();
 // repeat();
 // capitalize();
-// replace();
+replace();                              //GEORGI
 // split();
 // trim();
 // strings();

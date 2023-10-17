@@ -68,7 +68,7 @@ const indexOf = (array, element) => {                              //martin
     }
   }
   return -1;
-};
+}; 
 
 // hard
 
