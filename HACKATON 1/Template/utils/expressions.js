@@ -38,7 +38,7 @@ const isIn = (value, possibleValues) =>                                    //vya
         }
      }
 
-     console.log(result);
+     //console.log(result);
 };                 
 
 const isArrayOfType = (arr, type) => null; // TODO                    //Toni
