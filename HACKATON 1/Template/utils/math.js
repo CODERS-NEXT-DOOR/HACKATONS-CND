@@ -3,7 +3,7 @@
 /**
  * Returns the smallest number in the array.
  * @param {array} array The array to iterate through.
- * @returns {array} The smallest number of the array.
+ * @returns {number} The smallest number of the array.
  */
 const min = (array) => {               //Georgi
   
