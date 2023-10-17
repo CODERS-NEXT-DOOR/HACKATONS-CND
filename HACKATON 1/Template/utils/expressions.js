@@ -25,7 +25,21 @@ const isMaxLength = (str, maxLength) => str.length <= maxLength;              //
 
 // medium
 
-const isIn = (value, possibleValues) => null; // TODO                  //vyara
+const isIn = (value, possibleValues) =>                                    //vyara
+{
+    let result = false;
+    
+     for(let i = 0; i < possibleValues.length; i++)
+     {
+        if(possibleValues[i] === value)
+        {
+            result = true;
+            break;
+        }
+     }
+
+     console.log(result);
+};                 
 
 const isArrayOfType = (arr, type) => null; // TODO                    //Toni
 
