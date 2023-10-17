@@ -64,8 +64,26 @@ const replace = (string, char, replacement) => {               //Georgi
 
 // hard
 
+/**
+ * Splits string by separator.
+ * @param {string} string input string
+ * @param {string} separator input string
+ * @returns the split strings
+ */
 const split = (string, separator) => {                      //Martin
-  // TODO
+  let finalArr = [];
+  let currentStrng = '';
+
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] !== separator) {
+      currentStrng += string[i];
+    } else {
+      finalArr.push(currentStrng);
+      currentStrng = '';
+    }
+  }
+  finalArr.push(currentStrng);
+  return finalArr;
 };
 
 

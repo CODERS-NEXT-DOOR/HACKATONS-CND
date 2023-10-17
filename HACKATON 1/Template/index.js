@@ -40,7 +40,7 @@ const join = () => {             //GEORGI
   console.log(outputArr); // => 1!2!3!4!5
 };
 
-const indexOf = () => { // Martin
+const indexOf = () => {             // Martin
   const finalIndex = utils.indexOf([6, 0, 0, 2], 6);
   console.log(finalIndex);
   // => 0
@@ -178,7 +178,7 @@ const copy = (obj) => {                               //andy
 
 }
 
-const typeOfProps = () => { // Martin
+const typeOfProps = () => {                 // Martin
   const typesArray = utils.typeOfProps({
     name: 'Pesho',
     age: 20,
@@ -192,7 +192,7 @@ console.log(typesArray);
 // => ['string', 'number', 'null', 'boolean', 'string', 'object', 'array']
 };
 
-const flat = () => { // Martin
+const flat = () => {                       // Martin
   const result = utils.flat({
     name: 'Pesho',
     age: 20,
@@ -258,8 +258,12 @@ const replace = () => {                 //GEORGI
   console.log(result)      // => Telerik Academy
 };
 
-const split = () => {
-  // TODO
+const split = () => {              // Martin
+  const string = 'Time  To   Say Good  Night';
+  const separator = ' ';
+  const splitStrings = utils.split(string, separator);
+  console.log(splitStrings);
+  // => ['Time', '', 'To', '', '', 'Say', 'Good', '', 'Night']
 };
 
 const trim = () => {       //Toni
@@ -386,11 +390,11 @@ const expressions = () => {
 
 // Strings
 
-slice();
+// slice();                                //Martin
 // repeat();
 // capitalize();
 // replace();                              //GEORGI
-// split();
+// split();                                //Martin
 // trim();
 // strings();
 
