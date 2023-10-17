@@ -1,5 +1,6 @@
 // easy
 /**
+ *  * Checks if the string have the minimal given length.
  * 
  * @param {*} str  the string to check.
  * @param {*} minLength The min length.
@@ -46,6 +47,7 @@ const isArrayOfType = (arr, type) => null; // TODO                    //Toni
 const areValidNumbers = (stringNumbers) => null; // TODO                //georgi
 
 /**
+ * takes a string and turns it into a number then sums the numbers and returns them to the console
  * 
  * @param {*} newSting gets a string split it and makes it into numbers
  * @param {*} result stores and sums all numbers
