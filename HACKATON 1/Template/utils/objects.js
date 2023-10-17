@@ -65,8 +65,19 @@ const flat = (obj) => {                           //Martin
   return newObj;
 };
 
-const entries = (obj) => {                        //andi
-  // TODO
-};
+//START
+const entries = (obj) => {                   //andi
+  const result = [];
+
+  for (const key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      result.push([key, obj[key]]);
+    }
+  }
+  console.log(result);
+}
+
+const result = entries({ a: 5, b: 6, c: 7 });
+//END
 
 export { existInObject, typeOfProps, copy, removeProp, flat, entries };
