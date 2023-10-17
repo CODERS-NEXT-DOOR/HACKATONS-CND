@@ -124,7 +124,16 @@ const typeOfProps = () => {
 };
 
 const flat = () => {
-  // TODO
+  const result = utils.flat({
+    name: 'Pesho',
+    age: 20,
+    isAlive: true,
+    keyWithNullValue: null,
+    keyWithArrValue: [2, 3, 5, 7, 2],
+    address: { street: 'Al Malinov', number: 34 },
+  });
+  console.log(result);
+  // => {"name":"Pesho","age":20,"isAlive":true,"keyWithNullValue":null,"keyWithArrValue":[2,3,5,7,2],"address.street":"Al Malinov","address.number":34}
 };
 
 const entries = () => {

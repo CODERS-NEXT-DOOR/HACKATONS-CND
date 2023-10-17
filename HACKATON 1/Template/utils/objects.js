@@ -30,8 +30,29 @@ const typeOfProps = (obj) => {                       //Martin
 
 // hard
 
+/**
+ * Flattens nested objects into a single flat object.
+ * @param {object} obj input object
+ * @returns {object} the flattened object
+ */
+
 const flat = (obj) => {                           //Martin
-  // TODO
+  let newObj = {};
+
+  for (const key of Object.keys(obj)) {
+    if (typeof obj[key] !== 'object' || Array.isArray(obj[key]) || obj[key] === null) {
+      newObj[key] = obj[key];
+    } else {
+      let strng = key + '.';
+
+      for (const key1 in obj[key]) {
+        strng += key1;
+        newObj[strng] = obj[key][key1];
+        strng = key + '.';
+      }
+    }
+  }
+  return newObj;
 };
 
 const entries = (obj) => {                        //andi
