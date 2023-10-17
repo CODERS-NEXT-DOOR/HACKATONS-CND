@@ -50,14 +50,14 @@ const filter = () => {
   // TODO
 };
 
-const zip = (...arrays) => {                                         
+const zip = (...arrays) => {
   let minLength = arrays[0].length;
   for (let i = 1; i < arrays.length; i++) {
     if (arrays[i].length < minLength) {
       minLength = arrays[i].length;
     }
   }
-  
+
   const result = [];
   for (let i = 0; i < minLength; i++) {
     const groupedArr = [];
@@ -99,14 +99,14 @@ const sum = () => {
   // => 26
 };
 
-const pow = (number, power) => {        
+const pow = (number, power) => {
   let result = number;
-  for(let i = 1; i<power; i++){
-    result = result*number
+  for (let i = 1; i < power; i++) {
+    result = result * number
   }
   return result;
 };
-console.log(pow(3,2));
+console.log(pow(3, 2));
 // => "9"
 
 const average = () => {
@@ -131,8 +131,10 @@ const isPrime = () => {                  //GEORGI
   console.log(utils.isPrime(num5)) // => false
 };
 
-const swapWholeAndRemainder = () => {
-  // TODO
+const swapWholeAndRemainder = () => {                         //vyara
+  const result = utils.sumNumbersFromString('2 4 5 4 10');
+  console.log(result);
+  // 25
 };
 
 const math = () => {
@@ -152,8 +154,13 @@ const math = () => {
 
 // Objects
 
-const existInObject = () => {
-  // TODO
+const existInObject = () => {                          //vyara
+  const result1 = utils.existInObject({ a: 5 }, 'a');
+  const result2 = utils.existInObject({ a: 5 }, 'b');
+  console.log(result1);
+  // true
+  console.log(result2);
+  // => false
 };
 
 const removeProp = () => {                            //GEORGI
@@ -171,7 +178,7 @@ const copy = (obj) => {                               //andy
   const initialObject1 = { name: 'Andy', age: 30, isAlive: true, addressstreet: 'Grafa' };
   console.log(copy(initialObject)); // { name: 'Pesho', age: 20, isAlive: true, addressstreet: 'Al Malinov' }
   console.log(copy(initialObject1)); // { name: 'Andy', age: 30, isAlive: true, addressstreet: 'Grafa' }
-  
+
 }
 
 const typeOfProps = () => {
@@ -192,9 +199,9 @@ const flat = () => {
 };
 
 const entries = (obj) => {                //andi
-  const result ={ a: 5, b: 6, c: 7 };
-  const result1 ={ a: 3, b: 10, c: 6};
-  const result2 ={ a: 8, b: 2, c: 20};
+  const result = { a: 5, b: 6, c: 7 };
+  const result1 = { a: 3, b: 10, c: 6 };
+  const result2 = { a: 8, b: 2, c: 20 };
   console.log(entries(result)); // => [ [ 'a', 5 ], [ 'b', 6 ], [ 'c', 7 ] ]
   console.log(entries(result1)); // => [ [ 'a', 3 ], [ 'b', 10 ], [ 'c', 6 ] ]
   console.log(entries(result2)); // => [ [ 'a', 8], [ 'b', 2 ], [ 'c', 20 ] ]
@@ -246,17 +253,17 @@ const split = () => {
 
 const trim = (string) => {
   let startStr = 0;
-  let endStr = string.length-1;
+  let endStr = string.length - 1;
   let trimmedStr = '';
 
-  while(string[startStr] === ' '){
+  while (string[startStr] === ' ') {
     startStr++
   }
-  while(string[endStr] === ' '){
+  while (string[endStr] === ' ') {
     endStr--
   }
 
-  for(let i = startStr; i<= endStr; i++){
+  for (let i = startStr; i <= endStr; i++) {
     trimmedStr += string[i];
   }
 
@@ -283,7 +290,7 @@ const isMinLength = () => {
   console.log(isMinLength('asd', 4)); // Output: false
 };
 
-const isMaxLength = (str, maxLength) => str.length <= maxLength;  
+const isMaxLength = (str, maxLength) => str.length <= maxLength;
 console.log(isMaxLength("Telerik", 9));
 // => "true"
 
@@ -291,9 +298,9 @@ const isIn = () => {
   // TODO
 };
 
-const isArrayOfType = (arr, type) => arr.every(element => typeof element === type); 
+const isArrayOfType = (arr, type) => arr.every(element => typeof element === type);
 console.log(isArrayOfType(['apple', 4, 'cherry'], 'string'));
-  // => "false" 
+// => "false" 
 
 const areValidNumbers = () => {    //GEORGI
   const arr1 = ['1', '2', '3', '4', '5'];
@@ -305,10 +312,10 @@ const areValidNumbers = () => {    //GEORGI
 };
 
 const sumNumbersFromString = () => {
-const result = '2 4 5 4 10'
-const result1 = '3 5 6 2 20'
-sumNumbersFromString(result); // 25
-sumNumbersFromString(result1); // 36
+  const result = '2 4 5 4 10'
+  const result1 = '3 5 6 2 20'
+  sumNumbersFromString(result); // 25
+  sumNumbersFromString(result1); // 36
 };
 
 const expressions = () => {
