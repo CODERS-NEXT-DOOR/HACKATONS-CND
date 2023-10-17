@@ -19,9 +19,26 @@ const capitalize = (string) => {                              //vyara
   // TODO
 };
 
+/**
+ * Replaces all matches for a single character pattern in a string with replacement string.
+ *
+ * @param {string} the input string
+ * @param {string} the character to be replaced
+ * @param {string} the replacement for the character
+ * @return {string} the replaced string
+ */
 const replace = (string, char, replacement) => {               //Georgi
-  // TODO
+  let outputString = '';
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === char) {
+      outputString += replacement;
+    } else {
+      outputString += string[i];
+    };
+  };
+  return outputString;
 };
+
 
 // hard
 
