@@ -40,7 +40,6 @@ const average = (array) => { // TODO              //andi
 
   console.log(avg);
   };
-
 // END
 
 /**
