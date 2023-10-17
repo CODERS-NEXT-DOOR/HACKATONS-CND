@@ -2,12 +2,12 @@
 /**
  *  * Checks if the string have the minimal given length.
  * 
- * @param {*} str  the string to check.
- * @param {*} minLength The min length.
+ * @param {string} str  the string to check.
+ * @param {number} minLength The min length.
  * @returns {boolean} returns true if the validation passes and false if it doesn't
  */
 //START
-const isMinLength = (str, minLength) => str.length <= minLength          //Andi
+const isMinLength = (str, minLength) => str.length <= minLength; //andy
 
 //END
 
@@ -61,12 +61,12 @@ const areValidNumbers = (stringNumbers) => stringNumbers.every(e => !isNaN(+e) &
 /**
  * takes a string and turns it into a number then sums the numbers and returns them to the console
  * 
- * @param {*} string gets a string split it and makes it into numbers
- * @param {*} string stores and sums all numbers
+ * @param {string} string gets a string split it and makes it into numbers
+ * @param {number} string stores and sums all numbers
  * @returns {result} return the sum of the numbers
  */
 //START
-const sumNumbersFromString = (string) => console.log(string.split(' ').map(Number).reduce((acc, current) => acc + current, 0));
+const sumNumbersFromString = (string) => console.log(string.split(' ').map(Number).reduce((acc, current) => acc + current, 0)); //andy
 
 //END
 
