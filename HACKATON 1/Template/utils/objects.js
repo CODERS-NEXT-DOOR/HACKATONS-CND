@@ -8,7 +8,7 @@
  * @returns {boolean} - `true` if the property exists in the object, otherwise `false`.
  */
 const existInObject = (obj, prop) => {                 //vyara
-   
+
   return obj[prop];
 };
 
@@ -19,7 +19,7 @@ const existInObject = (obj, prop) => {                 //vyara
  * @returns {object} The new object.
  */
 const removeProp = (obj, prop) => {                 //Georgi
-  const outputObj = {...obj};
+  const outputObj = { ...obj };
   delete outputObj[prop];
   return outputObj;
 };
@@ -37,14 +37,31 @@ const copy = (obj) => {                          // andy
 }
 //END
 
+/**
+ * Gets the types of the properties of a given object.
+ * @param {object} obj input object
+ * @returns the types of the given object properties
+ */
 const typeOfProps = (obj) => {                       //Martin
-  // TODO
+  let types = [];
+
+  for (const key in obj) {
+    if (Array.isArray(obj[key])) {
+      types.push('array');
+    } else if (obj[key] === null) {
+      types.push('null');
+    } else {
+      types.push(typeof obj[key]);
+    }
+  }
+
+  return types;
 };
 
 // hard
 
 /**
- * Flattens nested objects into a single flat object.
+ * Flattens nested objects into a single flat object
  * @param {object} obj input object
  * @returns {object} the flattened object
  */

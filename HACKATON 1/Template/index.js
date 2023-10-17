@@ -40,7 +40,7 @@ const join = () => {             //GEORGI
   console.log(outputArr); // => 1!2!3!4!5
 };
 
-const indexOf = () => {
+const indexOf = () => { // Martin
   const finalIndex = utils.indexOf([6, 0, 0, 2], 6);
   console.log(finalIndex);
   // => 0
@@ -92,7 +92,7 @@ const min = () => {               //GEORGI
   console.log(result) // => -6
 };
 
-const sum = () => {
+const sum = () => { // Martin
   let finalSum = utils.sum([2, 3, 4, 5, 6, 2, 4]);
   console.log(finalSum);
   // => 26
@@ -178,11 +178,21 @@ const copy = (obj) => {                               //andy
 
 }
 
-const typeOfProps = () => {
-  // TODO
+const typeOfProps = () => { // Martin
+  const typesArray = utils.typeOfProps({
+    name: 'Pesho',
+    age: 20,
+    keyWithNullValue: null,
+    isAlive: true,
+    'address.street': 'Al Malinov',
+    address: { street: 'Professor Atanasov', number: 34 },
+    lotteryNumbers: [6, 3, 5, 3, 6]
+});
+console.log(typesArray);
+// => ['string', 'number', 'null', 'boolean', 'string', 'object', 'array']
 };
 
-const flat = () => {
+const flat = () => { // Martin
   const result = utils.flat({
     name: 'Pesho',
     age: 20,
@@ -347,7 +357,7 @@ const expressions = () => {
 // reverse();
 // fill();
 // join();                                 //GEORGI
-// indexOf();
+// indexOf();                              //Martin
 // filter();
 // zip();
 // arrays();
@@ -355,7 +365,7 @@ const expressions = () => {
 // Math
 
 // min();                                  //GEORGI
-// sum();
+// sum();                                  //Martin
 // average();
 // pow();
 // isPrime();                              //GEORGI
@@ -367,8 +377,8 @@ const expressions = () => {
 // existInObject();
 // removeProp();                           //GEORGI
 // copy();
-// typeOfProps();
-// flat();
+// typeOfProps();                             //Martin
+// flat();                                    //Martin
 // entries();
 // objects();
 
