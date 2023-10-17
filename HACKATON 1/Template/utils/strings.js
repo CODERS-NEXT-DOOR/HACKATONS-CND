@@ -8,9 +8,7 @@ const slice = (string, start = 0, end = string.length) => {     //Martin
   const repeat = (string, n) => {                                  //Andi
     console.log(string.repeat(n));
   };
-  const stars = repeat('*', 3);
-  const abc = repeat('abc', 2);
-  const nothing = repeat('abc', 0);
+
 //END
 
 // medium

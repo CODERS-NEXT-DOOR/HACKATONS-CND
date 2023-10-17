@@ -225,7 +225,9 @@ const slice = () => {
 };
 
 const repeat = () => {
-  // TODO
+  const stars = repeat('*', 3); // ***
+  const abc = repeat('abc', 2); // abcabc
+  const nothing = repeat('abc', 0); // 
 };
 
 const capitalize = () => {
