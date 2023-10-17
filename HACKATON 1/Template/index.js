@@ -41,7 +41,9 @@ const join = () => {    //GEORGI
 };
 
 const indexOf = () => {
-  // TODO
+  const finalIndex = utils.indexOf([6, 0, 0, 2], 6);
+  console.log(finalIndex);
+  // => 0
 };
 
 const filter = () => {
@@ -326,7 +328,7 @@ const expressions = () => {
 
 // reverse();
 // fill();
-join();
+// join();
 // indexOf();
 // filter();
 // zip();
@@ -334,7 +336,7 @@ join();
 
 // Math
 
-min();
+// min();
 // sum();
 // average();
 // pow();
@@ -368,6 +370,6 @@ min();
 // isMaxLength();
 // isIn();
 // isArrayOfType();
-areValidNumbers();
+// areValidNumbers();
 // sumNumbersFromString();
 // expressions();

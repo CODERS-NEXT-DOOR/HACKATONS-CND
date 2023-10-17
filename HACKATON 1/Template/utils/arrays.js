@@ -21,12 +21,12 @@ const reverse = (array) => {
 };
 
 const fill = (array, value, start = 0, end = array.length) => {      //Vyara
-  
+
   const filledArray = [];
 
   for(let i = start; i < end; i++)
   {
-     filledArray.push(value);
+    filledArray.push(value);
   }
 
   return filledArray;
@@ -42,7 +42,7 @@ const fill = (array, value, start = 0, end = array.length) => {      //Vyara
  * @returns {string} The concatinated string.
  */
 const join = (array, separator = ',') => {                         //Georgi
-  
+
   let outputString = '';
   for (let i = 0; i < array.length; i++) {
     if (i === array.length - 1) {
@@ -50,14 +50,24 @@ const join = (array, separator = ',') => {                         //Georgi
     } else {
       outputString += array[i] + separator
     }
-    
+
   };
   return outputString;
 };
 
-
+/**
+ * Returns the index of a given element in a given array.
+ * @param {array} array input array
+ * @param {number} element input number
+ * @returns the index of the element
+ */
 const indexOf = (array, element) => {                              //martin
-  // TODO
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === element) {
+      return i;
+    }
+  }
+  return -1;
 };
 
 // hard
@@ -85,7 +95,7 @@ const zip = (...arrays) => {                                         //Toni
       minLength = arrays[i].length;
     }
   }
-  
+
   const result = [];
   for (let i = 0; i < minLength; i++) {
     const groupedArr = [];
