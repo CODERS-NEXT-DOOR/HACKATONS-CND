@@ -34,10 +34,10 @@ const fill = () => {
   // array is not changed!
 };
 
-const join = () => {    //GEORGI
+const join = () => {             //GEORGI
   const arr = [1, 2, 3, 4, 5];
   const outputArr = utils.join(arr, '!');
-  console.log(outputArr); // CASE 1
+  console.log(outputArr); // => 1!2!3!4!5
 };
 
 const indexOf = () => {
@@ -90,7 +90,7 @@ const arrays = () => {
 const min = () => {               //GEORGI
   const arr = [1, 2, -2, 4, 9, 11, 0, -6, 7]
   const result = utils.min(arr)
-  console.log(result) //CASE 1
+  console.log(result) // => -6
 };
 
 const sum = () => {
@@ -118,17 +118,17 @@ const average = () => {
   console.log(utils.average(average3)); // => 5
 }
 
-const isPrime = () => {            //GEORGI
+const isPrime = () => {                  //GEORGI
   const num1 = 1;
   const num2 = 5;
   const num3 = 15;
   const num4 = -6;
   const num5 = 84;
-  console.log(utils.isPrime(num1)) //CASE 1
-  console.log(utils.isPrime(num2)) //CASE 2
-  console.log(utils.isPrime(num3)) //CASE 3
-  console.log(utils.isPrime(num4)) //CASE 4
-  console.log(utils.isPrime(num5)) //CASE 5
+  console.log(utils.isPrime(num1)) // => false
+  console.log(utils.isPrime(num2)) // => true
+  console.log(utils.isPrime(num3)) // => false
+  console.log(utils.isPrime(num4)) // => false
+  console.log(utils.isPrime(num5)) // => false
 };
 
 const swapWholeAndRemainder = () => {
@@ -163,7 +163,7 @@ const removeProp = () => {                            //GEORGI
     drivingLicense: true
   };
   const result = utils.removeProp(obj, 'drivingLicense');
-  console.log(result)
+  console.log(result)        // => { name: 'Georgi', age: 35 }
 };
 
 const copy = (obj) => {                               //andy
@@ -237,7 +237,7 @@ const capitalize = () => {
 const replace = () => {                 //GEORGI
   const string = 'Txlxrik Acadxmy'
   const result = utils.replace(string, 'x', 'e')
-  console.log(result) //CASE 1
+  console.log(result)      // => Telerik Academy
 };
 
 const split = () => {
@@ -300,8 +300,8 @@ const areValidNumbers = () => {    //GEORGI
   const arr2 = ['1', '2', 'dsg', '4', '5'];
   const result1 = utils.areValidNumbers(arr1);
   const result2 = utils.areValidNumbers(arr2);
-  console.log(result1); // CASE 1
-  console.log(result2); // CASE 2
+  console.log(result1);  // => true
+  console.log(result2);  // => false
 };
 
 const sumNumbersFromString = () => {
@@ -342,7 +342,7 @@ const expressions = () => {
 
 // reverse();
 // fill();
-// join();
+// join();                                 //GEORGI
 // indexOf();
 // filter();
 // zip();
@@ -350,7 +350,7 @@ const expressions = () => {
 
 // Math
 
-// min();
+// min();                                  //GEORGI
 // sum();
 // average();
 // pow();
@@ -384,6 +384,6 @@ const expressions = () => {
 // isMaxLength();
 // isIn();
 // isArrayOfType();
-// areValidNumbers();
+// areValidNumbers();                      //GEORGI
 // sumNumbersFromString();
 // expressions();
