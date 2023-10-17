@@ -1,13 +1,26 @@
 // easy
 
+/**
+ * Cut a section of a given string and return it as a result.
+ * @param {string} string input string
+ * @param {number} start input starting index of the string
+ * @param {number} end input ending index of the string
+ * @returns the cut string
+ */
 const slice = (string, start = 0, end = string.length) => {     //Martin      
-  // TODO
+  let result = '';
+
+  for (let i = start; i < end; i++) {
+    result += string[i];
+  }
+
+  return result;
 };
 
 //START
-  const repeat = (string, n) => {                                  //Andi
-    console.log(string.repeat(n));
-  };
+const repeat = (string, n) => {                                  //Andi
+  console.log(string.repeat(n));
+};
 
 //END
 
@@ -22,9 +35,9 @@ const capitalize = (string) => {                              //vyara
 
   let capitalizedString = '';
   capitalizedString += string.charAt(0)
-  .toUpperCase() + 
-  string.slice(1)
-  .toLowerCase();
+    .toUpperCase() +
+    string.slice(1)
+      .toLowerCase();
 
   return capitalizedString;
 };

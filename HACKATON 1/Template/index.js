@@ -234,8 +234,10 @@ const objects = () => {
 
 // Strings
 
-const slice = () => {
-  // TODO
+const slice = () => {                    // Martin
+  const cuttedString = utils.slice('!Forza Internazionale Milano!', 1, 12);
+  console.log(cuttedString);
+  // => Forza Inter
 };
 
 const repeat = () => {
@@ -384,7 +386,7 @@ const expressions = () => {
 
 // Strings
 
-// slice();
+slice();
 // repeat();
 // capitalize();
 // replace();                              //GEORGI
