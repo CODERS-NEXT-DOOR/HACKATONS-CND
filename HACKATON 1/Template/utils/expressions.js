@@ -1,17 +1,13 @@
 // easy
-
-
-const isMinLength = (str, minLength) => {  // TODO                //Andi
-
-  if (str.length <= minLength) {
-    console.log("false");
-  } else {
-    console.log("true");
-  }
-};
+/**
+ * 
+ * @param {*} str  the string to check.
+ * @param {*} minLength The min length.
+ * @returns {boolean} returns true if the validation passes and false if it doesn't
+ */
 //START
-const result1 = isMinLength("asd", 2);
-const result2 = isMinLength("asd", 4);
+const isMinLength = (str, minLength) => str.length <= minLength          //Andi
+
 //END
 
 /**
@@ -50,7 +46,7 @@ const isArrayOfType = (arr, type) => null; // TODO                    //Toni
 const areValidNumbers = (stringNumbers) => null; // TODO                //georgi
 
 //START
-const sumNumbersFromString = (string) => { // TODO                  //andi
+const sumNumbersFromString = (string) => {                  //andi
   let newSting = string.split(' ').map(Number);
   let result = 0;
   for(let i = 0; i < newSting.length; i++){
