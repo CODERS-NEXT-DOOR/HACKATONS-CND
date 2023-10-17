@@ -1,7 +1,15 @@
 // easy
 
+/**
+ * Checks if a specified property exists in an object.
+ *
+ * @param {Object} obj - The object to check for the property.
+ * @param {*} prop - The property to check for in the object.
+ * @returns {boolean} - `true` if the property exists in the object, otherwise `false`.
+ */
 const existInObject = (obj, prop) => {                 //vyara
-  // TODO
+   
+  return obj[prop];
 };
 
 /**

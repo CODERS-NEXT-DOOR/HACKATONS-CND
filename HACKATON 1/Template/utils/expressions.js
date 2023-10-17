@@ -25,21 +25,14 @@ const isMaxLength = (str, maxLength) => str.length <= maxLength;              //
 
 // medium
 
-const isIn = (value, possibleValues) =>                                    //vyara
-{
-    let result = false;
-    
-     for(let i = 0; i < possibleValues.length; i++)
-     {
-        if(possibleValues[i] === value)
-        {
-            result = true;
-            break;
-        }
-     }
+/**
+ * 
+ * @param {number} value that will be searched in the array
+ * @param {Array} possibleValues the array in which value will be searched
+ * @returns {Boolean} returns 'true' or 'false'
+ */
+const isIn = (value, possibleValues) => possibleValues.includes(value) ;          //vyara
 
-     //console.log(result);
-};                 
 
 const isArrayOfType = (arr, type) => null; // TODO                    //Toni
 
@@ -51,12 +44,12 @@ const areValidNumbers = (stringNumbers) => null; // TODO                //georgi
 const sumNumbersFromString = (string) => { // TODO                  //andi
   let newSting = string.split(' ').map(Number);
   let result = 0;
-  for(let i = 0; i < newSting.length; i++){
+  for (let i = 0; i < newSting.length; i++) {
     result += newSting[i]
   }
   console.log(result);
-}; 
-const result = sumNumbersFromString('2 4 5 4 10'); 
+};
+const result = sumNumbersFromString('2 4 5 4 10');
 //END
 
 export {
