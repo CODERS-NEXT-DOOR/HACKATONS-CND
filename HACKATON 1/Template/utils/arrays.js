@@ -64,11 +64,17 @@ const indexOf = (array, element) => {                              //martin
 // hard
 
 const filter = (array, predicate) => {                              // Vyara
-  // TODO
+  const filteredArray = [];
+  for (let item of array) {
+    if (predicate(item)) {
+      filteredArray.push(item);
+    }
+  }
+  return filteredArray;
 };
 
 const zip = (...arrays) => {                                         //Toni
-  // TODO
+  
 };
 
 export { reverse, fill, join, indexOf, filter, zip };
