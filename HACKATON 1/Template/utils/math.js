@@ -2,9 +2,8 @@
 
 /**
  * Returns the smallest number in the array.
- *
- * @param {array} the array to itetate through
- * @returns {array} the smallest number of the array
+ * @param {array} array The array to iterate through.
+ * @returns {array} The smallest number of the array.
  */
 const min = (array) => {               //Georgi
   
@@ -55,11 +54,11 @@ const pow = (number, power) => {           //Toni
 };
 
 // hard
+
 /**
  * Checks whether the number is prime.
- *
- * @param {number} the number to be checked
- * @returns {boolean} true if it's prime; else - false
+ * @param {number} number The number to be checked.
+ * @returns {boolean} True if it's prime, false otherwise.
  */
 const isPrime = (number) => {                      //Georgi
 
