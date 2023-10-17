@@ -46,9 +46,26 @@ const filter = () => {
   // TODO
 };
 
-const zip = () => {
-  // TODO
-};
+const zip = (...arrays) => {                                         
+  let minLength = arrays[0].length;
+  for (let i = 1; i < arrays.length; i++) {
+    if (arrays[i].length < minLength) {
+      minLength = arrays[i].length;
+    }
+  }
+  
+  const result = [];
+  for (let i = 0; i < minLength; i++) {
+    const groupedArr = [];
+    for (const array of arrays) {
+      groupedArr.push(array[i]);
+    }
+    result.push(groupedArr);
+  }
+  return result;
+}
+console.log(zip(['a', 'b'], [1, 2], [true, false]));
+// => [ [ 'a', 1, true ], [ 'b', 2, false ] ]
 
 const arrays = () => {
   const separators = ['-', '_', '~'];
@@ -74,9 +91,15 @@ const sum = () => {
   // TODO
 };
 
-const pow = () => {
-  // TODO
+const pow = (number, power) => {        
+  let result = number;
+  for(let i = 1; i<power; i++){
+    result = result*number
+  }
+  return result;
 };
+console.log(pow(3,2));
+// => "9"
 
 const average = () => {
   // TODO
@@ -180,9 +203,26 @@ const split = () => {
   // TODO
 };
 
-const trim = () => {
-  // TODO
+const trim = (string) => {
+  let startStr = 0;
+  let endStr = string.length-1;
+  let trimmedStr = '';
+
+  while(string[startStr] === ' '){
+    startStr++
+  }
+  while(string[endStr] === ' '){
+    endStr--
+  }
+
+  for(let i = startStr; i<= endStr; i++){
+    trimmedStr += string[i];
+  }
+
+  return trimmedStr;
 };
+console.log(trim('     Telerik   '));
+// => "Telerik"
 
 const strings = () => {
   const string = utils.repeat('  home', 2); //   home  home
@@ -203,17 +243,17 @@ const isMinLength = () => {
   const result2 = utils.isMinLength("asd", 4);
 };
 
-const isMaxLength = () => {
-  // TODO
-};
+const isMaxLength = (str, maxLength) => str.length <= maxLength;  
+console.log(isMaxLength("Telerik", 9));
+// => "true"
 
 const isIn = () => {
   // TODO
 };
 
-const isArrayOfType = () => {
-  // TODO
-};
+const isArrayOfType = (arr, type) => arr.every(element => typeof element === type); 
+console.log(isArrayOfType(['apple', 4, 'cherry'], 'string'));
+  // => "false" 
 
 const areValidNumbers = () => {
   // TODO
