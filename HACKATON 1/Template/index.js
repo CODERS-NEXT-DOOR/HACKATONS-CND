@@ -166,7 +166,7 @@ const removeProp = () => {                            //GEORGI
   console.log(result)
 };
 
-const copy = (obj) => {                               //andi
+const copy = (obj) => {                               //andy
   const initialObject = { name: 'Pesho', age: 20, isAlive: true, addressstreet: 'Al Malinov' };
   const initialObject1 = { name: 'Andy', age: 30, isAlive: true, addressstreet: 'Grafa' };
   console.log(copy(initialObject)); // { name: 'Pesho', age: 20, isAlive: true, addressstreet: 'Al Malinov' }

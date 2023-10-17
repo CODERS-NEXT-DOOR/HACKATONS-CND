@@ -24,7 +24,7 @@ const removeProp = (obj, prop) => {                 //Georgi
  * @param {object} newObj keep the changes
  */
 //START
-const copy = (obj) => {   
+const copy = (obj) => {                          // andy
   return { ...obj };
 }
 //END
@@ -74,7 +74,7 @@ const entries = (obj) => {                   //andi
       result.push([key, obj[key]]);
     }
   }
-  console.log(result);
+  return result;
 }
 //END
 
