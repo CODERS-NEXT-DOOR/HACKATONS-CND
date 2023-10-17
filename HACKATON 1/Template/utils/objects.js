@@ -20,17 +20,13 @@ const removeProp = (obj, prop) => {                 //Georgi
 // medium
 /**
  * makes a copy of an object
- * @param {*} obj The input object
- * @param {*} newObj keep the changes
+ * @param {object} obj The input object
+ * @param {object} newObj keep the changes
  */
 //START
-const copy = (obj) => {                               //andi
-  let newObj = {};
-  for(const key in obj){
-    newObj = obj;
-  }
-    console.log(newObj);
-  };
+const copy = (obj) => {   
+  return { ...obj };
+}
 //END
 
 const typeOfProps = (obj) => {                       //Martin
@@ -66,8 +62,8 @@ const flat = (obj) => {                           //Martin
 
 /**
  * takes an object, reconfigures it, and returns it as an array full of small arrays that contain key and value
- * @param {*} obj input object
- * @param {*} result keep the changes
+ * @param {object} obj input object
+ * @param {array} result keep the changes
  */
 //START
 const entries = (obj) => {                   //andi

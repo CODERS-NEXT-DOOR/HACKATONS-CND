@@ -35,8 +35,8 @@ const sum = (array) => {                 //Martin
 // medium
 /**
  * Returns the average of all numbers in the array
- *  @param {*} avg keep the average number
- * @param {*} array get the fuction input
+ *  @param {number} avg keep the average number
+ * @param {number} array get the fuction input
  */
 // START
 const average = (array) => { // TODO              //andi
@@ -45,8 +45,6 @@ const average = (array) => { // TODO              //andi
     avg += array[i];
   }
   avg /= array.length;
-
-  console.log(avg);
 };
 // END
 

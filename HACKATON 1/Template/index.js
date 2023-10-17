@@ -167,15 +167,12 @@ const removeProp = () => {                            //GEORGI
 };
 
 const copy = (obj) => {                               //andi
-  let newObj = {};
-  for(const key in obj){
-    newObj = obj;
-  }
-    console.log(newObj);
-  };
-const initialObject = { name: 'Pesho', age: 20, isAlive: true, addressstreet: 'Al Malinov' };
-const resultObject = copy(initialObject);
-console.log(initialObject === resultObject);
+  const initialObject = { name: 'Pesho', age: 20, isAlive: true, addressstreet: 'Al Malinov' };
+  const initialObject1 = { name: 'Andy', age: 30, isAlive: true, addressstreet: 'Grafa' };
+  console.log(copy(initialObject)); // { name: 'Pesho', age: 20, isAlive: true, addressstreet: 'Al Malinov' }
+  console.log(copy(initialObject1)); // { name: 'Andy', age: 30, isAlive: true, addressstreet: 'Grafa' }
+  
+}
 
 const typeOfProps = () => {
   // TODO

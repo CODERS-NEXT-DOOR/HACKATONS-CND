@@ -62,7 +62,7 @@ const areValidNumbers = (stringNumbers) => stringNumbers.every(e => !isNaN(+e) &
  * takes a string and turns it into a number then sums the numbers and returns them to the console
  * 
  * @param {string} string gets a string split it and makes it into numbers
- * @param {number} string stores and sums all numbers
+ * @param {string} string stores and sums all numbers
  * @returns {result} return the sum of the numbers
  */
 //START
