@@ -47,7 +47,20 @@ const indexOf = () => {
 };
 
 const filter = () => {
-  // TODO
+  const array = [1, 2, 3];
+
+  const filled = utils.fill(array, 'a');
+  const filledNewArr = utils.fill(Array(3), 2);
+  const filledInRange = utils.fill([4, 6, 8, 10], '*', 1, 3);
+  console.log(filled);
+  // => ['a', 'a', 'a']
+  console.log(filledNewArr);
+  // => [2, 2, 2]
+  console.log(filledInRange);
+  // => [4, '*', '*', 10]
+  console.log(array);
+  // => [1, 2, 3]
+  // array is not changed!
 };
 
 const zip = (...arrays) => {
@@ -238,7 +251,9 @@ const repeat = () => {
 };
 
 const capitalize = () => {
-  // TODO
+  const capitalized = utils.capitalize('FRED');                  //vyara
+  console.log(capitalized);
+  // => 'Fred'
 };
 
 const replace = () => {                 //GEORGI
@@ -294,8 +309,13 @@ const isMaxLength = (str, maxLength) => str.length <= maxLength;
 console.log(isMaxLength("Telerik", 9));
 // => "true"
 
-const isIn = () => {
-  // TODO
+const isIn = () => {                                      //vyara
+  const result1 = utils.isIn(2, [1, 3, 5, 7]);
+  const result2 = utils.isIn(2, [1, 2, 3, 4]);
+  console.log(result1);
+  // => false
+  console.log(result2);
+  // => true
 };
 
 const isArrayOfType = (arr, type) => arr.every(element => typeof element === type);
