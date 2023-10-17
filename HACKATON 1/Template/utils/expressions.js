@@ -45,6 +45,12 @@ const isArrayOfType = (arr, type) => null; // TODO                    //Toni
 
 const areValidNumbers = (stringNumbers) => null; // TODO                //georgi
 
+/**
+ * 
+ * @param {*} newSting gets a string split it and makes it into numbers
+ * @param {*} result stores and sums all numbers
+ * @returns {result} return the sum of the numbers
+ */
 //START
 const sumNumbersFromString = (string) => {                  //andi
   let newSting = string.split(' ').map(Number);
@@ -54,7 +60,6 @@ const sumNumbersFromString = (string) => {                  //andi
   }
   console.log(result);
 }; 
-const result = sumNumbersFromString('2 4 5 4 10'); 
 //END
 
 export {

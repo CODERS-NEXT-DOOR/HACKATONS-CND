@@ -220,7 +220,8 @@ const areValidNumbers = () => {
 };
 
 const sumNumbersFromString = () => {
-  // TODO
+  
+const result = sumNumbersFromString('2 4 5 4 10'); 
 };
 
 const expressions = () => {
