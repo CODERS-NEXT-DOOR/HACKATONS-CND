@@ -34,8 +34,10 @@ const fill = () => {
   // array is not changed!
 };
 
-const join = () => {
-  // TODO
+const join = () => {    //GEORGI
+  const arr = [1, 2, 3, 4, 5];
+  const outputArr = utils.join(arr, '!');
+  console.log(outputArr); // CASE 1
 };
 
 const indexOf = () => {
@@ -84,7 +86,9 @@ const arrays = () => {
 // Math
 
 const min = () => {
-  // TODO
+  const arr = [1, 2, -2, 4, 9, 11, 0, -6, 7]
+  const result = utils.min(arr)
+  console.log(result) //CASE 1
 };
 
 const sum = () => {
@@ -278,8 +282,13 @@ const isArrayOfType = (arr, type) => arr.every(element => typeof element === typ
 console.log(isArrayOfType(['apple', 4, 'cherry'], 'string'));
   // => "false" 
 
-const areValidNumbers = () => {
-  // TODO
+const areValidNumbers = () => {    //GEORGI
+  const arr1 = ['1', '2', '3', '4', '5'];
+  const arr2 = ['1', '2', 'dsg', '4', '5'];
+  const result1 = utils.areValidNumbers(arr1);
+  const result2 = utils.areValidNumbers(arr2);
+  console.log(result1); // CASE 1
+  console.log(result2); // CASE 2
 };
 
 const sumNumbersFromString = () => {
@@ -317,7 +326,7 @@ const expressions = () => {
 
 // reverse();
 // fill();
-// join();
+join();
 // indexOf();
 // filter();
 // zip();
@@ -325,7 +334,7 @@ const expressions = () => {
 
 // Math
 
-// min();
+min();
 // sum();
 // average();
 // pow();
@@ -359,6 +368,6 @@ const expressions = () => {
 // isMaxLength();
 // isIn();
 // isArrayOfType();
-// areValidNumbers();
+areValidNumbers();
 // sumNumbersFromString();
 // expressions();
