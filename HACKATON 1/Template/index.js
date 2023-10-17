@@ -63,26 +63,12 @@ const filter = () => {
   // array is not changed!
 };
 
-const zip = (...arrays) => {
-  let minLength = arrays[0].length;
-  for (let i = 1; i < arrays.length; i++) {
-    if (arrays[i].length < minLength) {
-      minLength = arrays[i].length;
-    }
-  }
-
-  const result = [];
-  for (let i = 0; i < minLength; i++) {
-    const groupedArr = [];
-    for (const array of arrays) {
-      groupedArr.push(array[i]);
-    }
-    result.push(groupedArr);
-  }
-  return result;
+const zip = () => {      //Toni
+  const result = utils.zip(['a', 'b'], [1, 2], [true, false]);
+  console.log(result); // => [ [ 'a', 1, true ], [ 'b', 2, false ] ]
 }
-console.log(zip(['a', 'b'], [1, 2], [true, false]));
-// => [ [ 'a', 1, true ], [ 'b', 2, false ] ]
+
+
 
 const arrays = () => {
   const separators = ['-', '_', '~'];
@@ -112,15 +98,13 @@ const sum = () => {
   // => 26
 };
 
-const pow = (number, power) => {
-  let result = number;
-  for (let i = 1; i < power; i++) {
-    result = result * number
-  }
-  return result;
+const pow = () => {    //Toni
+  const number = 2;
+  const power = 3;
+  const result = utils.pow(number, power);
+  console.log(result);  // => "9"
 };
-console.log(pow(3, 2));
-// => "9"
+
 
 const average = () => {
   const average1 = [1, -2, 3];
@@ -266,26 +250,12 @@ const split = () => {
   // TODO
 };
 
-const trim = (string) => {
-  let startStr = 0;
-  let endStr = string.length - 1;
-  let trimmedStr = '';
-
-  while (string[startStr] === ' ') {
-    startStr++
-  }
-  while (string[endStr] === ' ') {
-    endStr--
-  }
-
-  for (let i = startStr; i <= endStr; i++) {
-    trimmedStr += string[i];
-  }
-
-  return trimmedStr;
+const trim = () => {       //Toni
+  const string = '     Telerik   ';
+  const result = utils.trim(string);
+  console.log(result);  // => "Telerik"
 };
-console.log(trim('     Telerik   '));
-// => "Telerik"
+
 
 const strings = () => {
   const string = utils.repeat('  home', 2); //   home  home
@@ -305,9 +275,13 @@ const isMinLength = () => {
   console.log(isMinLength('asd', 4)); // Output: false
 };
 
-const isMaxLength = (str, maxLength) => str.length <= maxLength;
-console.log(isMaxLength("Telerik", 9));
-// => "true"
+const isMaxLength = () => {     //Toni
+ const str = 'Telerik'
+ const maxLength = 9;
+ const result = utils.isMaxLength(str, maxLength);
+ console.log(result);   // => "true"
+}
+
 
 const isIn = () => {                                      //vyara
   const result1 = utils.isIn(2, [1, 3, 5, 7]);
@@ -318,9 +292,12 @@ const isIn = () => {                                      //vyara
   // => true
 };
 
-const isArrayOfType = (arr, type) => arr.every(element => typeof element === type);
-console.log(isArrayOfType(['apple', 4, 'cherry'], 'string'));
-// => "false" 
+const isArrayOfType = () => {     //Toni
+ const arr = [1, 2, 'hello', 4]
+ const type = "number";
+ const result = utils.isArrayOfType(arr, type);
+ console.log(result);  // => "false" 
+}
 
 const areValidNumbers = () => {    //GEORGI
   const arr1 = ['1', '2', '3', '4', '5'];
