@@ -37,9 +37,11 @@ const isIn = (value, possibleValues) =>                                    //vya
             break;
         }
      }
-
      console.log(result);
 };                 
+
+const isIn2 =(value, possibleValues) => possibleValues.includes(value);
+
 
 const isArrayOfType = (arr, type) => null; // TODO                    //Toni
 
