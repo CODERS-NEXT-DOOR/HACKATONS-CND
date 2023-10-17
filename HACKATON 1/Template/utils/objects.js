@@ -19,10 +19,20 @@ const removeProp = (obj, prop) => {                 //Georgi
 
 
 // medium
-
+//START
 const copy = (obj) => {                               //andi
-  // TODO
-};
+  let newObj = {};
+  for(const key in obj){
+    newObj = obj;
+  }
+    console.log(newObj);
+  };
+
+const initialObject = { name: 'Pesho', age: 20, isAlive: true, addressstreet: 'Al Malinov' };
+const resultObject = copy(initialObject);
+
+console.log(initialObject === resultObject);
+//END
 
 const typeOfProps = (obj) => {                       //Martin
   // TODO
