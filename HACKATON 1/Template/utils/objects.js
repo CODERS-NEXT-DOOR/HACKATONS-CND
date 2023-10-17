@@ -18,6 +18,11 @@ const removeProp = (obj, prop) => {                 //Georgi
 
 
 // medium
+/**
+ * makes a copy of an object
+ * @param {*} obj The input object
+ * @param {*} newObj keep the changes
+ */
 //START
 const copy = (obj) => {                               //andi
   let newObj = {};
@@ -26,11 +31,6 @@ const copy = (obj) => {                               //andi
   }
     console.log(newObj);
   };
-
-const initialObject = { name: 'Pesho', age: 20, isAlive: true, addressstreet: 'Al Malinov' };
-const resultObject = copy(initialObject);
-
-console.log(initialObject === resultObject);
 //END
 
 const typeOfProps = (obj) => {                       //Martin
