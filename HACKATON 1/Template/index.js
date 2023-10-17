@@ -94,7 +94,9 @@ const min = () => {               //GEORGI
 };
 
 const sum = () => {
-  // TODO
+  let finalSum = utils.sum([2, 3, 4, 5, 6, 2, 4]);
+  console.log(finalSum);
+  // => 26
 };
 
 const pow = (number, power) => {        
@@ -353,14 +355,14 @@ const expressions = () => {
 // sum();
 // average();
 // pow();
-isPrime();                              //GEORGI
+// isPrime();                              //GEORGI
 // swapWholeAndRemainder();
 // math();
 
 // Objects
 
 // existInObject();
-removeProp();                           //GEORGI
+// removeProp();                           //GEORGI
 // copy();
 // typeOfProps();
 // flat();
@@ -372,7 +374,7 @@ removeProp();                           //GEORGI
 // slice();
 // repeat();
 // capitalize();
-replace();                              //GEORGI
+// replace();                              //GEORGI
 // split();
 // trim();
 // strings();

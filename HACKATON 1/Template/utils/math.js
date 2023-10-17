@@ -6,7 +6,7 @@
  * @returns {number} The smallest number of the array.
  */
 const min = (array) => {               //Georgi
-  
+
   let minNum = 0;
 
   for (const num of array) {
@@ -14,13 +14,22 @@ const min = (array) => {               //Georgi
       minNum = num;
     }
   };
-  
+
   return minNum;
 
 };
 
+/**
+ * Finds the sum of all numbers in a given array
+ * @param {array} array input array
+ * @returns the final sum
+ */
 const sum = (array) => {                 //Martin
-  // TODO
+  let finalSum = 0;
+  for (const num of array) {
+    finalSum += +num;
+  }
+  return finalSum;
 };
 
 // medium
@@ -32,13 +41,13 @@ const sum = (array) => {                 //Martin
 // START
 const average = (array) => { // TODO              //andi
   let avg = 0
-  for(let i = 0; i < array.length; i++){
+  for (let i = 0; i < array.length; i++) {
     avg += array[i];
   }
   avg /= array.length;
 
   console.log(avg);
-  };
+};
 // END
 
 /**
@@ -50,8 +59,8 @@ const average = (array) => { // TODO              //andi
  */
 const pow = (number, power) => {           //Toni
   let result = number;
-  for(let i = 1; i<power; i++){
-    result = result*number
+  for (let i = 1; i < power; i++) {
+    result = result * number
   }
   return result;
 };
@@ -65,8 +74,8 @@ const pow = (number, power) => {           //Toni
  */
 const isPrime = (number) => {                      //Georgi
 
-  let isPrime = true;    
-                                             
+  let isPrime = true;
+
   if (number <= 1) {
     isPrime = false;
     return isPrime;
@@ -76,24 +85,24 @@ const isPrime = (number) => {                      //Georgi
     if (number % i == 0) {
       isPrime = false;
       break;
+    };
   };
-  };
-  
+
   return isPrime;
 };
 
 
 const swapWholeAndRemainder = (number) => {                  //vyara
-  
+
   let swappedNumber = number.toString();
-  
+
   if (number % 1 !== 0) {
     const splitIndex = swappedNumber.indexOf('.');
-    
+
     if (splitIndex !== -1) {
       const wholePart = swappedNumber.slice(0, splitIndex);
       const remainder = swappedNumber.slice(splitIndex + 1);
-      
+
       swappedNumber = remainder + '.' + wholePart;
       const finalNumber = parseFloat(swappedNumber);
       console.log(finalNumber);
