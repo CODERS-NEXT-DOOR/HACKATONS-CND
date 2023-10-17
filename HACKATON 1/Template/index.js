@@ -101,9 +101,17 @@ const pow = (number, power) => {
 console.log(pow(3,2));
 // => "9"
 
-const average = () => {
-  // TODO
-};
+const average = (array) => {
+  let avg = 0
+  for(let i = 0; i < array.length; i++){
+    avg += array[i];
+  }
+  avg /= array.length;
+
+  console.log(avg);
+  };
+  const average1 = average([1, -2, 3]);
+  // => 0.6666666666666666
 
 const isPrime = () => {
   // TODO
@@ -238,7 +246,6 @@ const strings = () => {
 // Expressions
 
 const isMinLength = () => {
-  
   const result1 = utils.isMinLength("asd", 2);
   const result2 = utils.isMinLength("asd", 4);
 };
@@ -260,7 +267,6 @@ const areValidNumbers = () => {
 };
 
 const sumNumbersFromString = () => {
-  
 const result = sumNumbersFromString('2 4 5 4 10'); 
 };
 
