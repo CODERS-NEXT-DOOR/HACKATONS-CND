@@ -37,12 +37,11 @@ const fill = (array, value, start = 0, end = array.length) => {      //Vyara
 
 /**
  * Converts all elements in an array into a string separated by a separator.
- *
- * @param {array} array the array to be reversed
- * @param {[separator = ',']} the separators between the array elements
- * @returns the concatinated string
+ * @param {array} array The array to be concatinated.
+ * @param {string} separator The separator between the array elements.
+ * @returns {string} The concatinated string.
  */
-const join = (array, separator = ',') => {                          //Georgi
+const join = (array, separator = ',') => {                         //Georgi
   
   let outputString = '';
   for (let i = 0; i < array.length; i++) {
