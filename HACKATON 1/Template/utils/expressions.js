@@ -61,19 +61,13 @@ const areValidNumbers = (stringNumbers) => stringNumbers.every(e => !isNaN(+e) &
 /**
  * takes a string and turns it into a number then sums the numbers and returns them to the console
  * 
- * @param {*} newSting gets a string split it and makes it into numbers
- * @param {*} result stores and sums all numbers
+ * @param {*} string gets a string split it and makes it into numbers
+ * @param {*} string stores and sums all numbers
  * @returns {result} return the sum of the numbers
  */
 //START
-const sumNumbersFromString = (string) => {                  //andi
-  let newSting = string.split(' ').map(Number);
-  let result = 0;
-  for(let i = 0; i < newSting.length; i++){
-    result += newSting[i]
-  }
-  console.log(result);
-}; 
+const sumNumbersFromString = (string) => console.log(string.split(' ').map(Number).reduce((acc, current) => acc + current, 0));
+
 //END
 
 export {
