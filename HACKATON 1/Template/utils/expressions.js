@@ -39,8 +39,14 @@ const isIn = (value, possibleValues) =>                                    //vya
 
 const isIn2 =(value, possibleValues) => possibleValues.includes(value);
 
-
-const isArrayOfType = (arr, type) => null; // TODO                    //Toni
+/**
+ * Checks if all of the elements in the array are of given type.
+ * 
+ * @param {array} arr The array to check.
+ * @param {string} type The type the elements against.
+ * @returns returns true if the validation passes and false if it doesn't.
+ */
+const isArrayOfType = (arr, type) => arr.every(element => typeof element === type);               //Toni
 
 // hard
 
