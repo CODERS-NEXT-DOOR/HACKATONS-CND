@@ -21,11 +21,10 @@ const capitalize = (string) => {                              //vyara
 
 /**
  * Replaces all matches for a single character pattern in a string with replacement string.
- *
- * @param {string} the input string
- * @param {string} the character to be replaced
- * @param {string} the replacement for the character
- * @return {string} the replaced string
+ * @param {string} string The input string.
+ * @param {string} char The character to be replaced.
+ * @param {string} replacement The replacement for the character.
+ * @returns {string} The final string.
  */
 const replace = (string, char, replacement) => {               //Georgi
   let outputString = '';
