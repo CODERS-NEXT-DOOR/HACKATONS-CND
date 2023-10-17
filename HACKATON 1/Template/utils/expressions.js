@@ -50,7 +50,12 @@ const isArrayOfType = (arr, type) => arr.every(element => typeof element === typ
 
 // hard
 
-const areValidNumbers = (stringNumbers) => null; // TODO                //georgi
+/**
+ * Checks if an array of strings holds only valid numbers inside.
+ * @param {array} stringNumbers the array to be checked
+ * @returns {boolean} true if the array only holds valid numbers, false otherwise
+ */
+const areValidNumbers = (stringNumbers) => stringNumbers.every(e => !isNaN(+e) && typeof +e === 'number')
 
 //START
 const sumNumbersFromString = (string) => {                  //andi
