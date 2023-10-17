@@ -167,9 +167,18 @@ const flat = () => {
   // => {"name":"Pesho","age":20,"isAlive":true,"keyWithNullValue":null,"keyWithArrValue":[2,3,5,7,2],"address.street":"Al Malinov","address.number":34}
 };
 
-const entries = () => {
-  // TODO
-};
+const entries = (obj) => {                   //andi
+  const result = [];
+
+  for (const key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      result.push([key, obj[key]]);
+    }
+  }
+  console.log(result);
+}
+const result = entries({ a: 5, b: 6, c: 7 });
+// => [ [ 'a', 5 ], [ 'b', 6 ], [ 'c', 7 ] ]
 
 const objects = () => {
   const object = {

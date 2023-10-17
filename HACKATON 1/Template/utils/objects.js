@@ -64,6 +64,11 @@ const flat = (obj) => {                           //Martin
   return newObj;
 };
 
+/**
+ * takes an object, reconfigures it, and returns it as an array full of small arrays that contain key and value
+ * @param {*} obj input object
+ * @param {*} result keep the changes
+ */
 //START
 const entries = (obj) => {                   //andi
   const result = [];
@@ -75,8 +80,6 @@ const entries = (obj) => {                   //andi
   }
   console.log(result);
 }
-
-const result = entries({ a: 5, b: 6, c: 7 });
 //END
 
 export { existInObject, typeOfProps, copy, removeProp, flat, entries };
