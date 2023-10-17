@@ -10,12 +10,13 @@ const isMinLength = (str, minLength) => str.length <= minLength          //Andi
 
 //END
 
+
 /**
  * Checks if the string have the maximal given length.
- *
- * @param {string} string the string to check.
- * @param {number} number The max length.
- * @returns {boolean} returns true if the validation passes and false if it doesn't
+ * 
+ * @param {string} str the string to check.
+ * @param {number} maxLength The max length.
+ * @returns returns true if the validation passes and false if it doesn't
  */
 const isMaxLength = (str, maxLength) => str.length <= maxLength;              //Toni
 

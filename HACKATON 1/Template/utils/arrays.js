@@ -73,8 +73,29 @@ const filter = (array, predicate) => {                              // Vyara
   return filteredArray;
 };
 
+/**
+ * Takes multiple arrays as arguments and combines them into a single array of tuples.
+ * 
+ * @param  {...any} arrays The arrays to process.
+ * @returns Returns the new array of grouped elements.
+ */
 const zip = (...arrays) => {                                         //Toni
+  let minLength = arrays[0].length;
+  for (let i = 1; i < arrays.length; i++) {
+    if (arrays[i].length < minLength) {
+      minLength = arrays[i].length;
+    }
+  }
   
+  const result = [];
+  for (let i = 0; i < minLength; i++) {
+    const groupedArr = [];
+    for (const array of arrays) {
+      groupedArr.push(array[i]);
+    }
+    result.push(groupedArr);
+  }
+  return result;
 };
 
 export { reverse, fill, join, indexOf, filter, zip };

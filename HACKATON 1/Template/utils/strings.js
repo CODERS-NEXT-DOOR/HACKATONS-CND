@@ -47,11 +47,12 @@ const split = (string, separator) => {                      //Martin
 };
 
 
+
 /**
  * Trims the trailing spaces from the start and the end of a given string.
- *
+ * 
  * @param {string} string the string to trim.
- * @return {string} the trimmed string.
+ * @returns the trimmed string.
  */
 const trim = (string) => {                                 //Toni
   let startStr = 0;
