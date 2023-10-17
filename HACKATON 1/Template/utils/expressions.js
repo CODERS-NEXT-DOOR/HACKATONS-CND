@@ -11,12 +11,13 @@ const isMinLength = (str, minLength) => str.length <= minLength          //Andi
 
 //END
 
+
 /**
  * Checks if the string have the maximal given length.
- *
- * @param {string} string the string to check.
- * @param {number} number The max length.
- * @returns {boolean} returns true if the validation passes and false if it doesn't
+ * 
+ * @param {string} str the string to check.
+ * @param {number} maxLength The max length.
+ * @returns returns true if the validation passes and false if it doesn't
  */
 const isMaxLength = (str, maxLength) => str.length <= maxLength;              //Toni
 
@@ -39,12 +40,23 @@ const isIn = (value, possibleValues) =>                                    //vya
 
 const isIn2 =(value, possibleValues) => possibleValues.includes(value);
 
-
-const isArrayOfType = (arr, type) => null; // TODO                    //Toni
+/**
+ * Checks if all of the elements in the array are of given type.
+ * 
+ * @param {array} arr The array to check.
+ * @param {string} type The type the elements against.
+ * @returns returns true if the validation passes and false if it doesn't.
+ */
+const isArrayOfType = (arr, type) => arr.every(element => typeof element === type);               //Toni
 
 // hard
 
-const areValidNumbers = (stringNumbers) => null; // TODO                //georgi
+/**
+ * Checks if an array of strings holds only valid numbers inside.
+ * @param {array} stringNumbers the array to be checked
+ * @returns {boolean} true if the array only holds valid numbers, false otherwise
+ */
+const areValidNumbers = (stringNumbers) => stringNumbers.every(e => !isNaN(+e) && typeof +e === 'number')
 
 /**
  * takes a string and turns it into a number then sums the numbers and returns them to the console
