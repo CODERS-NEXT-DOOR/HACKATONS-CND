@@ -94,7 +94,7 @@ const isPrime = (number) => {                      //Georgi
 const swapWholeAndRemainder = (number) => {                  //vyara
 
   let swappedNumber = number.toString();
-
+  let finalNumber;
   if (number % 1 !== 0) {
     const splitIndex = swappedNumber.indexOf('.');
 
@@ -103,10 +103,11 @@ const swapWholeAndRemainder = (number) => {                  //vyara
       const remainder = swappedNumber.slice(splitIndex + 1);
 
       swappedNumber = remainder + '.' + wholePart;
-      const finalNumber = parseFloat(swappedNumber);
-      console.log(finalNumber);
+      finalNumber = parseFloat(swappedNumber);
     }
   }
+
+  return finalNumber;
 };
 
 export { min, sum, average, pow, isPrime, swapWholeAndRemainder };
