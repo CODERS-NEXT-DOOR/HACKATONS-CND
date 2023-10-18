@@ -24,7 +24,11 @@ const slice = (string, start = 0, end = string.length) => {     //Martin
  */
 //START
 const repeat = (string, n) => {                                  //Andi
-  console.log(string.repeat(n));
+  let outputStr = '';
+  for (let i = 0; i < n; i++) {
+    outputStr += string;
+  }
+  return outputStr;
 };
 
 //END
