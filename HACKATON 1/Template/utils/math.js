@@ -7,7 +7,7 @@
  */
 const min = (array) => {               //Georgi
 
-  let minNum = 0;
+  let minNum = Infinity;
 
   for (const num of array) {
     if (num < minNum) {
