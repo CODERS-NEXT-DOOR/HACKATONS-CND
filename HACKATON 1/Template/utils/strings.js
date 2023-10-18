@@ -17,6 +17,11 @@ const slice = (string, start = 0, end = string.length) => {     //Martin
   return result;
 };
 
+/**
+ * repeat the string n times
+ * @param {string} string repeated string
+ * @param {number} n the number of repeats
+ */
 //START
 const repeat = (string, n) => {                                  //Andi
   console.log(string.repeat(n));
