@@ -17,12 +17,13 @@ const reverse = (array) => {
 };
 
 /**
- * 
- * @param {array} array 
- * @param {*} value 
- * @param {number} start 
- * @param {number} end 
- * @returns 
+ * Fills a specified range of an array with a given value.
+ *
+ * @param {Array} array - The array to be filled.
+ * @param {*} value - The value to fill the array with.
+ * @param {number} [start=0] - The index at which filling should begin (inclusive). Defaults to 0.
+ * @param {number} [end=array.length] - The index at which filling should stop (exclusive). Defaults to the length of the input array.
+ * @returns {Array} - A new array with the specified range filled with the provided value.
  */
 const fill = (array, value, start = 0, end = array.length) => {          //vyara
   const filledArray = [...array]; 
@@ -96,7 +97,7 @@ const filter = (array, predicate) => {                              // Vyara
  * Takes multiple arrays as arguments and combines them into a single array of tuples.
  * 
  * @param  {...any} arrays The arrays to process.
- * @returns Returns the new array of grouped elements.
+ * @returns {array} Returns the new array of grouped elements.
  */
 const zip = (...arrays) => {                                         //Toni
   let minLength = arrays[0].length;
