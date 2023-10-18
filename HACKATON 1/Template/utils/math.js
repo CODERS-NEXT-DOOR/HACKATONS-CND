@@ -90,7 +90,11 @@ const isPrime = (number) => {                      //Georgi
   return isPrime;
 };
 
-
+/**
+ * Swaps the whole part and the reminder part of a given number.
+ * @param {number} number the input number.
+ * @returns the final number.
+ */
 const swapWholeAndRemainder = (number) => {                  //vyara
 
   let swappedNumber = number.toString();
