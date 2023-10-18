@@ -31,9 +31,6 @@ const isMaxLength = (str, maxLength) => str.length <= maxLength;              //
  */
 const isIn = (value, possibleValues) => possibleValues.includes(value) ;          //vyara
 
-
-const isIn2 =(value, possibleValues) => possibleValues.includes(value);
-
 /**
  * Checks if all of the elements in the array are of given type.
  * 
