@@ -8,8 +8,9 @@
  * @returns {boolean} - `true` if the property exists in the object, otherwise `false`.
  */
 const existInObject = (obj, prop) => {                 //vyara
-
-  return obj[prop];
+  if(obj[prop]) {
+    return true;
+  }
 };
 
 /**
