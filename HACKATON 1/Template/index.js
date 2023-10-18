@@ -173,8 +173,8 @@ const removeProp = () => {                            //GEORGI
 const copy = (obj) => {                               //andy
   const initialObject = { name: 'Pesho', age: 20, isAlive: true, addressstreet: 'Al Malinov' };
   const initialObject1 = { name: 'Andy', age: 30, isAlive: true, addressstreet: 'Grafa' };
-  console.log(copy(initialObject)); // { name: 'Pesho', age: 20, isAlive: true, addressstreet: 'Al Malinov' }
-  console.log(copy(initialObject1)); // { name: 'Andy', age: 30, isAlive: true, addressstreet: 'Grafa' }
+  console.log(utils.copy(initialObject)); // { name: 'Pesho', age: 20, isAlive: true, addressstreet: 'Al Malinov' }
+  console.log(utils.copy(initialObject1)); // { name: 'Andy', age: 30, isAlive: true, addressstreet: 'Grafa' }
 
 }
 
@@ -209,9 +209,9 @@ const entries = (obj) => {                //andi
   const result = { a: 5, b: 6, c: 7 };
   const result1 = { a: 3, b: 10, c: 6 };
   const result2 = { a: 8, b: 2, c: 20 };
-  console.log(entries(result)); // => [ [ 'a', 5 ], [ 'b', 6 ], [ 'c', 7 ] ]
-  console.log(entries(result1)); // => [ [ 'a', 3 ], [ 'b', 10 ], [ 'c', 6 ] ]
-  console.log(entries(result2)); // => [ [ 'a', 8], [ 'b', 2 ], [ 'c', 20 ] ]
+  console.log(utils.entries(result)); // => [ [ 'a', 5 ], [ 'b', 6 ], [ 'c', 7 ] ]
+  console.log(utils.entries(result1)); // => [ [ 'a', 3 ], [ 'b', 10 ], [ 'c', 6 ] ]
+  console.log(utils.entries(result2)); // => [ [ 'a', 8], [ 'b', 2 ], [ 'c', 20 ] ]
 }
 
 const objects = () => {
@@ -399,7 +399,7 @@ const expressions = () => {
 
 // Expressions
 
- isMinLength();                              //Andy
+//isMinLength();                              //Andy
 // isMaxLength();
 // isIn();
 // isArrayOfType();
