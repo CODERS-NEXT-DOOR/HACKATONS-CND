@@ -362,7 +362,7 @@ const expressions = () => {
 // reverse();
 // fill();
 // join();                                 //GEORGI
-// indexOf();                              //Martin
+// indexOf();                             //Martin
 // filter();
 // zip();
 // arrays();
@@ -370,10 +370,10 @@ const expressions = () => {
 // Math
 
 // min();                                  //GEORGI
-// sum();                                  //Martin
-// average();
+// sum();                                 //Martin
+// average();                            //Andy
 // pow();
-// isPrime();                              //GEORGI
+// isPrime();                          //GEORGI
 // swapWholeAndRemainder();
 // math();
 
@@ -381,28 +381,28 @@ const expressions = () => {
 
 // existInObject();
 // removeProp();                           //GEORGI
-// copy();
-// typeOfProps();                             //Martin
-// flat();                                    //Martin
-// entries();
+// copy();                                //Andy
+// typeOfProps();                        //Martin
+// flat();                              //Martin
+// entries();                          //Andy
 // objects();
 
 // Strings
 
 // slice();                                //Martin
-// repeat();
+// repeat();                              //Andy
 // capitalize();
-// replace();                              //GEORGI
-// split();                                //Martin
+// replace();                           //GEORGI
+// split();                            //Martin
 // trim();
 // strings();
 
 // Expressions
 
-// isMinLength();
+// isMinLength();                              //Andy
 // isMaxLength();
 // isIn();
 // isArrayOfType();
-// areValidNumbers();                      //GEORGI
-// sumNumbersFromString();
+// areValidNumbers();                     //GEORGI
+// sumNumbersFromString();               // Andy
 // expressions();
