@@ -336,25 +336,25 @@ const expressions = () => {
   const string = '1 0 1 1 0 2';
 
   const isMinLen = utils.isMinLength(string, 3); // true
-  // const isMaxLen = utils.isMaxLength(string, 11); // true
-  // const sum = utils.sumNumbersFromString(string); // 5
+  const isMaxLen = utils.isMaxLength(string, 11); // true
+  const sum = utils.sumNumbersFromString(string); // 5
 
-  // const splitted = string.split(' ');
-  // const areValidNumbers = utils.areValidNumbers(splitted); // true
-  // const isArrayOfType = utils.isArrayOfType(splitted, 'string'); // true
-  // const isIn = utils.isIn('2', splitted); // true
+  const splitted = string.split(' ');
+  const areValidNumbers = utils.areValidNumbers(splitted); // true
+  const isArrayOfType = utils.isArrayOfType(splitted, 'string'); // true
+  const isIn = utils.isIn('2', splitted); // true
 
-  // const validations = [
-  //   isMinLen,
-  //   isMaxLen,
-  //   areValidNumbers,
-  //   isArrayOfType,
-  //   isIn,
-  // ];
+  const validations = [
+    isMinLen,
+    isMaxLen,
+    areValidNumbers,
+    isArrayOfType,
+    isIn,
+  ];
 
-  // const areAllCorrect =
-  //   validations.every((validation) => validation === true) &&
-  //   validations.length === sum;
+  const areAllCorrect =
+    validations.every((validation) => validation === true) &&
+    validations.length === sum;
 
   console.log(isMinLen);
 };
