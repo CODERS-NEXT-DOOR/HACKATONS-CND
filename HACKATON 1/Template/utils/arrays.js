@@ -17,23 +17,23 @@ const reverse = (array) => {
 };
 
 /**
- * Creates a new array by filling it with a specified value within a specified range.
- *
- * @param {Array} array - The input array where the values will be filled.
- * @param {*} value - The value to fill the array with.
- * @param {number} [start=0] - The starting index for filling the array. Default is 0.
- * @param {number} [end=array.length] - The ending index (exclusive) for filling the array. Default is the length of the array.
- * @returns {Array} - A new array filled with the specified value within the given range.
+ * 
+ * @param {array} array 
+ * @param {*} value 
+ * @param {number} start 
+ * @param {number} end 
+ * @returns 
  */
-const fill = (array, value, start = 0, end = array.length) => {           //vyara
-  const filledArray = [];
+const fill = (array, value, start = 0, end = array.length) => {          //vyara
+  const filledArray = [...array]; 
 
   for (let i = start; i < end; i++) {
-    filledArray.push(value);
+    filledArray[i] = value;
   }
 
   return filledArray;
 };
+
 
 
 // medium
