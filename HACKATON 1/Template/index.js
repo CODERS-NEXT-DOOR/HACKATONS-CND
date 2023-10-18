@@ -286,8 +286,8 @@ const strings = () => {
 // Expressions
 
 const isMinLength = () => {
-  console.log(isMinLength('asd', 2)); // Output: true
-  console.log(isMinLength('asd', 4)); // Output: false
+  console.log(utils.isMinLength('asd', 2)); // Output: true
+  console.log(utils.isMinLength('asd', 4)); // Output: false
 };
 
 const isMaxLength = () => {     //Toni
@@ -399,7 +399,7 @@ const expressions = () => {
 
 // Expressions
 
-// isMinLength();                              //Andy
+ isMinLength();                              //Andy
 // isMaxLength();
 // isIn();
 // isArrayOfType();
