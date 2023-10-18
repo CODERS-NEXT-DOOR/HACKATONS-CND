@@ -22,7 +22,7 @@ const min = (array) => {               //Georgi
 /**
  * Finds the sum of all numbers in a given array
  * @param {array} array input array
- * @returns the final sum
+ * @returns {number} the final sum
  */
 const sum = (array) => {                 //Martin
   let finalSum = 0;
@@ -54,7 +54,7 @@ const average = (array) => { // TODO              //andi
  * 
  * @param {number} number the base number
  * @param {number} power the power by which the number should be raised
- * @returns the number raised by the power
+ * @returns {number} the number raised by the power
  */
 const pow = (number, power) => {           //Toni
   let result = number;
@@ -93,7 +93,7 @@ const isPrime = (number) => {                      //Georgi
 /**
  * Swaps the whole part and the reminder part of a given number.
  * @param {number} number the input number.
- * @returns the final number.
+ * @returns {number} the final number.
  */
 const swapWholeAndRemainder = (number) => {                  //vyara
 
