@@ -45,6 +45,7 @@ const average = (array) => { // TODO              //andi
     avg += array[i];
   }
   avg /= array.length;
+  return avg
 };
 // END
 
