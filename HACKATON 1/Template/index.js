@@ -102,7 +102,7 @@ const pow = () => {    //Toni
   const number = 2;
   const power = 3;
   const result = utils.pow(number, power);
-  console.log(result);  // => "9"
+  console.log(result);  // => 8
 };
 
 
@@ -267,11 +267,10 @@ const split = () => {              // Martin
 };
 
 const trim = () => {       //Toni
-  const string = '     Telerik   ';
+  const string = '   hello   ';
   const result = utils.trim(string);
-  console.log(result);  // => "Telerik"
-};
-
+  console.log(result);  // => "hello"
+}
 
 const strings = () => {
   const string = utils.repeat('  home', 2); //   home  home
@@ -292,10 +291,10 @@ const isMinLength = () => {
 };
 
 const isMaxLength = () => {     //Toni
- const str = 'Telerik'
- const maxLength = 9;
- const result = utils.isMaxLength(str, maxLength);
- console.log(result);   // => "true"
+ const result1 = utils.isMaxLength('asd', 2);
+ const result2 = utils.isMaxLength('asd', 4);
+ console.log(result1);   // => false
+ console.log(result2);   // => true
 }
 
 
