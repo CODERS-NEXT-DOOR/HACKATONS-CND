@@ -7,7 +7,7 @@
  * @returns {boolean} returns true if the validation passes and false if it doesn't
  */
 //START
-const isMinLength = (str, minLength) => str.length <= minLength; //andy
+const isMinLength = (string, length) => typeof string === 'string' && typeof length === 'number' ? string.length >= length : false;//andy
 
 //END
 
