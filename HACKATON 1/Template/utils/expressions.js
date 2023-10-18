@@ -60,7 +60,7 @@ const areValidNumbers = (stringNumbers) => stringNumbers.every(e => !isNaN(+e) &
  * @returns {result} return the sum of the numbers
  */
 //START
-const sumNumbersFromString = (string) => console.log(string.split(' ').map(Number).reduce((acc, current) => acc + current, 0)); //andy
+const sumNumbersFromString = (string) => string.split(' ').map(Number).reduce((acc, current) => acc + current, 0); //andy
 
 //END
 
