@@ -25,9 +25,7 @@ const reverse = (array) => {
  * @param {number} [end=array.length] - The ending index (exclusive) for filling the array. Default is the length of the array.
  * @returns {Array} - A new array filled with the specified value within the given range.
  */
-const fill = (array, value, start = 0, end = array.length) => {      //Vyara
-
-
+const fill = (array, value, start = 0, end = array.length) => {           //vyara
   const filledArray = [];
 
   for (let i = start; i < end; i++) {
@@ -35,8 +33,8 @@ const fill = (array, value, start = 0, end = array.length) => {      //Vyara
   }
 
   return filledArray;
-
 };
+
 
 // medium
 
