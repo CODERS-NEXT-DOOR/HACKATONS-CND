@@ -241,9 +241,10 @@ const slice = () => {                    // Martin
 };
 
 const repeat = () => {
-  const stars = repeat('*', 3); // ***
-  const abc = repeat('abc', 2); // abcabc
-  const nothing = repeat('abc', 0); // 
+  const stars = utils.repeat('*', 3); // ***
+  const abc = utils.repeat('abc', 2); // abcabc
+  const nothing = utils.repeat('abc', 0); //
+
 };
 
 const capitalize = () => {
@@ -326,8 +327,8 @@ const areValidNumbers = () => {    //GEORGI
 const sumNumbersFromString = () => {
   const result = '2 4 5 4 10'
   const result1 = '3 5 6 2 20'
-  sumNumbersFromString(result); // 25
-  sumNumbersFromString(result1); // 36
+  utils.sumNumbersFromString(result); // 25
+  utils.sumNumbersFromString(result1); // 36
 };
 
 const expressions = () => {
@@ -390,7 +391,7 @@ const expressions = () => {
 // Strings
 
 // slice();                                //Martin
-// repeat();                              //Andy
+ repeat();                              //Andy
 // capitalize();
 // replace();                           //GEORGI
 // split();                            //Martin
@@ -404,5 +405,5 @@ const expressions = () => {
 // isIn();
 // isArrayOfType();
 // areValidNumbers();                     //GEORGI
-// sumNumbersFromString();               // Andy
+//sumNumbersFromString();               // Andy
 // expressions();
