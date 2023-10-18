@@ -41,7 +41,7 @@ const copy = (obj) => {                          // andy
 /**
  * Gets the types of the properties of a given object.
  * @param {object} obj input object
- * @returns the types of the given object properties
+ * @returns {array} the types of the given object properties
  */
 const typeOfProps = (obj) => {                       //Martin
   let types = [];
