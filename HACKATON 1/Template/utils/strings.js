@@ -5,7 +5,7 @@
  * @param {string} string input string
  * @param {number} start input starting index of the string
  * @param {number} end input ending index of the string
- * @returns the cut string
+ * @returns {string} the cut string.
  */
 const slice = (string, start = 0, end = string.length) => {     //Martin      
   let result = '';
@@ -36,7 +36,7 @@ const repeat = (string, n) => {                                  //Andi
 // medium
 
 /**
- * 
+ * Converts the first character of string to upper case and the remaining to lower case.
  * @param {String} string the string that is going to be capitalized(its first letter will be upper case)
  * @returns {String} the capitalized string
  */
@@ -77,7 +77,7 @@ const replace = (string, char, replacement) => {               //Georgi
  * Splits string by separator.
  * @param {string} string input string
  * @param {string} separator input string
- * @returns the split strings
+ * @returns {array} the split strings
  */
 const split = (string, separator) => {                      //Martin
   let finalArr = [];
@@ -101,7 +101,7 @@ const split = (string, separator) => {                      //Martin
  * Trims the trailing spaces from the start and the end of a given string.
  * 
  * @param {string} string the string to trim.
- * @returns the trimmed string.
+ * @returns {string} the trimmed string.
  */
 const trim = (string) => {                                 //Toni
   let startStr = 0;
