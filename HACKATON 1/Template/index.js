@@ -391,7 +391,7 @@ const expressions = () => {
 // Strings
 
 // slice();                                //Martin
- repeat();                              //Andy
+// repeat();                              //Andy
 // capitalize();
 // replace();                           //GEORGI
 // split();                            //Martin
