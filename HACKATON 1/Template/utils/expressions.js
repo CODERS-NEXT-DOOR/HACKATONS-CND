@@ -17,14 +17,14 @@ const isMinLength = (string, length) => typeof string === 'string' && typeof len
  * 
  * @param {string} str the string to check.
  * @param {number} maxLength The max length.
- * @returns returns true if the validation passes and false if it doesn't
+ * @returns {boolean} returns true if the validation passes and false if it doesn't.
  */
 const isMaxLength = (str, maxLength) => str.length <= maxLength;              //Toni
 
 // medium
 
 /**
- * 
+ * Search for a given value inside an array.
  * @param {number} value that will be searched in the array
  * @param {Array} possibleValues the array in which value will be searched
  * @returns {Boolean} returns 'true' or 'false'
@@ -36,7 +36,7 @@ const isIn = (value, possibleValues) => possibleValues.includes(value) ;        
  * 
  * @param {array} arr The array to check.
  * @param {string} type The type the elements against.
- * @returns returns true if the validation passes and false if it doesn't.
+ * @returns {boolean} returns true if the validation passes and false if it doesn't.
  */
 const isArrayOfType = (arr, type) => arr.every(element => typeof element === type);               //Toni
 
