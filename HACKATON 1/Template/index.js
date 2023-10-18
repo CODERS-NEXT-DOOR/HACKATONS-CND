@@ -356,8 +356,9 @@ const expressions = () => {
     validations.every((validation) => validation === true) &&
     validations.length === sum;
 
-  console.log(isMinLen);
+  console.log(areAllCorrect);
 };
+
 
 // Arrays
 
@@ -406,5 +407,5 @@ const expressions = () => {
 // isIn();                                   //vyara
 // isArrayOfType();
 // areValidNumbers();                     //GEORGI
-//sumNumbersFromString();               // Andy
+// sumNumbersFromString();               // Andy
 // expressions();
