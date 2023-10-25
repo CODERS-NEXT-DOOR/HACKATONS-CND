@@ -34,7 +34,7 @@ const addFirstTest = () => {
 };
 
 // addFirstTest();
-const slice = () => {
+const slice = () => {                        //ANDY
   const arr = [undefined, undefined, undefined, 1, 1, 1, 8, 2, 3];
 
   console.log(slice(4, 7)); // 1, 1, 8
@@ -114,7 +114,8 @@ const testTwo = () => {
 };
 
 // testTwo();
-// offTopic: Не знам дали трябва да е така :(
+
+// offTopic: Не знам дали трябва да е така :(   // ANDY
 // const objWithLength = { length: 5 };
 // const newArray = arrayFrom(objWithLength);
 // console.log(newArray);
