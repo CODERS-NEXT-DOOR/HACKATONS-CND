@@ -1,22 +1,31 @@
 import {
-  addFirst,
-  removeFirst,
-  removeLast,
-  keys,
-  entries,
-  reverse,
-  arrayFrom,
-  pipe,
-  compose,
-  flat,
-  fill,
-  groupBy,
-  reduce,
-  map,
-  slice,
-  join,
-  find,
-  filter,
+  addFirst,         // 1
+  removeFirst,      // 2
+  addLast,          // 3
+  removeLast,       // 4
+  keys,             // 5
+  entries,          // 6
+  slice,            // 7
+  concat,           // 8
+  reverse,          // 9
+  join,             // 10
+  find,             // 12
+  fill,             // 13
+  forEach,          // 14
+  map,              // 15
+  filter,           // 16
+  reduce,           // 17
+  reduceRight,      // 18
+  some,             // 19
+  every,            // 20
+  includes,         // 21
+  indexOf,          // 22
+  arrayFrom,        // 23
+  pipe,             // 24
+  compose,          // 25
+  flat,             // 26
+  flatMap,          // 27
+  groupBy           // 28
 } from './array-utils.js';
 
 /*
@@ -34,6 +43,7 @@ const addFirstTest = () => {
 };
 
 // addFirstTest();
+
 const slice = () => {                        //ANDY
   const arr = [undefined, undefined, undefined, 1, 1, 1, 8, 2, 3];
 
