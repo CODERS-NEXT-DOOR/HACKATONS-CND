@@ -43,19 +43,18 @@ const removeLast = (arr) => {                                                  /
  * @param {array} arr  accepts an array 
  * @returns {array}  return an array with the valid indexes
  */
-const keys = (arr) => {    
-  
-    return arr.reduce((accumulator,_,index) =>                               //VYARA
-    {
-      const result = [];
-     if(index in arr)
-     {
-        result.push(index);
-     }
+const keys = (arr) => {
 
-     return result;
-    }, [] )  ;                                            
-  
+  return arr.reduce((accumulator, _, index) =>                               //VYARA
+  {
+    const result = [];
+    if (index in arr) {
+      result.push(index);
+    }
+
+    return result;
+  }, []);
+
 };
 
 /**
@@ -115,13 +114,13 @@ const join = (separator) => {                                                 //
 const find = (predicate) => {                                                 //VYARA
   return (arr) => {
     return arr.reduce((accumulator, current, index) => {
-        if (accumulator.found !== null) {
-            return accumulator;
-        }
-        if (predicate(current, index)) {
-            accumulator.found = current;
-        }
+      if (accumulator.found !== null) {
         return accumulator;
+      }
+      if (predicate(current, index)) {
+        accumulator.found = current;
+      }
+      return accumulator;
     }, { found: null }).found;
   };
 };
@@ -139,19 +138,32 @@ const fill = (value, start, end) => {                                         //
   return (arr) => {
     return arr.map((element, index) => {
       if (index >= start && index < end) {
-          return value;
+        return value;
       } else {
-          return element;
+        return element;
       }
-   });
+    });
   };
 };
-
+/**
+ * Call a function with each of the elements of an array as a parameter.
+ * @param {*} fn The function to call with the elements. 
+ * @returns Returns a closure that will iterate over the passed array and will call the received function 
+ * with each of the elements. This function does not return anything.
+ */
 const forEach = (fn) => {                                                     //ANDY
-  return (arr) => {
-    // TODO
+    return (arr) => {
+      arr.forEach(fn);
+    };
+  }
+  function printElement(element) {
+    console.log("Element:", element);
+
+  // Test:
+  // const myArray = [1, 2, 3, 4, 5];
+  // const caller = iterateAndCall(printElement);
+  // caller(myArray);
   };
-};
 
 /**
  * Transforms each of the elements of an array using a mapping function.
@@ -216,9 +228,22 @@ const indexOf = (searchedElement) => {                                        //
   };
 };
 
+/**
+ * Finds and returns the index of the searched element in the array based on a predicate function. 
+ * If the element does not exist in the array, return -1.
+ * 
+ * @param {function} predicate A function that accepts an element and (optionally) an index, and returns a boolean value.
+ * @returns {number} Finds and returns the index of the searched element in the array based on a predicate function. 
+ * If the element does not exist in the array, return -1.
+ */
 const findIndex = (predicate) => {                                            //ANTONIYA
   return (arr) => {
-    // TODO
+    const filteredArray = arr.filter((element, index) => predicate(element, index));
+    if (filteredArray.length > 0) {
+      return arr.indexOf(filteredArray[0]);
+    } else {
+      return -1;
+    }
   };
 };
 
