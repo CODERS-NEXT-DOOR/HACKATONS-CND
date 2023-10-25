@@ -107,10 +107,24 @@ const find = (predicate) => {                                                 //
   };
 };
 
-
+/**
+ * Fills elements of array with value from start up to, but not including, end. 
+ * This should not change the original array.
+ * 
+ * @param {*} value The value to fill array with.
+ * @param {number} start The start position.
+ * @param {number} end The end position.
+ * @returns {array} Returns a closure that will fill the passed array with the value.
+ */
 const fill = (value, start, end) => {                                         //ANTONIYA
   return (arr) => {
-    // TODO
+    return arr.map((element, index) => {
+      if (index >= start && index < end) {
+          return value;
+      } else {
+          return element;
+      }
+   });
   };
 };
 
