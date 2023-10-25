@@ -210,11 +210,40 @@ const some = (predicate) => {                                                 //
   };
 };
 
+/**
+ * Iterates over elements of a collection and returns true
+ * if all the elements pass the predicate function's condition. Otherwise return false.
+ * @param {function} predicate The test function that returns a boolean
+ * @returns {function} A closure that will iterate over the passed array in and will call
+ * the received predicate function with each of the elements.
+ * If all of the calls return true, return true. Otherwise return false.
+ */
 const every = (predicate) => {                                                //GEORGI
-  return (arr) => {
-    // TODO
+  let output = true;
+  /**
+   * @param {array} arr The input array
+   * @returns {boolean} The output boolean.
+   */
+  const closure = (arr) => {
+    arr.map(el => {
+      if(!predicate(el)) {
+        output = !output;
+      }
+    });
+    return output;
   };
+  return closure;
 };
+
+// EVERY() FUNC TEST (IGNORE)
+// const predicate = function(c) {
+//   if (typeof c === 'number') {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// console.log(every(predicate)([1,2,3]))
 
 const includes = (element) => {                                               //MARTIN
   return (arr) => {
