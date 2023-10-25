@@ -84,7 +84,11 @@ const concat = (arr) => {                                                      /
 // ------------------------- MEDIUM -------------------------------//
 
 const reverse = (arr) => {                                                    //GEORGI
-  // TODO
+  const outputArr = arr.reduce((acc, current) => {
+    acc.unshift(current);
+    return acc;
+  }, [])
+  return outputArr;
 };
 
 const join = (separator) => {                                                 //MARTIN
