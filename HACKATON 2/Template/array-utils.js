@@ -48,9 +48,14 @@ const keys = (arr) => {
   
 };
 
-const entries = (arr) => {                                                     //ANTONIYA
-  // TODO
-};
+/**
+ * Get the array's entries in the form of key-value pairs [index, element].
+ * 
+ * @param {array} arr The array to get the entries from.
+ * @returns {array} Returns a new array with the valid entries in the form [index, element].
+ */
+const entries = (arr) => arr.map((element, index) => [index, element]);      //ANTONIYA
+
 
 /**
  * Obtain a start and end position. Making changes to the array and returning it.
