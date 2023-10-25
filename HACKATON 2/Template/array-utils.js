@@ -19,7 +19,7 @@ const removeFirst = (arr) => arr.slice(1); // it does not take additional parame
 
 const addLast = (element) => {                                                 //GEORGI
   return (arr) => {
-    // TODO
+    return [...arr, element];
   };
 };
 
