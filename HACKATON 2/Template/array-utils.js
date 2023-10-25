@@ -27,8 +27,19 @@ const removeLast = (arr) => {                                                  /
   // TODO
 };
 
-const keys = (arr) => {                                                        //VYARA
-  // TODO
+const keys = (arr) => {    
+  
+    return arr.reduce((accumulator,_,index) =>
+    {
+      const result = [];
+     if(index in arr)
+     {
+        result.push(index);
+     }
+
+     return result;
+    }, [] )  ;                                            //VYARA
+  
 };
 
 const entries = (arr) => {                                                     //ANTONIYA
