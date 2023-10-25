@@ -194,10 +194,15 @@ const findIndex = (predicate) => {                                            //
 
 
 // ------------------------- HARD -------------------------------//
-
-const arrayFrom = (objLength, value) => {                                           //ANDY
-  if (objLength && objLength.length !== undefined) {
-    return Array.from({ length: objLength.length }, () => value);
+/**
+ * Creates an array from object by using its length property.
+ * @param {number} obj An object that has the length property.
+ * @returns Returns the created array with length equal to the passed object's length property, 
+ * filled with undefined values.
+ */
+const arrayFrom = (obj) => {                                           //ANDY
+  if (obj && obj.length !== undefined) {
+    return Array.from({ length: obj.length });
   } else {
     return [];
   }
