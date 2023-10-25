@@ -1,4 +1,4 @@
-// easy
+// ------------------------- EASY -------------------------------//
 
 /**
  * Add an element at front of the array
@@ -17,149 +17,159 @@ const addFirst = (element) => {
 
 const removeFirst = (arr) => arr.slice(1); // it does not take additional parameters to be splitted
 
-const addLast = (element) => {
+const addLast = (element) => {                                                 //GEORGI
   return (arr) => {
     // TODO
   };
 };
 
-const removeLast = (arr) => {
+const removeLast = (arr) => {                                                  //MARTIN
   // TODO
 };
 
-const keys = (arr) => {
+const keys = (arr) => {                                                        //VYARA
   // TODO
 };
 
-const entries = (arr) => {
+const entries = (arr) => {                                                     //ANTONIYA
   // TODO
 };
 
-const slice = (start, end) => {
+const slice = (start, end) => {                                                //ANDY
   return (arr) => {
     // TODO
   };
 };
 
-const concat = (arr) => {
+const concat = (arr) => {                                                      //ANTON
   return (innerArr) => {
     // TODO
   };
 };
 
-// medium
 
-const reverse = (arr) => {
+
+
+
+
+// ------------------------- MEDIUM -------------------------------//
+
+const reverse = (arr) => {                                                    //GEORGI
   // TODO
 };
 
-const join = (separator) => {
+const join = (separator) => {                                                 //MARTIN
   return (arr) => {
     // TODO
   };
 };
 
-const find = (predicate) => {
+const find = (predicate) => {                                                 //VYARA
   return (arr) => {
     // TODO
   };
 };
 
-const fill = (value, start, end) => {
+const fill = (value, start, end) => {                                         //ANTONIYA
   return (arr) => {
     // TODO
   };
 };
 
-const forEach = (fn) => {
+const forEach = (fn) => {                                                     //ANDY
   return (arr) => {
     // TODO
   };
 };
 
-const map = (mapperFn) => {
+const map = (mapperFn) => {                                                   //GEORGI
   return (arr) => {
     // TODO
   };
 };
 
-const filter = (predicate) => {
+const filter = (predicate) => {                                               //MARTIN
   return (arr) => {
     // TODO
   };
 };
 
-const reduce = (fn, initialValue) => {
+const reduce = (fn, initialValue) => {                                        //VYARA
   return (arr) => {
     // TODO
   };
 };
 
-const reduceRight = (fn, initialValue) => {
+const reduceRight = (fn, initialValue) => {                                   //ANTONIYA
   return (arr) => {
     // TODO
   };
 };
 
-const some = (predicate) => {
+const some = (predicate) => {                                                 //ANDY
   return (arr) => {
     // TODO
   };
 };
 
-const every = (predicate) => {
+const every = (predicate) => {                                                //GEORGI
   return (arr) => {
     // TODO
   };
 };
 
-const includes = (element) => {
+const includes = (element) => {                                               //MARTIN
   return (arr) => {
     // TODO
   };
 };
 
-const indexOf = (searchedElement) => {
+const indexOf = (searchedElement) => {                                        //VYARA
   return (arr) => {
     // TODO
   };
 };
 
-const findIndex = (predicate) => {
+const findIndex = (predicate) => {                                            //ANTONIYA
   return (arr) => {
     // TODO
   };
 };
 
-// hard
 
-const arrayFrom = ({ length }) => {
+
+
+
+
+// ------------------------- HARD -------------------------------//
+
+const arrayFrom = ({ length }) => {                                           //ANDY
   // TODO
 };
 
-const pipe = (...fns) => {
+const pipe = (...fns) => {                                                    //GEORGI 
   return (input) => {
     // TODO
   };
 };
 
-const compose = (...fns) => {
+const compose = (...fns) => {                                                 //MARTIN
   return (input) => {
     // TODO
   };
 };
 
-const flat = (arr) => {
+const flat = (arr) => {                                                       //VYARA
   // TODO
 };
 
-const flatMap = (mapperFn) => {
+const flatMap = (mapperFn) => {                                               //ANTONIYA
   return (arr) => {
     // TODO
   };
 };
 
-const groupBy = (groupingFn) => {
+const groupBy = (groupingFn) => {                                             //MARTIN
   return (arr) => {
     // TODO
   };
