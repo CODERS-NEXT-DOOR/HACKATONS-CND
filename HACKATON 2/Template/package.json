@@ -13,5 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "jsdoc": "^3.6.3"
+  },
+  "dependencies": {
+    "eslint": "^8.52.0"
   }
 }

@@ -10,7 +10,7 @@
   "parserOptions": {
       "ecmaVersion": 13,
       "sourceType": "module"
-  },
+  }
   // "rules": {      
   //   ////////// overrides of google config //////////
   //   "max-len": ["error", {
