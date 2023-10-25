@@ -115,10 +115,9 @@ const testTwo = () => {
 
 // testTwo();
 // offTopic: Не знам дали трябва да е така :(
-// const arrayFrom = () => {
-//   const objWithLength = { length: 4 };
-//   const newArray = arrayFrom(objWithLength, 7);
-//   console.log(newArray);
+// const objWithLength = { length: 5 };
+// const newArray = arrayFrom(objWithLength);
+// console.log(newArray);
 // };
 
 const testThree = () => {
