@@ -83,6 +83,11 @@ const concat = (arr) => {                                                      /
 
 // ------------------------- MEDIUM -------------------------------//
 
+/**
+ * Create a reversed copy of the array
+ * @param {array} arr The input array
+ * @returns {array} The reversed array
+ */
 const reverse = (arr) => {                                                    //GEORGI
   const outputArr = arr.reduce((acc, current) => {
     acc.unshift(current);
