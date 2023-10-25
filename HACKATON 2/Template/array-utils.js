@@ -204,10 +204,23 @@ const reduceRight = (fn, initialValue) => {                                   //
   };
 };
 
+/**
+ * Iterates over elements of a collection and returns the result.
+ * @param {number} predicate A function that accepts an element and an index, and returns a boolean value.
+ * @returns Returns a closure that will iterate over the passed array.
+ */
 const some = (predicate) => {                                                 //ANDY
   return (arr) => {
-    // TODO
+    return arr.reduce(
+      (result, element, index) => result || predicate(element, index), false);
   };
+  //Test:
+  // const isEven = (el) => el % 2 === 0;
+  // const hasEvenNumber = some(isEven);
+  // const array1 = [1, 3, 5, 7, 9];
+  // const array2 = [1, 2, 3, 4, 5];
+  // console.log(hasEvenNumber(array1));
+  // console.log(hasEvenNumber(array2));
 };
 
 /**
