@@ -119,9 +119,14 @@ const reverse = (arr) => {                                                    //
   return outputArr;
 };
 
+/**
+ * Converts all elements in array into a string separated by separator.
+ * @param {any} separator The separator element.
+ * @returns The separated string
+ */
 const join = (separator) => {                                                 //MARTIN
   return (arr) => {
-    // TODO
+    return arr.reduce((acc, el) => acc + el + separator, '').slice(0, -1);
   };
 };
 
