@@ -33,9 +33,13 @@ const addLast = (element) => {                                                 /
   return closure;
 };
 
-const removeLast = (arr) => {                                                  //MARTIN
-  // TODO
-};
+/**
+ * Removes the last element of the array.
+ * @param {array} arr The array to remove the last element of.
+ * @returns The final array.
+ */
+const removeLast = (arr) => arr.slice(0, -1);                                  //MARTIN
+
 
 /**
  * Return the key's valid indexes of an array
