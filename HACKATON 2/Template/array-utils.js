@@ -206,7 +206,7 @@ const map = (mapperFn) => {                                                   //
 
 /**
  * Iterates over elements of collection, returning an array of all elements the passed function returns truthy for.
- * @param {} predicate The function that accepts an element and (optionally) an index, and returns a boolean value.
+ * @param {function} predicate The function that accepts an element and (optionally) an index, and returns a boolean value.
  * @returns Returns a closure that will iterate over the passed array and will call the received predicate function with each of the elements.
  */
 const filter = (predicate) => {                                               //MARTIN
@@ -286,11 +286,29 @@ const every = (predicate) => {                                                //
 // }
 // console.log(every(predicate)([1,2,3]))
 
+/**
+ * Iterates over elements of a collection and returns true/false if the searched element is/isn't one of them.
+ * @param {any} element The searched element
+ * @returns Returns a closure that will iterate over the passed array in and will check if the searched element is there.
+ */
 const includes = (element) => {                                               //MARTIN
   return (arr) => {
-    // TODO
+    let theSearchedElExists = false;
+
+        arr.forEach((item) => {
+            if (element === item) {
+                theSearchedElExists = true;
+            }
+        });
+
+        return theSearchedElExists;
   };
 };
+
+/*
+Test:
+console.log(includes(4)([2, 5, 6, 8, 12, 4, 3, 5]));
+*/
 
 const indexOf = (searchedElement) => {                                        //VYARA
   return (arr) => {
