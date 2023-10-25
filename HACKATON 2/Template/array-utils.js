@@ -19,6 +19,7 @@ const removeFirst = (arr) => arr.slice(1); // it does not take additional parame
 
 /**
  * Add an element at the back of the array.
+ * @author Georgi Popov <gwvr028@gmail.com>
  * @param {any} element The element to be added
  * @returns {function} Clousre function to add the element
  */
@@ -27,9 +28,7 @@ const addLast = (element) => {                                                 /
    * @param {array} arr 
    * @returns The final array
    */                                             
-  const closure = (arr) => {
-    return [...arr, element];
-  };
+  const closure = (arr) => [...arr, element];
   return closure;
 };
 
@@ -105,6 +104,7 @@ const concat = (arr) => (innerArr) => [...arr, ...innerArr];            //ANTON 
 
 /**
  * Create a reversed copy of the array
+ * @author Georgi Popov <gwvr028@gmail.com>
  * @param {array} arr The input array
  * @returns {array} The reversed array
  */
@@ -183,6 +183,7 @@ const forEach = (fn) => {                                                     //
 
 /**
  * Transforms each of the elements of an array using a mapping function.
+ * @author Georgi Popov <gwvr028@gmail.com>
  * @param {function} mapperFn The mapping function to call with the elements.
  * @returns {function} Closure function to accept the array
  */
@@ -251,6 +252,7 @@ const some = (predicate) => {                                                 //
 /**
  * Iterates over elements of a collection and returns true
  * if all the elements pass the predicate function's condition. Otherwise return false.
+ * @author Georgi Popov <gwvr028@gmail.com>
  * @param {function} predicate The test function that returns a boolean
  * @returns {function} A closure that will iterate over the passed array in and will call
  * the received predicate function with each of the elements.
@@ -354,8 +356,10 @@ const arrayFrom = (obj) => {                                           //ANDY
 
 /**
  * Accepts any number of functions and creates a sequence where the output of the last function becomes the input for the next.
+ * @author Georgi Popov <gwvr028@gmail.com>
  * @param  {array} fns The spead functions to pipe.
- * @returns {function} Closure that will iterate over the passed array of functions and will call the each of them with the output of the last.
+ * @returns {function} Closure that will iterate over the passed array of functions and will call the each of
+ * them with the output of the last.
  */
 const pipe = (...fns) => {                                             //GEORGI 
   const functionsArr = [...fns].flat();   
