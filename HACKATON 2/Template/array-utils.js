@@ -17,10 +17,20 @@ const addFirst = (element) => {
 
 const removeFirst = (arr) => arr.slice(1); // it does not take additional parameters to be splitted
 
+/**
+ * Add an element at the back of the array.
+ * @param {any} element The element to be added
+ * @returns {function} Clousre function to add the element
+ */
 const addLast = (element) => {                                                 //GEORGI
-  return (arr) => {
+  /**
+   * @param {array} arr 
+   * @returns The final array
+   */                                             
+  const closure = (arr) => {
     return [...arr, element];
   };
+  return closure;
 };
 
 const removeLast = (arr) => {                                                  //MARTIN
