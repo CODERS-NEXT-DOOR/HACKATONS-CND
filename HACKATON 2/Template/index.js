@@ -34,7 +34,12 @@ const addFirstTest = () => {
 };
 
 // addFirstTest();
+const slice = () => {
+  const arr = [undefined, undefined, undefined, 1, 1, 1, 8, 2, 3];
 
+  console.log(slice(4, 7)); // 1, 1, 8
+  console.log(slice(2, 4)); // undefined, 1 
+};
 
 /*
 *  Composite functions tests
@@ -109,6 +114,12 @@ const testTwo = () => {
 };
 
 // testTwo();
+// offTopic: Не знам дали трябва да е така :(
+// const arrayFrom = () => {
+//   const objWithLength = { length: 4 };
+//   const newArray = arrayFrom(objWithLength, 7);
+//   console.log(newArray);
+// };
 
 const testThree = () => {
   const startValue = [

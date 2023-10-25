@@ -195,8 +195,12 @@ const findIndex = (predicate) => {                                            //
 
 // ------------------------- HARD -------------------------------//
 
-const arrayFrom = ({ length }) => {                                           //ANDY
-  // TODO
+const arrayFrom = (objLength, value) => {                                           //ANDY
+  if (objLength && objLength.length !== undefined) {
+    return Array.from({ length: objLength.length }, () => value);
+  } else {
+    return [];
+  }
 };
 
 const pipe = (...fns) => {                                                    //GEORGI 
