@@ -159,6 +159,11 @@ const forEach = (fn) => {                                                     //
   }
   function printElement(element) {
     console.log("Element:", element);
+
+  // Test:
+  // const myArray = [1, 2, 3, 4, 5];
+  // const caller = iterateAndCall(printElement);
+  // caller(myArray);
   };
 
 /**
