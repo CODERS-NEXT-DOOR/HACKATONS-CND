@@ -85,19 +85,16 @@ const slice = (start, end) => {                                                /
 
 /**
  * Concatenates the elements from one array with the elements of another creating a result array with all the elements.
- * @param {number/string} arr The array to concatenate with.
- * @returns Returns a closure that will concatenate the passed inner array with the already received outer.
+ * @param {array} arr The array to concatenate with.
+ * @returns {function} Returns a closure that will concatenate the passed inner array with the already received outer.
  */
-const concat = (arr) => {                                                      //ANTON / Andy
-  return (innerArr) => [...innerArr, ...arr];
-};
+const concat = (arr) => (innerArr) => [...arr, ...innerArr];            //ANTON / Andy 
+
 // Test:
 // const outerArray = [1, 2, 3];
 // const innerArray = [4, 5, 6];
 
-// const concatArrays = concat(outerArray); 
-// const resultArray = concatArrays(innerArray); 
-// console.log(resultArray); 
+// console.log(concat(outerArray)(innerArray)); 
 
 
 
