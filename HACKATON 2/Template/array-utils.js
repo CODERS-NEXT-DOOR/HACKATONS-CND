@@ -242,15 +242,29 @@ const arrayFrom = (obj) => {                                           //ANDY
   }
 };
 
-const pipe = (...fns) => {                                                    //GEORGI 
-  return (input) => {
-    // TODO
+/**
+ * Accepts any number of functions and creates a sequence where the output of the last function becomes the input for the next.
+ * @param  {array} fns The spead functions to pipe.
+ * @returns {function} Closure that will iterate over the passed array of functions and will call the each of them with the output of the last.
+ */
+const pipe = (...fns) => {                                             //GEORGI 
+  const functionsArr = [...fns].flat();   
+  /**
+   * @param {any} input 
+   * @returns {any} The result of the last output
+   */                               
+  const closure = (input) => {
+    return functionsArr.reduce((acc, func) => func(acc), input)
   };
+  return closure;
 };
+
+// console.log(pipe([(e) => ++e, (e) => e += 10, (e) => e*3])(10))
+
 
 const compose = (...fns) => {                                                 //MARTIN
   return (input) => {
-    // TODO
+    
   };
 };
 
