@@ -153,11 +153,26 @@ const forEach = (fn) => {                                                     //
   };
 };
 
-const map = (mapperFn) => {                                                   //GEORGI
-  return (arr) => {
-    // TODO
+/**
+ * Transforms each of the elements of an array using a mapping function.
+ * @param {function} mapperFn The mapping function to call with the elements.
+ * @returns {function} Closure function to accept the array
+ */
+const map = (mapperFn) => {                                                   //GEORGI   
+  /**
+   * @param {array} arr The input array
+   * @returns {array} The mapped array.
+   */                                                                                             
+  const closure = (arr) => {
+    const mappedArr = arr.reduce((acc, el) => {
+      acc.push(mapperFn(el));
+      return acc;
+    }, []);
+    return mappedArr;
   };
+  return closure;
 };
+
 
 const filter = (predicate) => {                                               //MARTIN
   return (arr) => {
