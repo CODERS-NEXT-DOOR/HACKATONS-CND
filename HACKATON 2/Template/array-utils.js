@@ -122,7 +122,7 @@ const reverse = (arr) => {                                                    //
 /**
  * Converts all elements in array into a string separated by separator.
  * @param {any} separator The separator element.
- * @returns The separated string
+ * @returns Returns a closure that will join the elements of the array with the passed separator.
  */
 const join = (separator) => {                                                 //MARTIN
   return (arr) => {
@@ -204,10 +204,19 @@ const map = (mapperFn) => {                                                   //
   return closure;
 };
 
-
+/**
+ * Iterates over elements of collection, returning an array of all elements the passed function returns truthy for.
+ * @param {} predicate The function that accepts an element and (optionally) an index, and returns a boolean value.
+ * @returns Returns a closure that will iterate over the passed array and will call the received predicate function with each of the elements.
+ */
 const filter = (predicate) => {                                               //MARTIN
   return (arr) => {
-    // TODO
+    return arr.reduce((acc, el) => {
+      if (predicate(el)) {
+          acc.push(el);
+      }
+      return acc;
+  }, []);
   };
 };
 
