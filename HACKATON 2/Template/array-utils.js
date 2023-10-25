@@ -27,9 +27,15 @@ const removeLast = (arr) => {                                                  /
   // TODO
 };
 
+/**
+ * Return the key's valid indexes of an array
+ * 
+ * @param {array} arr  accepts an array 
+ * @returns {array}  return an array with the valid indexes
+ */
 const keys = (arr) => {    
   
-    return arr.reduce((accumulator,_,index) =>
+    return arr.reduce((accumulator,_,index) =>                               //VYARA
     {
       const result = [];
      if(index in arr)
@@ -38,7 +44,7 @@ const keys = (arr) => {
      }
 
      return result;
-    }, [] )  ;                                            //VYARA
+    }, [] )  ;                                            
   
 };
 
@@ -77,9 +83,18 @@ const join = (separator) => {                                                 //
 
 const find = (predicate) => {                                                 //VYARA
   return (arr) => {
-    // TODO
+    return arr.reduce((accumulator, current, index) => {
+        if (accumulator.found !== null) {
+            return accumulator;
+        }
+        if (predicate(current, index)) {
+            accumulator.found = current;
+        }
+        return accumulator;
+    }, { found: null }).found;
   };
 };
+
 
 const fill = (value, start, end) => {                                         //ANTONIYA
   return (arr) => {
