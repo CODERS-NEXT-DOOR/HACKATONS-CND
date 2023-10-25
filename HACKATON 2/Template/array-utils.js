@@ -19,7 +19,7 @@ const removeFirst = (arr) => arr.slice(1); // it does not take additional parame
 
 const addLast = (element) => {                                                 //GEORGI
   return (arr) => {
-    // TODO
+    return [...arr, element];
   };
 };
 
@@ -52,9 +52,16 @@ const entries = (arr) => {                                                     /
   // TODO
 };
 
+/**
+ * Obtain a start and end position. Making changes to the array and returning it.
+ * @param {number} start New starting point.
+ * @param {number} end New ending point.
+ * @returns Specific part of the main array.
+ */
 const slice = (start, end) => {                                                //ANDY
   return (arr) => {
-    // TODO
+    const copiedArray = arr.filter((element, index) => index >= start && index < end);
+    return copiedArray;
   };
 };
 
