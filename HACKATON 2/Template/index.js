@@ -141,15 +141,15 @@ const arrayFromTest = () => {                        //ANDY
 //arrayFromTest();
 
 // removeLast:
-const removeLast = (arr) => arr.slice(0, -1);            // Martin
+const removeLastTest = (arr) => arr.slice(0, -1);            // Martin
 
 const arr = ['Inter', 'Chelsea', 'Crew Alexandra', 'Monaco', 'Juventus'];
 
-// console.log(removeLast(arr)); // ['Inter', 'Chelsea', 'Crew Alexandra', 'Monaco']
+// console.log(removeLastTest(arr)); // ['Inter', 'Chelsea', 'Crew Alexandra', 'Monaco']
 // console.log(arr); // ['Inter', 'Chelsea', 'Crew Alexandra', 'Monaco', 'Juventus']
 
 // join:
-const join = (separator) => {                            // Martin
+const joinTest = (separator) => {                            // Martin
     return (arr) => {
         return arr.reduce((acc, el) => acc + el + separator, '').slice(0, -1);
     };
@@ -157,11 +157,11 @@ const join = (separator) => {                            // Martin
 
 const separator = ('-');
 const arr1 = [5, true, 'proba', false, 10, 'spacecraft', 'stamm'];
-// console.log(join(separator)(arr1));  // 5-true-proba-false-10-spacecraft-stamm
+// console.log(joinTest(separator)(arr1));  // 5-true-proba-false-10-spacecraft-stamm
 // console.log(arr1) // [5, true, 'proba', false, 10, 'spacecraft', 'stamm']
 
 //filter:
-const filter = (predicate) => {                           // Martin
+const filterTest = (predicate) => {                           // Martin
     return (arr) => {
         return arr.reduce((acc, el) => {
             if (predicate(el)) {
@@ -174,11 +174,11 @@ const filter = (predicate) => {                           // Martin
 
 const predicate = x => x === 7;
 const arr2 = [2, 5, 7, 6, 5, 6, 3, 7, 6, 8, 7];
-// console.log(filter(predicate)(arr2)); // [7, 7, 7]
+// console.log(filterTest(predicate)(arr2)); // [7, 7, 7]
 // console.log(arr2); // [2, 5, 7, 6, 5, 6, 3, 7, 6, 8, 7]
 
 // includes:
-const includes = (element) => {                            // Martin
+const includesTest = (element) => {                            // Martin
     return (arr) => {
         let theSearchedElExists = false;
 
@@ -194,11 +194,11 @@ const includes = (element) => {                            // Martin
 
 const element = 'Trophy';
 const arr3 = ['Juventus', 'Juve', 'Fc Juve', 'Milan', 'AC Milan'];
-// console.log(includes(element)(arr3)); // false
+// console.log(includesTest(element)(arr3)); // false
 // console.log(arr3); // ['Juventus', 'Juve', 'Fc Juve', 'Milan', 'AC Milan']
 
 // compose:
-const compose = (...fns) => {                               // Martin
+const composeTest = (...fns) => {                               // Martin
     let lastResult;
     return (input) => {
         fns.reverse().forEach((fn, i) => {
@@ -219,11 +219,11 @@ const num1 = 3;
 const multiplyByTwo = (num) => num * 2;
 const num2 = 3;
 
-// console.log(compose(multiplyByTwo, subtractOne, addOne, addOne)(num)); // 8
+// console.log(composeTest(multiplyByTwo, subtractOne, addOne, addOne)(num)); // 8
 // console.log(num2); // 3
 
 // groupBy:
-const groupBy = (groupingFn) => {                            // Martin
+const groupByTest = (groupingFn) => {                            // Martin
     return (arr) => {
         return arr.reduce((result, item) => {
             const key = groupingFn(item);
@@ -240,7 +240,7 @@ const groupBy = (groupingFn) => {                            // Martin
 
 const groupingFn = x => x;
 const arr4 = [7, 2, 3, 7, 3, 9];
-// console.log(groupBy(groupingFn)(arr4)); // { '2': [ 2 ], '3': [ 3, 3 ], '7': [ 7, 7 ], '9': [ 9 ] }
+// console.log(groupByTest(groupingFn)(arr4)); // { '2': [ 2 ], '3': [ 3, 3 ], '7': [ 7, 7 ], '9': [ 9 ] }
 // console.log(arr4); // [ 7, 2, 3, 7, 3, 9 ] 
 
 
