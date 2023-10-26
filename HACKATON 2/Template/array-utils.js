@@ -288,23 +288,23 @@ const every = (predicate) => {                                                //
 /**
  * Iterates over elements of a collection and returns true/false if the searched element is/isn't one of them.
  * @param {any} element The searched element
- * @returns {predicate} Returns a closure that will iterate over the passed array in and will check if the searched element is there.
+ * @returns {nestedFn} Returns a closure that will iterate over the passed array in and will check if the searched element is there.
  */
 const includes = (element) => {                                               //MARTIN
   /**
-   * @function predicate
-   * @returns {boolean}
+   * @function nestedFn
+   * @returns {boolean} the boolean
    */
   return (arr) => {
     let theSearchedElExists = false;
 
-        arr.forEach((item) => {
-            if (element === item) {
-                theSearchedElExists = true;
-            }
-        });
+    arr.forEach((item) => {
+        if (element === item) {
+            theSearchedElExists = true;
+        }
+    });
 
-        return theSearchedElExists;
+    return theSearchedElExists;
   };
 };
 
@@ -379,10 +379,26 @@ const pipe = (...fns) => {                                             //GEORGI
 
 // console.log(pipe([(e) => ++e, (e) => e += 10, (e) => e*3])(10))
 
-
+/**
+ * Accepts any number of functions and creates a sequence where the output of the last function becomes the input for the next.
+ * @param  {...Function} fns the input function
+ * @returns {nestedFn} the nested function
+ */
 const compose = (...fns) => {                                                 //MARTIN
+  /**
+   * @function nestedFn
+   * @returns {any} the final result
+   */
+  let lastResult;
   return (input) => {
-    
+    fns.reverse().forEach((fn, i) => {
+      if (i === 0) {
+        lastResult = fn(input);
+      } else {
+        lastResult = fn(lastResult);
+      }
+    })
+    return lastResult;
   };
 };
 
