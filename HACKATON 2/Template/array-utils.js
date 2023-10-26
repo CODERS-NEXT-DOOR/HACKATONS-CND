@@ -288,9 +288,13 @@ const every = (predicate) => {                                                //
 /**
  * Iterates over elements of a collection and returns true/false if the searched element is/isn't one of them.
  * @param {any} element The searched element
- * @returns Returns a closure that will iterate over the passed array in and will check if the searched element is there.
+ * @returns {predicate} Returns a closure that will iterate over the passed array in and will check if the searched element is there.
  */
 const includes = (element) => {                                               //MARTIN
+  /**
+   * @function predicate
+   * @returns {boolean}
+   */
   return (arr) => {
     let theSearchedElExists = false;
 
