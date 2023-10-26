@@ -236,8 +236,8 @@ const map = (mapperFn) => {                                                   //
    * @returns {array} The mapped array.
    */                                                                                             
   const closure = (arr) => {
-    const mappedArr = arr.reduce((acc, el) => {
-      acc.push(mapperFn(el));
+    const mappedArr = arr.reduce((acc, el, index) => {
+      acc.push(mapperFn(el, index));
       return acc;
     }, []);
     return mappedArr;
