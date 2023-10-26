@@ -60,12 +60,12 @@ const keys = (arr) => {
  
   return arr.reduce((accumulator, _, index) =>                               //VYARA
   {
-    const result = [];
+    
     if (index in arr) {
-      result.push(index);
+      accumulator.push(index);
     }
 
-    return result;
+    return accumulator;
   }, []);
 
 };
