@@ -88,6 +88,11 @@ const join = (separator) => {                                                 //
   };
 };
 
+/**
+ * 
+ * @param {Boolean} predicate  returns 
+ * @returns 
+ */
 const find = (predicate) => {                                                 //VYARA
   return (arr) => {
     return arr.reduce((accumulator, current, index) => {
@@ -127,10 +132,23 @@ const filter = (predicate) => {                                               //
   };
 };
 
+/**
+ * 
+ * @param {Function} fn  a function hat
+ * @param {*} initialValue 
+ * @returns 
+ */
 const reduce = (fn, initialValue) => {                                        //VYARA
-  return (arr) => {
-    // TODO
-  };
+  return (arr) =>
+  {
+    let acc = initialValue;
+    arr.map((el) =>
+    {
+        acc= fn(acc,el);
+    });
+
+    return acc;
+  }
 };
 
 const reduceRight = (fn, initialValue) => {                                   //ANTONIYA
