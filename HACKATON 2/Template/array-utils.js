@@ -258,8 +258,8 @@ const filter = (predicate) => {                                               //
    * @returns {array} the final result as array
    */
   return (arr) => {
-    return arr.reduce((acc, el) => {
-      if (predicate(el)) {
+    return arr.reduce((acc, el, index) => {
+      if (predicate(el, index)) {
           acc.push(el);
       }
       return acc;

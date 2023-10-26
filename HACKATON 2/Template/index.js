@@ -442,9 +442,9 @@ const testThree = () => {
       (str) => str.split(''), // ['7', '-', '2', '-', '2', '-', '2', '-', '3'],
       (filter((_, index) => index < 5)),
       map((el, index) => [index + 1, el]), // [[1, '7'], [2, '-'], [3, '2'], [4, '-'], [5, '2']]
-      keys, // [0, 1, 2, 3, 4]
-      removeFirst, // [1, 2, 3, 4]
-      reduce((a, b) => a * b, 1) // 24
+      // keys, // [0, 1, 2, 3, 4]
+      // removeFirst, // [1, 2, 3, 4]
+      // reduce((a, b) => a * b, 1) // 24
   );
 
   console.log(piped(startValue));
