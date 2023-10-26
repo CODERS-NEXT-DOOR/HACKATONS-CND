@@ -412,9 +412,27 @@ const flatMap = (mapperFn) => {                                               //
   };
 };
 
+/**
+ * Creates an object that will group the array values by a passed grouping function.
+ * @param {Function} groupingFn any function that accepts an element from the array and returns criterion to group by
+ * @returns {nestedFn} the nested function
+ */
 const groupBy = (groupingFn) => {                                             //MARTIN
+  /**
+   * @function nestedFn
+   * @returns {object} the final result as object
+   */
   return (arr) => {
-    // TODO
+    return arr.reduce((result, item) => {
+      const key = groupingFn(item);
+      if (!result[key]) {
+        result[key] = [];
+      }
+
+      result[key].push(item);
+
+      return result;
+    }, {});
   };
 };
 
