@@ -354,3 +354,54 @@ const testThree = () => {
 };
 
 // testThree();
+
+const keysTest = () => {                                                //vyara
+  const inputArray = [1, 2, undefined, 4, undefined, 6];
+  const result = keys(inputArray);
+
+  console.log(inputArray); // [1, 2, undefined, 4, undefined, 6]
+  console.log(result); // [0, 1, 3, 5]
+};
+
+// keysTest();
+
+
+const findTest = () => {                                                  //vyara
+  const inputArray = [1, 2, 3, 4, 5, 6];
+  const isEven = (element) => element % 2 === 0;
+  const result = find(isEven)(inputArray);
+  console.log(inputArray);
+  console.log(result);
+};
+
+
+// findTest();
+
+const reduceTest = () => {                                                    //vyara
+  const inputArray = [1, 2, 3, 4, 5];
+  const reducer = (accumulator, current) => accumulator + current;
+  const initialValue = 0;
+  const result = reduce(reducer, initialValue)(inputArray);
+  console.log(result);
+};
+
+// reduceTest();
+
+ 
+const indexOfTest = () => {                                                   //vyara
+  const inputArray = [1, 2, 3, 4, 3, 5];
+  const findIndex = indexOf(3);
+  const result = findIndex(inputArray);
+  console.log(result);
+};
+
+// indexOfTest();
+ 
+const flatTest = () => {                                                       //vyara
+  const inputArray = [1, [2, 3], 4, [5, 6]];
+  const result = flat(inputArray);
+  console.log(result);
+};
+
+// flatTest();
+
