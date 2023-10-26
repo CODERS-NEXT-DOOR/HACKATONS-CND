@@ -246,9 +246,29 @@ const reduce = (fn, initialValue) => {                                        //
   };
 };
 
+/**
+ * Iterates over elements of collection backwards and reducing all of them in a single value
+ * 
+ * @param {function} fn The reducer function that will accept an accumulator 
+ * and the next element and will return the updated accumulator.
+ * 
+ * @author Antoniya Asenova <tonii.asenova@gmail.com>
+ * @param {*} initialValue The accumulator's initial value.
+ * @returns {array} Returns a closure that will iterate over the passed array in reverse order 
+ * and will call the received reducer function with the accumulator variable and the current element. 
+ * Return the accumulator at the end.
+ */
 const reduceRight = (fn, initialValue) => {                                   //ANTONIYA
   return (arr) => {
-    // TODO
+    const internalReduce = (index, accumulator) => {
+      if (index < 0) {
+        return accumulator;
+      }
+      const updatedAccumulator = fn(accumulator, arr[index]);
+      return internalReduce(index - 1, updatedAccumulator);
+    };
+
+    return internalReduce(arr.length - 1, initialValue);
   };
 };
 
@@ -351,6 +371,7 @@ const indexOf = (searchedElement) => {                                        //
  * If the element does not exist in the array, return -1.
  */
 const findIndex = (predicate) => {                                            //ANTONIYA
+  
   return (arr) => {
     const filteredArray = arr.filter((element, index) => predicate(element, index));
     if (filteredArray.length > 0) {
