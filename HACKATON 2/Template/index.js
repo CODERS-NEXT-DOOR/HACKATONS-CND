@@ -25,7 +25,8 @@ import {
   compose,          // 25
   flat,             // 26
   flatMap,          // 27
-  groupBy           // 28
+  groupBy,          // 28
+  findIndex         // 29
 } from './array-utils.js';
 
 /*
@@ -243,8 +244,50 @@ const arr4 = [7, 2, 3, 7, 3, 9];
 // console.log(groupByTest(groupingFn)(arr4)); // { '2': [ 2 ], '3': [ 3, 3 ], '7': [ 7, 7 ], '9': [ 9 ] }
 // console.log(arr4); // [ 7, 2, 3, 7, 3, 9 ] 
 
+const entriesTest = () => {                      //Antoniya
+  const arr1 = [1,2,3,4];
+  const arr2 = ["Ivan", "Pesho", "Mitko"];
+  const res1 = entries(arr1);
+  const res2 = entries(arr2);
+  console.log(res1); // [ [ 0, 1 ], [ 1, 2 ], [ 2, 3 ], [ 3, 4 ] ]
+  console.log(res2); // [ [ 0, 'Ivan' ], [ 1, 'Pesho' ], [ 2, 'Mitko' ] ]
+}
+// entriesTest()
 
+const fillTest = () => {                          //Antoniya
+ const arr = [2, 3, 4, 5, 2, 2, 4];
+ const filledArray = fill(0, 2, 6)(arr);
+ console.log(filledArray); // [2, 3, 0, 0, 0, 0, 4]
+}
+// fillTest();
 
+const reduceRightTest = () => {                   //Antoniya
+  const arr1 = [1, 2, 3, 4, 5];
+  const arr2 = ["a", "b", "c"];
+  const sumReducer = (acc, el) => acc + el;
+  const concatReducer = (acc, el) => acc + el;
+  const sumResult = reduceRight(sumReducer, 0)(arr1);
+  const concatResult = reduceRight(concatReducer, "")(arr2);
+  console.log(sumResult); // 15
+  console.log(concatResult); // "cba"
+}
+// reduceRightTest();
+
+const findIndexTest = () => {                      //Antoniya
+  const isEven = (number) => number % 2 === 0;
+  const numbers = [1, 3, 5, 7, 9, 2, 4, 6];
+  const findEvenIndex = findIndex(isEven)(numbers);
+  console.log(findEvenIndex); // 5
+}
+// findIndexTest();
+
+const flatMapTest = () => {                         //Antoniya
+  const mapperFnc = (el) => [el * 2, el * 3];
+  const arr = [1,2,3];
+  const flattenedArray = flatMap(mapperFnc)(arr);
+  console.log(flattenedArray); // [ 2, 3, 4, 6, 6, 9 ]
+}
+// flatMapTest()
 
 /*
 *  Composite functions tests
