@@ -45,11 +45,19 @@ const removeLast = (arr) => arr.slice(0, -1);                                  /
 /**
  * Return the key's valid indexes of an array
  * 
+ * @author Vyara Delcheva <valentinesbyv@yahoo.com>
  * @param {array} arr  accepts an array 
  * @returns {array}  return an array with the valid indexes
  */
 const keys = (arr) => {
 
+  /**
+ * Creates a new array containing the indices of defined elements in the input array
+ *
+ * @param {Array} arr - the input array to extract indices from
+ * @returns {Array} an array containing the indices of defined elements in the input array
+ */
+ 
   return arr.reduce((accumulator, _, index) =>                               //VYARA
   {
     const result = [];
@@ -142,11 +150,22 @@ const join = (separator) => {                                                 //
 };
 
 /**
+ * Finds the first element in an array using a predicate function or returns null if it fails
  * 
- * @param {Boolean} predicate  returns 
- * @returns 
+ * * @author Vyara Delcheva <valentinesbyv@yahoo.com>
+ * @param {Boolean} predicate  returns true or false. The closer uses it to evaluate it's expressions
+ * @returns {closure} the first element that mathes the predicate's conditions. Otherwise returns null.
  */
-const find = (predicate) => {                                                 //VYARA
+const find = (predicate) => {  
+  
+  /**
+ * Find the first element in the array that matches the provided predicate
+ *
+ 
+ * @param {Array} arr - the input array to search within
+ * @param {Function} predicate - a function that tests each element for a condition
+ * @returns {*} the first element in the array that matches the predicate, or null if no match is found
+ */                                                                                                          //VYARA
   return (arr) => {
     return arr.reduce((accumulator, current, index) => {
       if (accumulator.found !== null) {
@@ -246,12 +265,19 @@ const filter = (predicate) => {                                               //
 };
 
 /**
- * 
- * @param {Function} fn  a function hat
- * @param {*} initialValue 
- * @returns 
+ * Creates a curried reducer function for arrays by applying a given reducer function and an initial value
+ *
+ * @author Vyara Delcheva <valentinesbyv@yahoo.com>
+ * @param {Function} fn - the reducer function that takes an accumulator and an array element and returns a new accumulator
+ * @param {*} initialValue - an initial value to start the reduction process
+ * @returns {Function} a curried function that, when provided an array, reduces its elements using the specified reducer function and initial value
  */
-const reduce = (fn, initialValue) => {                                        //VYARA
+const reduce = (fn, initialValue) => {    
+   /**
+    * Returns the new acumulator (the result of Function fn's operations)
+    * @param {array} array every element is being acumulated by the map function 
+    * @returns {accumulator} the new acumulator is being returned as it contains the result from fn's actions
+    * */                                   //VYARA
   return (arr) =>
   {
     let acc = initialValue;
@@ -365,9 +391,28 @@ Test:
 console.log(includes(4)([2, 5, 6, 8, 12, 4, 3, 5]));
 */
 
+
+/**
+ * Creates a closure function that finds and returns the first index of the searched element in an array using map and filter
+ *
+ * @author Vyara Delcheva <valentinesbyv@yahoo.com>
+ * @param {any} searchedElement - The element to search for in the array.
+ * @returns {(arr: any[]) => number} a closure function that, when given an array, iterates over the array and checks if the searched element exists using map and filter.
+ * 
+ */
 const indexOf = (searchedElement) => {                                        //VYARA
+  /**
+   * Searches for the first occurrence of the searched element in the array using map and filter
+   *
+   * @param {any[]} arr - the array to search for the element.
+   * @returns {number} the index of the first occurrence of the element, or -1 if not found
+   */
   return (arr) => {
-    // TODO
+    const foundIndices = arr
+      .map((element, index) => (element === searchedElement ? index : -1))
+      .filter((index) => index !== -1);
+
+    return foundIndices.length > 0 ? foundIndices[0] : -1;
   };
 };
 
@@ -461,9 +506,32 @@ const compose = (...fns) => {                                                 //
   };
 };
 
-const flat = (arr) => {                                                       //VYARA
-  // TODO
-};
+/**
+ * Flattens a nested array one level deep by concatenating inner arrays
+ *
+ * @author Vyara Delcheva <valentinesbyv@yahoo.com>
+ * @param {Array} arr - the input array to be flattened.
+ * @returns {Array} A new array where inner arrays are flattened one level deep
+ */
+const flat = (arr) => {
+
+  /**
+ * Flattens a nested array one level deep by concatenating inner arrays
+ *
+ * @param {Array} arr - the input array to be flattened
+ * @returns {Array} a new array where inner arrays are flattened 
+ */
+  return arr.reduce((accumulator, current) => {                                  //VYARA
+    if (Array.isArray(current)) {
+      return accumulator.concat(current);
+    } else {
+      accumulator.push(current);
+      return accumulator;
+    }
+  }, []);
+};                                                   
+  
+ 
 
 /**
  * Transform each of the elements of an array using a mapping function. The mapping function must always return an array. 
