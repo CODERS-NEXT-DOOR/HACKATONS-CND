@@ -1,22 +1,31 @@
 import {
-  addFirst,
-  removeFirst,
-  removeLast,
-  keys,
-  entries,
-  reverse,
-  arrayFrom,
-  pipe,
-  compose,
-  flat,
-  fill,
-  groupBy,
-  reduce,
-  map,
-  slice,
-  join,
-  find,
-  filter,
+  addFirst,         // 1
+  removeFirst,      // 2
+  addLast,          // 3
+  removeLast,       // 4
+  keys,             // 5
+  entries,          // 6
+  slice,            // 7
+  concat,           // 8
+  reverse,          // 9
+  join,             // 10
+  find,             // 12
+  fill,             // 13
+  forEach,          // 14
+  map,              // 15
+  filter,           // 16
+  reduce,           // 17
+  reduceRight,      // 18
+  some,             // 19
+  every,            // 20
+  includes,         // 21
+  indexOf,          // 22
+  arrayFrom,        // 23
+  pipe,             // 24
+  compose,          // 25
+  flat,             // 26
+  flatMap,          // 27
+  groupBy           // 28
 } from './array-utils.js';
 
 /*
@@ -26,14 +35,112 @@ import {
 
 const addFirstTest = () => {
   const arr = [1, 2, 3];
-
   const copy = addFirst(5)(arr);
-
   console.log(arr); // 1, 2, 3
   console.log(copy); // 5, 1, 2, 3
 };
-
 // addFirstTest();
+
+const removeFirstTest = () => {
+  const arr = [1, 2, 3, 4, 5]
+  const res = removeFirst(arr)
+  console.log(arr) // [1, 2, 3, 4, 5]
+  console.log(res) // [2, 3, 4, 5]
+}
+// removeFirstTest()                             //GEORGI
+
+const addLastTest = () => {
+  const arr = [1, 2, 3, 4];
+  const res = addLast(5)(arr);
+  console.log(arr); // [1, 2, 3, 4]
+  console.log(res); // [1, 2, 3, 4, 5]
+}
+// addLastTest()                                 //GEORGI
+
+const reverseTest = () => {
+  const arr = [1, 2, 3, 4, 5];
+  const res = reverse(arr);
+  console.log(arr) // [1, 2, 3, 4, 5]
+  console.log(res) // [5, 4, 3, 2, 1]
+}
+// reverseTest()                                 //GEORGI
+
+const mapTest = () => {
+  const arr = [1, 2, 3, 4, 5];
+  const res = arr.map((el) => ++el)
+  console.log(arr) // [1, 2, 3, 4, 5]
+  console.log(res) // [2, 3, 4, 5, 6]
+}
+// mapTest()                                     //GEORGI
+
+const EveryTest = () => {
+  const arr1 = [1, 2, 3, 4, 5];
+  const arr2 = [1, 2, '3', 4, 5];
+  const predicate = c => typeof c === 'number' ? true : false
+  const res1 = every(predicate)(arr1);
+  const res2 = every(predicate)(arr2)    
+  console.log(arr1); // [1, 2, 3, 4, 5]
+  console.log(arr2); // [1, 2, '3', 4, 5]
+  console.log(res1); // true
+  console.log(res2); // false
+}
+// EveryTest()                                   //GEORGI
+
+const pipeTest = () => {
+  const funcArr = [(e) => ++e, (e) => e += 10, (e) => e*3];
+  const res = pipe(funcArr)(1);
+  console.log(res) // 36
+}
+// pipeTest()                                    //GEORGI
+
+const sliceTest = () => {                        //ANDY
+  const arr = [undefined, undefined, undefined, 1, 1, 1, 8, 2, 3];
+  const arr1 = [3, 4, 8, 5, 7, 2];
+  console.log(arr(4, 7)); // 1, 1, 8
+  console.log(arr1(2, 4)); // 8, 5
+};
+// sliceTest();
+
+const concatTest = () => {                        //ANDY
+  const outerArray = [1, 2, 3];
+  const innerArray = [4, 5, 6];
+  console.log(concat(outerArray)(innerArray)); // [ 4, 5, 6, 1, 2, 3 ]
+};
+// concatTest();
+
+const forEachTest = () => {                        //ANDY
+  const myArray = [1, 2, 3, 4, 5];
+  const caller = iterateAndCall(printElement);
+  const result = caller(myArray);
+  console.log(result);
+  // Element: 1
+  // Element: 2
+  // Element: 3
+  // Element: 4
+  // Element: 5
+};
+// forEachTest();
+
+const someTest = () => {                        //ANDY
+  const isEven = (el) => el % 2 === 0;
+  const hasEvenNumber = some(isEven);
+  const array1 = [1, 3, 5, 7, 9];
+  const array2 = [1, 2, 3, 4, 5];
+  const res1 = hasEvenNumber(array1);
+  const res2 = hasEvenNumber(array2);
+  console.log(res1); //false
+  console.log(res2); // true
+};
+// someTest();
+
+const arrayFromTest = () => {                        //ANDY
+  const objWithLength = { length: 5 };
+  const newArray = arrayFrom(objWithLength);
+  console.log(newArray); // [ undefined, undefined, undefined, undefined, undefined ]
+};
+//arrayFromTest();
+
+
 
 
 /*
@@ -60,6 +167,8 @@ const testOne = () => {
 };
 
 // testOne();
+
+
 
 const testTwo = () => {
   const startValue = [
@@ -109,6 +218,7 @@ const testTwo = () => {
 };
 
 // testTwo();
+
 
 const testThree = () => {
   const startValue = [
