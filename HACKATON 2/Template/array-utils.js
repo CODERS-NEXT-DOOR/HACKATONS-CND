@@ -71,6 +71,7 @@ const entries = (arr) => arr.map((element, index) => [index, element]);      //A
 
 /**
  * Obtain a start and end position. Making changes to the array and returning it.
+ * @author Andrey Raychev <andreyraychev27@gmail.com>
  * @param {number} start New starting point.
  * @param {number} end New ending point.
  * @returns Specific part of the main array.
@@ -163,6 +164,7 @@ const fill = (value, start, end) => {                                         //
 };
 /**
  * Call a function with each of the elements of an array as a parameter.
+ * @author Andrey Raychev <andreyraychev27@gmail.com>
  * @param {*} fn The function to call with the elements. 
  * @returns Returns a closure that will iterate over the passed array and will call the received function 
  * with each of the elements. This function does not return anything.
@@ -232,6 +234,7 @@ const reduceRight = (fn, initialValue) => {                                   //
 
 /**
  * Iterates over elements of a collection and returns the result.
+ * @author Andrey Raychev <andreyraychev27@gmail.com>
  * @param {number} predicate A function that accepts an element and an index, and returns a boolean value.
  * @returns Returns a closure that will iterate over the passed array.
  */
@@ -346,6 +349,7 @@ const findIndex = (predicate) => {                                            //
 // ------------------------- HARD -------------------------------//
 /**
  * Creates an array from object by using its length property.
+ * @author Andrey Raychev <andreyraychev27@gmail.com>
  * @param {number} obj An object that has the length property.
  * @returns Returns the created array with length equal to the passed object's length property, 
  * filled with undefined values.
