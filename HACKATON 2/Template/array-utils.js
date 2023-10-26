@@ -77,6 +77,11 @@ const entries = (arr) => arr.map((element, index) => [index, element]);      //A
  * @returns Specific part of the main array.
  */
 const slice = (start, end) => {                                                //ANDY
+  /**
+   * @function slice
+   * @param {array} arr an array to add element into
+   * @return {array} a copy of the array with the element added
+   */
   return (arr) => {
     const copiedArray = arr.filter((element, index) => index >= start && index < end);
     return copiedArray;
@@ -89,6 +94,11 @@ const slice = (start, end) => {                                                /
  * @returns {function} Returns a closure that will concatenate the passed inner array with the already received outer.
  */
 const concat = (arr) => {
+  /**
+   * @function concat
+   * @param {array} innerArr an array to add element into
+   * @return {array} a copy of two arrays merged into one
+   */
   (innerArr) => [...arr, ...innerArr]};            //ANTON / Andy 
 
 
@@ -166,6 +176,11 @@ const fill = (value, start, end) => {                                         //
  * with each of the elements. This function does not return anything.
  */
 const forEach = (fn) => {                                                     //ANDY
+    /**
+   * @function forEach
+   * @param {array} arr an array to add element into
+   * @return {string} number of elements
+   */
     return (arr) => {
       arr.forEach(fn);
     };
@@ -217,9 +232,29 @@ const reduce = (fn, initialValue) => {                                        //
   };
 };
 
+/**
+ * Iterates over elements of collection backwards and reducing all of them in a single value
+ * 
+ * @param {function} fn The reducer function that will accept an accumulator 
+ * and the next element and will return the updated accumulator.
+ * 
+ * @author Antoniya Asenova <tonii.asenova@gmail.com>
+ * @param {*} initialValue The accumulator's initial value.
+ * @returns {array} Returns a closure that will iterate over the passed array in reverse order 
+ * and will call the received reducer function with the accumulator variable and the current element. 
+ * Return the accumulator at the end.
+ */
 const reduceRight = (fn, initialValue) => {                                   //ANTONIYA
   return (arr) => {
-    // TODO
+    const internalReduce = (index, accumulator) => {
+      if (index < 0) {
+        return accumulator;
+      }
+      const updatedAccumulator = fn(accumulator, arr[index]);
+      return internalReduce(index - 1, updatedAccumulator);
+    };
+
+    return internalReduce(arr.length - 1, initialValue);
   };
 };
 
@@ -230,6 +265,11 @@ const reduceRight = (fn, initialValue) => {                                   //
  * @returns Returns a closure that will iterate over the passed array.
  */
 const some = (predicate) => {                                                 //ANDY
+  /**
+   * @function some
+   * @param {array} arr an array to add element into
+   * @return {boolean} true or false
+   */
   return (arr) => {
     return arr.reduce(
       (result, element, index) => result || predicate(element, index), false);
@@ -315,6 +355,7 @@ const indexOf = (searchedElement) => {                                        //
  * If the element does not exist in the array, return -1.
  */
 const findIndex = (predicate) => {                                            //ANTONIYA
+  
   return (arr) => {
     const filteredArray = arr.filter((element, index) => predicate(element, index));
     if (filteredArray.length > 0) {
@@ -339,6 +380,11 @@ const findIndex = (predicate) => {                                            //
  * filled with undefined values.
  */
 const arrayFrom = (obj) => {                                           //ANDY
+  /**
+   * @function arrayFrom
+   * @param {obj} obj an object that keeps the length
+   * @return {array} return a array full with undefined
+   */
   if (obj && obj.length !== undefined) {
     return Array.from({ length: obj.length });
   } else {
