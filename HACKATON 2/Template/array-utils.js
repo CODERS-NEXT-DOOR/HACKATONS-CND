@@ -65,6 +65,7 @@ const keys = (arr) => {
 /**
  * Get the array's entries in the form of key-value pairs [index, element].
  * 
+ * @author Antoniya Asenova <tonii.asenova@gmail.com>
  * @param {array} arr The array to get the entries from.
  * @returns {array} Returns a new array with the valid entries in the form [index, element].
  */
@@ -164,13 +165,14 @@ const find = (predicate) => {                                                 //
  * Fills elements of array with value from start up to, but not including, end. 
  * This should not change the original array.
  * 
+ * @author Antoniya Asenova <tonii.asenova@gmail.com>
  * @param {*} value The value to fill array with.
  * @param {number} start The start position.
  * @param {number} end The end position.
  * @returns {array} Returns a closure that will fill the passed array with the value.
  */
 const fill = (value, start, end) => {                                         //ANTONIYA
-  return (arr) => {
+  const filledArr = (arr) => {
     return arr.map((element, index) => {
       if (index >= start && index < end) {
         return value;
@@ -179,6 +181,7 @@ const fill = (value, start, end) => {                                         //
       }
     });
   };
+  return filledArr;
 };
 
 /**
@@ -277,7 +280,12 @@ const reduce = (fn, initialValue) => {                                        //
  * Return the accumulator at the end.
  */
 const reduceRight = (fn, initialValue) => {                                   //ANTONIYA
-  return (arr) => {
+  /**
+   * 
+   * @param {array} arr The input array.
+   * @returns {array} Returns the final result.
+   */
+  const reducedArr = (arr) => {
     const internalReduce = (index, accumulator) => {
       if (index < 0) {
         return accumulator;
@@ -288,6 +296,7 @@ const reduceRight = (fn, initialValue) => {                                   //
 
     return internalReduce(arr.length - 1, initialValue);
   };
+  return reducedArr;
 };
 
 /**
@@ -375,13 +384,18 @@ const indexOf = (searchedElement) => {                                        //
  * Finds and returns the index of the searched element in the array based on a predicate function. 
  * If the element does not exist in the array, return -1.
  * 
+ * @author Antoniya Asenova <tonii.asenova@gmail.com>
  * @param {function} predicate A function that accepts an element and (optionally) an index, and returns a boolean value.
  * @returns {number} Finds and returns the index of the searched element in the array based on a predicate function. 
  * If the element does not exist in the array, return -1.
  */
 const findIndex = (predicate) => {                                            //ANTONIYA
-  
-  return (arr) => {
+  /**
+   * 
+   * @param {array} arr The input array
+   * @returns {number} The index of the searched element
+   */
+  const foundIndex = (arr) => {
     const filteredArray = arr.filter((element, index) => predicate(element, index));
     if (filteredArray.length > 0) {
       return arr.indexOf(filteredArray[0]);
@@ -389,6 +403,7 @@ const findIndex = (predicate) => {                                            //
       return -1;
     }
   };
+  return foundIndex;
 };
 
 
@@ -477,13 +492,16 @@ const flat = (arr) => {                                                       //
 const flatMap = (mapperFn) => {                                               //ANTONIYA
   /**
    * 
+   * @param {array} arr The input array.
+   * @returns {array} Returns the final resault as array
    */
-  return (arr) => {
+  const flattedMappedArr = (arr) => {
     return arr.reduce(function(acc, el) {
         const mappedArr = mapperFn(el);
         return [...acc, ...mappedArr];
     }, []);
   }
+  return flattedMappedArr;
 };
 
 /**
