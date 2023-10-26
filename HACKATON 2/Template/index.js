@@ -35,30 +35,60 @@ import {
 
 const addFirstTest = () => {
   const arr = [1, 2, 3];
-
   const copy = addFirst(5)(arr);
-
   console.log(arr); // 1, 2, 3
   console.log(copy); // 5, 1, 2, 3
 };
 // addFirstTest();
 
+const removeFirstTest = () => {
+  const arr = [1, 2, 3, 4, 5]
+  const res = removeFirst(arr)
+  console.log(arr) // [1, 2, 3, 4, 5]
+  console.log(res) // [2, 3, 4, 5]
+}
+// removeFirstTest()                             GEORGI
 
-const slice = () => {                        //ANDY
+const sliceTest = () => {                        //ANDY
   const arr = [undefined, undefined, undefined, 1, 1, 1, 8, 2, 3];
   const arr1 = [3, 4, 8, 5, 7, 2]
   console.log(arr(4, 7)); // 1, 1, 8
   console.log(arr1(2, 4)); // 8, 5
 };
-// slice();
+// sliceTest();
 
-
-const concat = () => {                        //ANDY
+const concatTest = () => {                        //ANDY
   const outerArray = [1, 2, 3];
   const innerArray = [4, 5, 6];
   console.log(concat(outerArray)(innerArray));
 };
-// concat();
+// concatTest();
+
+const forEachTest = () => {                        //ANDY
+  const myArray = [1, 2, 3, 4, 5];
+  const caller = iterateAndCall(printElement);
+  caller(myArray);
+};
+// forEachTest();
+
+const someTest = () => {                        //ANDY
+  const isEven = (el) => el % 2 === 0;
+  const hasEvenNumber = some(isEven);
+  const array1 = [1, 3, 5, 7, 9];
+  const array2 = [1, 2, 3, 4, 5];
+  console.log(hasEvenNumber(array1));
+  console.log(hasEvenNumber(array2));
+};
+// someTest();
+
+const arrayFromTest = () => {       //offTopic: Не знам дали трябва да е така :(                 //ANDY
+  const objWithLength = { length: 5 };
+  const newArray = arrayFrom(objWithLength);
+  console.log(newArray);
+};
+//arrayFromTest();
+
+
 
 
 /*
@@ -86,22 +116,6 @@ const testOne = () => {
 
 // testOne();
 
-const forEach = () => {                        //ANDY
-  const myArray = [1, 2, 3, 4, 5];
-  const caller = iterateAndCall(printElement);
-  caller(myArray);
-};
-// forEach();
-
-const some = () => {                        //ANDY
-  const isEven = (el) => el % 2 === 0;
-  const hasEvenNumber = some(isEven);
-  const array1 = [1, 3, 5, 7, 9];
-  const array2 = [1, 2, 3, 4, 5];
-  console.log(hasEvenNumber(array1));
-  console.log(hasEvenNumber(array2));
-};
-// some();
 
 
 const testTwo = () => {
@@ -153,12 +167,6 @@ const testTwo = () => {
 
 // testTwo();
 
-const arrayFrom = () => {       //offTopic: Не знам дали трябва да е така :(                 //ANDY
-  const objWithLength = { length: 5 };
-  const newArray = arrayFrom(objWithLength);
-  console.log(newArray);
-};
-//arrayFrom();
 
 const testThree = () => {
   const startValue = [
