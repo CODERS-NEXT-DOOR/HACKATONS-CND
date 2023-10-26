@@ -447,10 +447,25 @@ const flat = (arr) => {                                                       //
   // TODO
 };
 
+/**
+ * Transform each of the elements of an array using a mapping function. The mapping function must always return an array. 
+ * Flat the array of arrays after the mapping function and return the result.
+ * 
+ * @author Antoniya Asenova <tonii.asenova@gmail.com>
+ * @param {*} mapperFn The mapping function. It must return an array.
+ * @returns {array} Returns a closure that will iterate over the passed array 
+ * and will call the mapping function with each of the elements. Flat the result of the mapping and return it.
+ */
 const flatMap = (mapperFn) => {                                               //ANTONIYA
+  /**
+   * 
+   */
   return (arr) => {
-    // TODO
-  };
+    return arr.reduce(function(acc, el) {
+        const mappedArr = mapperFn(el);
+        return [...acc, ...mappedArr];
+    }, []);
+  }
 };
 
 /**
