@@ -51,7 +51,7 @@ const removeFirstTest = () => {
 
 const sliceTest = () => {                        //ANDY
   const arr = [undefined, undefined, undefined, 1, 1, 1, 8, 2, 3];
-  const arr1 = [3, 4, 8, 5, 7, 2]
+  const arr1 = [3, 4, 8, 5, 7, 2];
   console.log(arr(4, 7)); // 1, 1, 8
   console.log(arr1(2, 4)); // 8, 5
 };
@@ -60,14 +60,20 @@ const sliceTest = () => {                        //ANDY
 const concatTest = () => {                        //ANDY
   const outerArray = [1, 2, 3];
   const innerArray = [4, 5, 6];
-  console.log(concat(outerArray)(innerArray));
+  console.log(concat(outerArray)(innerArray)); // [ 4, 5, 6, 1, 2, 3 ]
 };
 // concatTest();
 
 const forEachTest = () => {                        //ANDY
   const myArray = [1, 2, 3, 4, 5];
   const caller = iterateAndCall(printElement);
-  caller(myArray);
+  const result = caller(myArray);
+  console.log(result);
+  // Element: 1
+  // Element: 2
+  // Element: 3
+  // Element: 4
+  // Element: 5
 };
 // forEachTest();
 
@@ -76,15 +82,17 @@ const someTest = () => {                        //ANDY
   const hasEvenNumber = some(isEven);
   const array1 = [1, 3, 5, 7, 9];
   const array2 = [1, 2, 3, 4, 5];
-  console.log(hasEvenNumber(array1));
-  console.log(hasEvenNumber(array2));
+  const res1 = hasEvenNumber(array1);
+  const res2 = hasEvenNumber(array2);
+  console.log(res1); //false
+  console.log(res2); // true
 };
 // someTest();
 
-const arrayFromTest = () => {       //offTopic: Не знам дали трябва да е така :(                 //ANDY
+const arrayFromTest = () => {                        //ANDY
   const objWithLength = { length: 5 };
   const newArray = arrayFrom(objWithLength);
-  console.log(newArray);
+  console.log(newArray); // [ undefined, undefined, undefined, undefined, undefined ]
 };
 //arrayFromTest();
 
