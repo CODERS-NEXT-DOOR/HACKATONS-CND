@@ -132,7 +132,7 @@ const someTest = () => {                        //ANDY
   console.log(res1); //false
   console.log(res2); // true
 };
- someTest();
+//  someTest();
 
 const arrayFromTest = () => {                        //ANDY
   const objWithLength = { length: 5 };
@@ -366,7 +366,7 @@ const testOne = () => {
   console.log(piped(startValue));
 };
 
- testOne();
+//  testOne();
 
 
 
