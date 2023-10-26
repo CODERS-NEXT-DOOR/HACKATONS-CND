@@ -206,22 +206,19 @@ const fill = (value, start, end) => {                                         //
 /**
  * Call a function with each of the elements of an array as a parameter.
  * @author Andrey Raychev <andreyraychev27@gmail.com>
- * @param {*} fn The function to call with the elements. 
- * @returns Returns a closure that will iterate over the passed array and will call the received function 
+ * @param {function} fn The function to call with the elements. 
+ * @returns {function} Returns a closure that will iterate over the passed array and will call the received function 
  * with each of the elements. This function does not return anything.
  */
-const forEach = (fn) => {                                                     //ANDY
+const forEach = (fn) => {                                           //ANDY     
     /**
-   * @function forEach
-   * @param {array} arr an array to add element into
-   * @return {string} number of elements
-   */
-    return (arr) => {
-      arr.forEach(fn);
-    };
-  }
-  function printElement(element) {
-    console.log("Element:", element);
+     * @param {array} arr The input array
+     * @returns {array} The output array
+     */                                                                                                                                       
+    const closure = (arr) => {
+      return arr.map(fn);
+    } 
+  return closure;
   };
 
 /**

@@ -111,18 +111,13 @@ const concatTest = () => {                        //ANDY
 
 const forEachTest = () => {                        //ANDY
   const myArray = [1, 2, 3, 4, 5];
-  const caller = iterateAndCall(printElement);
-  const result = caller(myArray);
+  const forEachFn = e => ++e;
+  const result = forEach(forEachFn)(myArray)
   console.log(result);
-  // Element: 1
-  // Element: 2
-  // Element: 3
-  // Element: 4
-  // Element: 5
 };
 // forEachTest();
 
-const someTest = () => {                        //ANDY
+const someTest = () => {                           //ANDY
   const isEven = (el) => el % 2 === 0;
   const hasEvenNumber = some(isEven);
   const array1 = [1, 3, 5, 7, 9];
@@ -134,7 +129,7 @@ const someTest = () => {                        //ANDY
 };
 //  someTest();
 
-const arrayFromTest = () => {                        //ANDY
+const arrayFromTest = () => {                       //ANDY
   const objWithLength = { length: 5 };
   const newArray = arrayFrom(objWithLength);
   console.log(newArray); // [ undefined, undefined, undefined, undefined, undefined ]
@@ -442,9 +437,9 @@ const testThree = () => {
       (str) => str.split(''), // ['7', '-', '2', '-', '2', '-', '2', '-', '3'],
       (filter((_, index) => index < 5)),
       map((el, index) => [index + 1, el]), // [[1, '7'], [2, '-'], [3, '2'], [4, '-'], [5, '2']]
-      // keys, // [0, 1, 2, 3, 4]
-      // removeFirst, // [1, 2, 3, 4]
-      // reduce((a, b) => a * b, 1) // 24
+      keys, // [0, 1, 2, 3, 4]
+      removeFirst, // [1, 2, 3, 4]
+      reduce((a, b) => a * b, 1) // 24
   );
 
   console.log(piped(startValue));
