@@ -47,7 +47,51 @@ const removeFirstTest = () => {
   console.log(arr) // [1, 2, 3, 4, 5]
   console.log(res) // [2, 3, 4, 5]
 }
-// removeFirstTest()                             GEORGI
+// removeFirstTest()                             //GEORGI
+
+const addLastTest = () => {
+  const arr = [1, 2, 3, 4];
+  const res = addLast(5)(arr);
+  console.log(arr); // [1, 2, 3, 4]
+  console.log(res); // [1, 2, 3, 4, 5]
+}
+// addLastTest()                                 //GEORGI
+
+const reverseTest = () => {
+  const arr = [1, 2, 3, 4, 5];
+  const res = reverse(arr);
+  console.log(arr) // [1, 2, 3, 4, 5]
+  console.log(res) // [5, 4, 3, 2, 1]
+}
+// reverseTest()                                 //GEORGI
+
+const mapTest = () => {
+  const arr = [1, 2, 3, 4, 5];
+  const res = arr.map((el) => ++el)
+  console.log(arr) // [1, 2, 3, 4, 5]
+  console.log(res) // [2, 3, 4, 5, 6]
+}
+// mapTest()                                     //GEORGI
+
+const EveryTest = () => {
+  const arr1 = [1, 2, 3, 4, 5];
+  const arr2 = [1, 2, '3', 4, 5];
+  const predicate = c => typeof c === 'number' ? true : false
+  const res1 = every(predicate)(arr1);
+  const res2 = every(predicate)(arr2)    
+  console.log(arr1); // [1, 2, 3, 4, 5]
+  console.log(arr2); // [1, 2, '3', 4, 5]
+  console.log(res1); // true
+  console.log(res2); // false
+}
+// EveryTest()                                   //GEORGI
+
+const pipeTest = () => {
+  const funcArr = [(e) => ++e, (e) => e += 10, (e) => e*3];
+  const res = pipe(funcArr)(1);
+  console.log(res) // 36
+}
+// pipeTest()                                    //GEORGI
 
 const sliceTest = () => {                        //ANDY
   const arr = [undefined, undefined, undefined, 1, 1, 1, 8, 2, 3];

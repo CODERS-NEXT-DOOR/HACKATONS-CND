@@ -316,15 +316,6 @@ const every = (predicate) => {                                                //
   return closure;
 };
 
-// EVERY() FUNC TEST (IGNORE)
-// const predicate = function(c) {
-//   if (typeof c === 'number') {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
-// console.log(every(predicate)([1,2,3]))
 
 /**
  * Iterates over elements of a collection and returns true/false if the searched element is/isn't one of them.
@@ -426,8 +417,6 @@ const pipe = (...fns) => {                                             //GEORGI
   };
   return closure;
 };
-
-// console.log(pipe([(e) => ++e, (e) => e += 10, (e) => e*3])(10))
 
 /**
  * Accepts any number of functions and creates a sequence where the output of the last function becomes the input for the next.
