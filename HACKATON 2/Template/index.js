@@ -41,15 +41,25 @@ const addFirstTest = () => {
   console.log(arr); // 1, 2, 3
   console.log(copy); // 5, 1, 2, 3
 };
-
 // addFirstTest();
+
 
 const slice = () => {                        //ANDY
   const arr = [undefined, undefined, undefined, 1, 1, 1, 8, 2, 3];
-
-  console.log(slice(4, 7)); // 1, 1, 8
-  console.log(slice(2, 4)); // undefined, 1 
+  const arr1 = [3, 4, 8, 5, 7, 2]
+  console.log(arr(4, 7)); // 1, 1, 8
+  console.log(arr1(2, 4)); // 8, 5
 };
+// slice();
+
+
+const concat = () => {                        //ANDY
+  const outerArray = [1, 2, 3];
+  const innerArray = [4, 5, 6];
+  console.log(concat(outerArray)(innerArray));
+};
+// concat();
+
 
 /*
 *  Composite functions tests
@@ -75,6 +85,24 @@ const testOne = () => {
 };
 
 // testOne();
+
+const forEach = () => {                        //ANDY
+  const myArray = [1, 2, 3, 4, 5];
+  const caller = iterateAndCall(printElement);
+  caller(myArray);
+};
+// forEach();
+
+const some = () => {                        //ANDY
+  const isEven = (el) => el % 2 === 0;
+  const hasEvenNumber = some(isEven);
+  const array1 = [1, 3, 5, 7, 9];
+  const array2 = [1, 2, 3, 4, 5];
+  console.log(hasEvenNumber(array1));
+  console.log(hasEvenNumber(array2));
+};
+// some();
+
 
 const testTwo = () => {
   const startValue = [
@@ -125,11 +153,12 @@ const testTwo = () => {
 
 // testTwo();
 
-// offTopic: Не знам дали трябва да е така :(   // ANDY
-// const objWithLength = { length: 5 };
-// const newArray = arrayFrom(objWithLength);
-// console.log(newArray);
-// };
+const arrayFrom = () => {       //offTopic: Не знам дали трябва да е така :(                 //ANDY
+  const objWithLength = { length: 5 };
+  const newArray = arrayFrom(objWithLength);
+  console.log(newArray);
+};
+//arrayFrom();
 
 const testThree = () => {
   const startValue = [

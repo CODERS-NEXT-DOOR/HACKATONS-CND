@@ -88,13 +88,8 @@ const slice = (start, end) => {                                                /
  * @param {array} arr The array to concatenate with.
  * @returns {function} Returns a closure that will concatenate the passed inner array with the already received outer.
  */
-const concat = (arr) => (innerArr) => [...arr, ...innerArr];            //ANTON / Andy 
-
-// Test:
-// const outerArray = [1, 2, 3];
-// const innerArray = [4, 5, 6];
-
-// console.log(concat(outerArray)(innerArray)); 
+const concat = (arr) => {
+  (innerArr) => [...arr, ...innerArr]};            //ANTON / Andy 
 
 
 
@@ -162,6 +157,7 @@ const fill = (value, start, end) => {                                         //
     });
   };
 };
+
 /**
  * Call a function with each of the elements of an array as a parameter.
  * @author Andrey Raychev <andreyraychev27@gmail.com>
@@ -176,11 +172,6 @@ const forEach = (fn) => {                                                     //
   }
   function printElement(element) {
     console.log("Element:", element);
-
-  // Test:
-  // const myArray = [1, 2, 3, 4, 5];
-  // const caller = iterateAndCall(printElement);
-  // caller(myArray);
   };
 
 /**
@@ -243,13 +234,6 @@ const some = (predicate) => {                                                 //
     return arr.reduce(
       (result, element, index) => result || predicate(element, index), false);
   };
-  //Test:
-  // const isEven = (el) => el % 2 === 0;
-  // const hasEvenNumber = some(isEven);
-  // const array1 = [1, 3, 5, 7, 9];
-  // const array2 = [1, 2, 3, 4, 5];
-  // console.log(hasEvenNumber(array1));
-  // console.log(hasEvenNumber(array2));
 };
 
 /**
