@@ -34,6 +34,8 @@ const addLast = (element) => {                                                 /
 
 /**
  * Removes the last element of the array.
+ * 
+ * @author Martin Andreev <xxdead_worldxx@abv.bg>
  * @param {array} arr The array to remove the last element of.
  * @returns The final array.
  */
@@ -124,10 +126,16 @@ const reverse = (arr) => {                                                    //
 
 /**
  * Converts all elements in array into a string separated by separator.
+ * 
+ * @author Martin Andreev <xxdead_worldxx@abv.bg>
  * @param {any} separator The separator element.
  * @returns Returns a closure that will join the elements of the array with the passed separator.
  */
 const join = (separator) => {                                                 //MARTIN
+  /**
+   * @function nestedFn
+   * @returns {string} the final result
+   */
   return (arr) => {
     return arr.reduce((acc, el) => acc + el + separator, '').slice(0, -1);
   };
@@ -212,10 +220,16 @@ const map = (mapperFn) => {                                                   //
 
 /**
  * Iterates over elements of collection, returning an array of all elements the passed function returns truthy for.
+ * 
+ * @author Martin Andreev <xxdead_worldxx@abv.bg>
  * @param {function} predicate The function that accepts an element and (optionally) an index, and returns a boolean value.
  * @returns Returns a closure that will iterate over the passed array and will call the received predicate function with each of the elements.
  */
 const filter = (predicate) => {                                               //MARTIN
+  /**
+   * @function nestedFn
+   * @returns {array} the final result as array
+   */
   return (arr) => {
     return arr.reduce((acc, el) => {
       if (predicate(el)) {
@@ -305,6 +319,8 @@ const every = (predicate) => {                                                //
 
 /**
  * Iterates over elements of a collection and returns true/false if the searched element is/isn't one of them.
+ * 
+ * @author Martin Andreev <xxdead_worldxx@abv.bg>
  * @param {any} element The searched element
  * @returns {nestedFn} Returns a closure that will iterate over the passed array in and will check if the searched element is there.
  */
@@ -404,6 +420,8 @@ const pipe = (...fns) => {                                             //GEORGI
 
 /**
  * Accepts any number of functions and creates a sequence where the output of the last function becomes the input for the next.
+ * 
+ * @author Martin Andreev <xxdead_worldxx@abv.bg>
  * @param  {...Function} fns the input function
  * @returns {nestedFn} the nested function
  */
@@ -437,6 +455,8 @@ const flatMap = (mapperFn) => {                                               //
 
 /**
  * Creates an object that will group the array values by a passed grouping function.
+ * 
+ * @author Martin Andreev <xxdead_worldxx@abv.bg>
  * @param {Function} groupingFn any function that accepts an element from the array and returns criterion to group by
  * @returns {nestedFn} the nested function
  */
