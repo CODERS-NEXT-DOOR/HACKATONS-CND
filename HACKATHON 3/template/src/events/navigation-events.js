@@ -1,6 +1,7 @@
 import { ABOUT, FULL_HEART, CONTAINER_SELECTOR, HOME } from '../common/constants.js';
 import { toAboutView } from '../views/about-view.js';
 import { toHomeView } from '../views/home-view.js';
+import { toFavoritesView } from '../views/favorites-view.js';
 import { toMoviesFromCategoryView } from '../views/movie-views.js';
 import { q, setActiveNav } from './helpers.js';
 
