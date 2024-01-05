@@ -1,4 +1,4 @@
-import { ABOUT, FULL_HEART, CONTAINER_SELECTOR, HOME } from '../common/constants.js';
+import { HOME, CATEGORIES, FAVORITESABOUT, ABOUT, CONTAINER_SELECTOR, FULL_HEART, EMPTY_HEART} from '../common/constants.js';
 import { toAboutView } from '../views/about-view.js';
 import { toHomeView } from '../views/home-view.js';
 import { toFavoritesView } from '../views/favorites-view.js';
@@ -13,6 +13,18 @@ export const loadPage = (page = '') => {
     case HOME:
       setActiveNav(HOME);
       return renderHome();
+
+    case CATEGORIES:
+      setActiveNav(CATEGORIES);
+      return renderCategories();
+
+    case FAVORITES:
+      setActiveNav(FAVORITES);
+      return renderFavorites();
+
+    case ABOUT:
+      setActiveNav(ABOUT);
+      return renderAbout();
 
       // missing partial implementation
 
