@@ -1,4 +1,4 @@
-import { HOME, CATEGORIES, FAVORITESABOUT, ABOUT, CONTAINER_SELECTOR, FULL_HEART, EMPTY_HEART} from '../common/constants.js';
+import { HOME, CATEGORIES, FAVORITES, ABOUT, CONTAINER_SELECTOR, FULL_HEART, EMPTY_HEART} from '../common/constants.js';
 import { toAboutView } from '../views/about-view.js';
 import { toHomeView } from '../views/home-view.js';
 import { toFavoritesView } from '../views/favorites-view.js';
