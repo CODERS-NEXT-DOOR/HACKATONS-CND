@@ -155,7 +155,7 @@ You can start with creating the individual views - HTML and CSS. When you open t
 ```html
     <div id="container">
       <!-- start placeholders -->
-
+      
       <!-- end placeholders -->
     </div>
 ```
@@ -234,27 +234,27 @@ Explicit listing:
 
 1. Templates/views:
 
-    - `toSingleCategoryView(category)`  -> Andi
-    - `toSingleMovieView(movie)` -> Toni
-    - `toMovieSimple(movie)` -> Joro
-    - `toMovieDetailed(movie)` -> Martin
+    - `toSingleCategoryView(category)`
+    - `toSingleMovieView(movie)`
+    - `toMovieSimple(movie)`
+    - `toMovieDetailed(movie)`
 
 1. Event functions:
 
-    - `loadPage(page)` -> Andi
-    - `renderMovieDetails(id)` -> Toni
-    - `renderCategory(categoryId)` -> Joro
-    - `renderCategories()` -> Martin
-    - `renderFavorites()` -> Andi
-    - `renderAbout()` -> Toni
-    - `renderSearchItems(searchTerm)` -> Martin
+    - `loadPage(page)`
+    - `renderMovieDetails(id)`
+    - `renderCategory(categoryId)`
+    - `renderCategories()`
+    - `renderFavorites()`
+    - `renderAbout()`
+    - `renderSearchItems(searchTerm)`
 
 1. Request service functions:
 
-    - `loadCategories()` -> Andi
-    - `loadMovies(categoryId)` -> Toni
-    - `loadSingleMovie(id)` -> Joro
-    - `loadSearchMovies(searchTerm)` -> Martin
+    - `loadCategories()`
+    - `loadMovies(categoryId)`
+    - `loadSingleMovie(id)`
+    - `loadSearchMovies(searchTerm)`
 
 <br>
 

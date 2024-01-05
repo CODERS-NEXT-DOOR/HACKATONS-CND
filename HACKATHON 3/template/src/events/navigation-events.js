@@ -1,8 +1,10 @@
-import { HOME, CATEGORIES, FAVORITES, ABOUT, CONTAINER_SELECTOR, FULL_HEART, EMPTY_HEART} from '../common/constants.js';
-import { toAboutView } from '../views/about-view.js';
+import { ABOUT, CATEGORIES, CONTAINER_SELECTOR, HOME, FAVORITES } from '../common/constants.js'; // ABOUT imported additionally
+import { getFavorites } from '../data/favorites.js';
+import { loadCategories, loadCategory, loadMovies, loadSingleMovie } from '../requests/request-service.js';
+import { toAboutView } from '../views/about-view.js'; // imported additionally
+import { toCategoriesView } from '../views/category-view.js'; // imported additionally
 import { toHomeView } from '../views/home-view.js';
-import { toFavoritesView } from '../views/favorites-view.js';
-import { toMoviesFromCategoryView } from '../views/movie-views.js';
+import { toMoviesFromCategoryView, toSingleMovieView, toFavoriteMovies } from '../views/movie-views.js';
 import { q, setActiveNav } from './helpers.js';
 
 // public API
@@ -14,19 +16,19 @@ export const loadPage = (page = '') => {
       setActiveNav(HOME);
       return renderHome();
 
-    case CATEGORIES:
-      setActiveNav(CATEGORIES);
-      return renderCategories();
-
-    case FAVORITES:
-      setActiveNav(FAVORITES);
-      return renderFavorites();
-
+    // missing partial implementation
     case ABOUT:
       setActiveNav(ABOUT);
       return renderAbout();
 
-      // missing partial implementation
+    case CATEGORIES:
+      setActiveNav(CATEGORIES);
+      return renderCategories();
+
+
+    case FAVORITES:
+      setActiveNav(FAVORITES);
+      return renderFavorites();
 
     /* if the app supports error logging, use default to log mapping errors */
     default: return null;
@@ -35,11 +37,15 @@ export const loadPage = (page = '') => {
 };
 
 export const renderMovieDetails = (id = null) => {
-  // missing implementation - loadMovie
+  // missing implementation
+  const movie = loadSingleMovie(id);
+
+  q(CONTAINER_SELECTOR).innerHTML = toSingleMovieView(movie);
 };
 
 export const renderCategory = (categoryId = null) => {
-  // missing partial implementation
+  const category = loadCategory(categoryId);
+  const movies = loadMovies(categoryId);
 
   q(CONTAINER_SELECTOR).innerHTML = toMoviesFromCategoryView(category, movies);
 };
@@ -52,12 +58,18 @@ const renderHome = () => {
 
 const renderCategories = () => {
   // missing implementation
+  const categories = loadCategories();
+  q(CONTAINER_SELECTOR).innerHTML = toCategoriesView(categories);
 };
 
 const renderFavorites = () => {
-  q(FULL_HEART).innerHTML = toFavoritesView();
+  const favorites = getFavorites();
+  const movies = favorites.map(movieId => loadSingleMovie(movieId));
+
+  q(CONTAINER_SELECTOR).innerHTML = toFavoriteMovies(movies);
 };
 
 const renderAbout = () => {
-  q(ABOUT).innerHTML = toAboutView();
+  // missing implementation
+  q(CONTAINER_SELECTOR).innerHTML = toAboutView();
 };

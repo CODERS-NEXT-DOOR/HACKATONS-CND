@@ -15,7 +15,7 @@ div#app {
   margin: 0 auto;
   grid-template-columns: auto 1fr auto;
   grid-template-rows: auto auto 1fr auto;
-  grid-template-areas: 
+  grid-template-areas:
     'header header header'
     'menu menu menu'
     'container container container'
@@ -101,5 +101,16 @@ span.favorite:hover {
 /* End template styling */
 
 
-
 /* Add your styles below */
+
+.category-box {
+  padding: 32px;
+  margin: 16px;
+  border: 2px solid gray;
+  background-color: black;
+}
+
+.category-box a {
+  font-size: 32px;
+  font-weight: 500;
+}
