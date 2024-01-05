@@ -42,7 +42,7 @@ const renderCategories = () => {
 };
 
 const renderFavorites = () => {
-  // missing implementation
+  q(FULL_HEART).innerHTML = toFavoritesView();
 };
 
 const renderAbout = () => {
