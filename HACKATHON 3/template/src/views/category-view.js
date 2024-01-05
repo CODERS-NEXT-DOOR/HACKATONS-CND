@@ -7,6 +7,9 @@ export const toCategoriesView = (categories) => `
 </div>
 `;
 
-const toSingleCategoryView = (category) => `
-<!-- your template here -->
-`;
+const toSingleCategoryView = (category) => // Andy // id="container"
+` <div class="category"> 
+  <h2>${category.name}</h2>
+  <p>Number of Movies: ${category.movies.length}</p>
+  <button class="view-category-btn" data-category-id="${category.id}">View Category</button>
+  </div>`;
