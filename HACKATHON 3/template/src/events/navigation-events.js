@@ -1,4 +1,5 @@
-import { CONTAINER_SELECTOR, HOME } from '../common/constants.js';
+import { ABOUT, CONTAINER_SELECTOR, HOME } from '../common/constants.js';
+import { toAboutView } from '../views/about-view.js';
 import { toHomeView } from '../views/home-view.js';
 import { toMoviesFromCategoryView } from '../views/movie-views.js';
 import { q, setActiveNav } from './helpers.js';
@@ -21,7 +22,7 @@ export const loadPage = (page = '') => {
 };
 
 export const renderMovieDetails = (id = null) => {
-  // missing implementation
+  // missing implementation - loadMovie
 };
 
 export const renderCategory = (categoryId = null) => {
@@ -45,5 +46,5 @@ const renderFavorites = () => {
 };
 
 const renderAbout = () => {
-  // missing implementation
+  q(ABOUT).innerHTML = toAboutView();
 };
