@@ -28,12 +28,27 @@ export const toSingleMovieView = (movie) => `
 `;
 
 export const toMovieSimple = (movie) => `
-<div>
-  <a href="#" class="movie-link" data-movie="${movie.id}">${movie.title}</a>
-  ${renderFavoriteStatus(movie.id)}
+<div class="movie-simple-view">
+  <h2>${movie.title}</h2>
+  <h3>(${movie.year})</h3>
+  <img src="${movie.poster}">
+  <div class="movie-simple-bottom-content">
+    <a href="#" class="movie-link" data-movie="${movie.id}">View details</a>
+    ${renderFavoriteStatus(movie.id)}
+  </div>
 </div>
 `;
 
 const toMovieDetailed = (movie) => `
-${movie.genre}|${movie.director}|${movie.stars.join(', ')}|${movie.description}
-`; // put it with div - each of them
+<div class="movie-detailed-view">
+  <div class="movie-detailed-view-poster-container">
+    <img src="${movie.poster}" />
+  </div>
+  <div class="movie-detailed-view-info-container">
+    <p>Genre: ${movie.genre}</p>
+    <p>Director: ${movie.director}</p>
+    <p>Starring: ${movie.stars.join(', ')}</p>
+    <p>Plot: ${movie.description}</p>
+  </div>
+</div>
+`;

@@ -105,12 +105,105 @@ span.favorite:hover {
 
 .category-box {
   padding: 32px;
-  margin: 16px;
-  border: 2px solid gray;
-  background-color: black;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(18, 0, 28);
+  border-radius: 5px;
+  margin: 0 auto;
 }
 
 .category-box a {
+  color: white;
   font-size: 32px;
   font-weight: 500;
+  text-decoration: none;
+  padding-top: 1em;
+}
+
+#categories > h1 {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 2.8rem;
+}
+
+.categories-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#about {
+  text-align: center;
+}
+
+#movie {
+  padding: 2em;
+}
+
+#movie > h1 {
+  margin-bottom: 1em;
+}
+
+.movie-detailed-view {
+  display: flex;
+}
+
+.movie-detailed-view-poster-container > img {
+  width: 260px;
+  border-right: rgb(202, 202, 202) solid 2px;
+  padding-right: 2em;
+}
+
+.movie-detailed-view-info-container {
+  margin-left: 2em;
+}
+
+.movie-detailed-view-info-container p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#movies > .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 2em;
+}
+
+.movie-simple-view {
+  border: rgb(0, 0, 0) 3px solid;
+  border-radius: 6px;
+  padding: 1em;
+}
+
+.movie-simple-view > img {
+ width: 100%;
+}
+
+.movie-simple-view > h2, h3 {
+  text-align: center;
+}
+
+.movie-simple-view > h2 {
+  font-size: 1.5em;
+}
+
+.movie-simple-bottom-content > a {
+  text-decoration: none;
+  padding: 1em;
+  color: white;
+  border: rgb(34, 0, 34) 2px solid;
+  background-color: rgb(83, 0, 83);
+  border-radius: 5px;
+}
+
+.movie-simple-bottom-content {
+  margin-top: 2em;
+  align-items: center;
+}
+
+.category-box {
+  text-align: center;
+}
+
+.category-box > a {
+  font-size: 1rem;
 }

@@ -1,7 +1,7 @@
 export const toHomeView = () => `
 <div id="home">
   <h1>Mov(e)ster</h1>
-  <div class="content">
+  <div class="home-content">
     <p>Simple movie database app. You can:</p>
     <ul>
       <li>Browse categories</li>
