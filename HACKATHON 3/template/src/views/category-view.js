@@ -11,6 +11,6 @@ const toSingleCategoryView = (category) => `
 <div class="category-box">
   <h1>${category.name}</h1>
   <p>10 movies</p>
-  <a href="#" class="category-link" data-category="${category.id}">View category</a>
+  <a href="#" class="category-link" data-category="${category.id}">VIEW</a>
 </div>
 `;

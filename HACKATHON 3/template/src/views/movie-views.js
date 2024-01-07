@@ -33,7 +33,7 @@ export const toMovieSimple = (movie) => `
   <h3>(${movie.year})</h3>
   <img src="${movie.poster}">
   <div class="movie-simple-bottom-content">
-    <a href="#" class="movie-link" data-movie="${movie.id}">View details</a>
+    <a href="#" class="movie-link" data-movie="${movie.id}">VIEW DETAILS</a>
     ${renderFavoriteStatus(movie.id)}
   </div>
 </div>
